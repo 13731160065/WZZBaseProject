@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  WZZBaseProject
+//
+//  Created by 王泽众 on 2018/5/13.
+//  Copyright © 2018年 王泽众. All rights reserved.
+//  全局头文件
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//全局引用文件
+#import "ImportHeader.h"
+//全局宏定义文件
+#import "DefineHeader.h"
+
+#endif /* PrefixHeader_pch */
