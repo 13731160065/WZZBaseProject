@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WZZTabbarVC.h"
 
 @interface AppDelegate ()
 
@@ -14,8 +15,12 @@
 
 @implementation AppDelegate
 
+#pragma mark - 系统方法
+
 //MAKR:APP已经启动
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self setup];
     
     return YES;
 }
@@ -45,5 +50,20 @@
     
 }
 
+#pragma mark - 自定义方法
+
+//MARK:初始化
+- (void)setup {
+    //tabbar
+    WZZTabbarVC * tabbarVC = [[WZZTabbarVC alloc] init];
+    
+    //window
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tabbarVC;
+    [self.window makeKeyAndVisible];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+}
+
+#pragma mark - 三方框架
 
 @end

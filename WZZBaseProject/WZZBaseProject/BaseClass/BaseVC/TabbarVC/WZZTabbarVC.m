@@ -7,12 +7,25 @@
 //
 
 #import "WZZTabbarVC.h"
+#import "tmpViewController.h"
 
 @interface WZZTabbarVC ()
 
 @end
 
 @implementation WZZTabbarVC
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        tmpViewController * ba = [[tmpViewController alloc] init];
+        ba.basevc_tabbarPlace = YES;
+        ba.basevc_navigationBarHidden = YES;
+        self.viewControllers = @[ba];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

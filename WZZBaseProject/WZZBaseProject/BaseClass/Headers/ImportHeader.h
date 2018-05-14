@@ -11,5 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WZZPCHExtern.h"
+#import "WZZBaseVC.h"
+#import "WZZBaseNVC.h"
 
 #endif /* ImportHeader_h */

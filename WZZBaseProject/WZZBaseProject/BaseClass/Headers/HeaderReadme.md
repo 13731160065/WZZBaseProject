@@ -10,5 +10,8 @@ ImportHeader.h是引用头文件
 **DefineHeader.h**
 DefineHeader.h是宏定义文件
 
+**WZZDefineTool.h**
+WZZDefineTool.h是宏定义工具文件
+
 **WZZPCHExtern.h/WZZPCHExtern.m**
 这两个是用来给pch文件扩展的类

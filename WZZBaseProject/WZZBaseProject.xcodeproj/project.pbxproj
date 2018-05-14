@@ -17,6 +17,8 @@
 		7192333820A8239100735249 /* WZZBaseNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333720A8239100735249 /* WZZBaseNVC.m */; };
 		7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333A20A8251100735249 /* WZZPCHExtern.m */; };
 		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
+		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
+		71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		71DB203920A82FF900147BAE /* WZZTabbarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZTabbarVC.m; sourceTree = "<group>"; };
 		71DB203B20A8301000147BAE /* OtherReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = OtherReadme.md; sourceTree = "<group>"; };
 		71DB203C20A8302300147BAE /* ToolReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToolReadme.md; sourceTree = "<group>"; };
+		71DCFACC20A93E6100DF0FAB /* WZZDefineTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZDefineTool.h; sourceTree = "<group>"; };
+		71DCFACE20A949E200DF0FAB /* tmpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tmpViewController.h; sourceTree = "<group>"; };
+		71DCFACF20A949E200DF0FAB /* tmpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tmpViewController.m; sourceTree = "<group>"; };
+		71DCFAD020A949E200DF0FAB /* tmpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tmpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				71DB203320A82DF900147BAE /* ClassReadme.md */,
+				71DCFACE20A949E200DF0FAB /* tmpViewController.h */,
+				71DCFACF20A949E200DF0FAB /* tmpViewController.m */,
+				71DCFAD020A949E200DF0FAB /* tmpViewController.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -206,6 +215,7 @@
 				7192332520A820F600735249 /* PrefixHeader.pch */,
 				7192332620A8210700735249 /* ImportHeader.h */,
 				7192332720A8212100735249 /* DefineHeader.h */,
+				71DCFACC20A93E6100DF0FAB /* WZZDefineTool.h */,
 				7192333920A8251100735249 /* WZZPCHExtern.h */,
 				7192333A20A8251100735249 /* WZZPCHExtern.m */,
 			);
@@ -356,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */,
 				7192331E20A81FDE00735249 /* Info.plist in Resources */,
 				719232EC20A81DE500735249 /* Assets.xcassets in Resources */,
 			);
@@ -382,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
 				7192333820A8239100735249 /* WZZBaseNVC.m in Sources */,
 				7192331D20A81FDE00735249 /* main.m in Sources */,
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
@@ -536,7 +548,7 @@
 				DEVELOPMENT_TEAM = L3EKEXQ8PC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,7 +565,7 @@
 				DEVELOPMENT_TEAM = L3EKEXQ8PC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
