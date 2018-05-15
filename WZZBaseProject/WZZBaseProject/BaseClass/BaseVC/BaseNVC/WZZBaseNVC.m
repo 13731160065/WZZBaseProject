@@ -17,6 +17,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationBar setHidden:YES];
+    
+    [self createUI];
 }
+
+- (void)createUI {
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+#pragma mark - 系统方法
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    WZZBaseVC * vc = (WZZBaseVC *)self.viewControllers.lastObject;
+    switch (vc.basevc_stateBarTintColor) {
+        case WZZBaseVC_StateBarTintColor_Black:
+        {
+            return UIStatusBarStyleDefault;
+        }
+            break;
+        case WZZBaseVC_StateBarTintColor_White:
+        {
+            return UIStatusBarStyleLightContent;
+        }
+            break;
+            
+        default:
+        {
+            return ([WZZBaseVC isLightColor:vc.basevc_navigationBarColor])?UIStatusBarStyleDefault:UIStatusBarStyleLightContent;
+        }
+            break;
+    }
+}
+
+
 
 @end

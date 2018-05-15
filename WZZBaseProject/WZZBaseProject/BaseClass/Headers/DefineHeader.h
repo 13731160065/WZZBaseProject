@@ -13,10 +13,15 @@
 
 //是不是IPhoneX
 #define DEF_ISIPHONEX [WZZPCHExtern isIphoneX]
+
 //底部安全区高度
 #define DEF_BOTTOM_SAFEAREA_HEIGHT (DEF_ISIPHONEX ? 33.0f : 0.0f)
+
 //StateBar高度
 #define DEF_STATEBAR_HEIGHT (DEF_ISIPHONEX ? 44.0f : 20.0f)
+
+//tabbar高度
+#define DEF_TABBAR_HEIGHT 48.0f
 
 #pragma mark - 颜色
 

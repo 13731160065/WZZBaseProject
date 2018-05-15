@@ -20,7 +20,9 @@
 }
 
 - (IBAction)next:(id)sender {
-    [self presentViewController:[[tmpViewController alloc] init] animated:YES completion:nil];
+    tmpViewController * vc = [[tmpViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

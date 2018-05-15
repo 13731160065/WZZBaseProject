@@ -44,6 +44,16 @@ typedef enum : NSUInteger {
 /**
  statebar前景色(文字颜色)
  */
-@property (nonatomic, assign) WZZBaseVC_StateBarTintColor stateBarTintColor;
+@property (nonatomic, assign) WZZBaseVC_StateBarTintColor basevc_stateBarTintColor;
+
+#pragma mark - 辅助方法
+
+/**
+ 判断颜色是不是亮色
+
+ @param color 颜色
+ @return bool
+ */
++ (BOOL)isLightColor:(UIColor *)color;
 
 @end

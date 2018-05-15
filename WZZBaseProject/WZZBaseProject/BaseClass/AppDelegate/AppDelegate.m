@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WZZTabbarVC.h"
+#import "tmpViewController.h"
 
 @interface AppDelegate ()
 
@@ -56,6 +57,24 @@
 - (void)setup {
     //tabbar
     WZZTabbarVC * tabbarVC = [[WZZTabbarVC alloc] init];
+    
+    //添加vc
+    tmpViewController * ba = [[tmpViewController alloc] init];
+    ba.basevc_tabbarPlace = YES;
+    ba.basevc_navigationBarHidden = YES;
+    [tabbarVC addVC:ba selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
+    
+    //添加vc
+    tmpViewController * ba2 = [[tmpViewController alloc] init];
+    ba2.basevc_tabbarPlace = YES;
+    ba2.basevc_navigationBarHidden = YES;
+    [tabbarVC addVC:ba2 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
+    
+    //添加vc
+    tmpViewController * ba3 = [[tmpViewController alloc] init];
+    ba3.basevc_tabbarPlace = YES;
+    ba3.basevc_navigationBarHidden = YES;
+    [tabbarVC addVC:ba3 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
     
     //window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

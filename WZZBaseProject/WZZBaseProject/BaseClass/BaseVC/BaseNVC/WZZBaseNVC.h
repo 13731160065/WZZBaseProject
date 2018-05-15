@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WZZBaseVC.h"
 
 @interface WZZBaseNVC : UINavigationController
 

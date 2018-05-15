@@ -23,6 +23,13 @@
     [self createUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //刷新statebar前景色
+    self.basevc_stateBarTintColor = self.basevc_stateBarTintColor;
+}
+
 //MARK:创建UI
 - (void)createUI {
     //view颜色
@@ -42,8 +49,7 @@
     _basevc_navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_basevc_stateBar.frame), _basevc_stateBar.bounds.size.width, 44)];
     [self.view addSubview:_basevc_navigationBar];
     
-//    [self setBasevc_navigationBarColor:DEF_MAINCOLOR];
-    [self setBasevc_navigationBarColor:[UIColor colorWithWhite:(CGFloat)(arc4random()%100/100.0f) alpha:1.0f]];
+    self.basevc_navigationBarColor = DEF_MAINCOLOR;
     
     [self reloadUI];
 }
@@ -51,7 +57,7 @@
 - (void)reloadUI {
     //视图
     CGFloat upspace = _basevc_navigationBarHidden?DEF_STATEBAR_HEIGHT:(DEF_STATEBAR_HEIGHT+44);
-    CGFloat bottomspace = _basevc_tabbarPlace?(DEF_BOTTOM_SAFEAREA_HEIGHT+50):DEF_BOTTOM_SAFEAREA_HEIGHT;
+    CGFloat bottomspace = _basevc_tabbarPlace?(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):DEF_BOTTOM_SAFEAREA_HEIGHT;
     [realSelfView setFrame:CGRectMake(0, upspace, self.view.bounds.size.width, self.view.bounds.size.height-upspace-bottomspace)];
     
     //导航栏
@@ -76,10 +82,15 @@
     [self reloadUI];
 }
 
-#pragma mark - 系统方法
+- (void)setBasevc_stateBarTintColor:(WZZBaseVC_StateBarTintColor)basevc_stateBarTintColor {
+    _basevc_stateBarTintColor = basevc_stateBarTintColor;
+    //状态栏
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 
+#pragma mark - 系统方法
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    switch (_stateBarTintColor) {
+    switch (_basevc_stateBarTintColor) {
         case WZZBaseVC_StateBarTintColor_Black:
         {
             return UIStatusBarStyleDefault;
@@ -93,12 +104,54 @@
             
         default:
         {
-#warning wzz自动颜色还有问题
-            const CGFloat * colorComponents = CGColorGetComponents(_basevc_navigationBarColor.CGColor);
-            CGFloat color = ((colorComponents[0] * 299) + (colorComponents[1] * 587) + (colorComponents[2] * 114)) / 1000;
-            return (color > 0.5f)?UIStatusBarStyleDefault:UIStatusBarStyleLightContent;
+            return ([WZZBaseVC isLightColor:_basevc_navigationBarColor])?UIStatusBarStyleDefault:UIStatusBarStyleLightContent;
         }
             break;
+    }
+}
+
+#pragma mark - 辅助方法
+
+//判断颜色是不是亮色
++ (BOOL)isLightColor:(UIColor *)color {
+    if (!color) {
+        return YES;
+    }
+    CGFloat components[3];
+    [self getRGBComponents:components forColor:color];
+    //    NSLog(@"%f %f %f", components[0], components[1], components[2]);
+    
+    CGFloat num = components[0] + components[1] + components[2];
+    if (num < 382) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+//获取RGB值
++ (void)getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
+    int bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
+#else
+    int bitmapInfo = kCGImageAlphaPremultipliedLast;
+#endif
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char resultingPixel[4];
+    CGContextRef context = CGBitmapContextCreate(&resultingPixel,
+                                                 1,
+                                                 1,
+                                                 8,
+                                                 4,
+                                                 rgbColorSpace,
+                                                 bitmapInfo);
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, 1, 1));
+    CGContextRelease(context);
+    CGColorSpaceRelease(rgbColorSpace);
+    
+    for (int component = 0; component < 3; component++) {
+        components[component] = resultingPixel[component];
     }
 }
 

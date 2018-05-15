@@ -7,29 +7,54 @@
 //
 
 #import "WZZTabbarVC.h"
+#import "WZZBaseVC.h"
+#import "WZZBaseNVC.h"
 #import "tmpViewController.h"
 
-@interface WZZTabbarVC ()
+@interface WZZTabbarVC ()<UITabBarControllerDelegate>
+{
+    BOOL (^_tabbarItemDidSelected)(NSInteger);
+}
 
 @end
 
 @implementation WZZTabbarVC
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        tmpViewController * ba = [[tmpViewController alloc] init];
-        ba.basevc_tabbarPlace = YES;
-        ba.basevc_navigationBarHidden = YES;
-        self.viewControllers = @[ba];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.delegate = self;
+}
+
+//MARK:添加控制器
+- (void)addVC:(WZZBaseVC *)vc
+  selectImage:(UIImage *)selectImage
+  normalImage:(UIImage *)normalImage {
+    
+    vc.tabBarItem.image = [normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.tabBarItem.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    CGFloat offset = (DEF_TABBAR_HEIGHT-selectImage.size.width)/2;
+    
+    vc.tabBarItem.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
+    
+    WZZBaseNVC * nvc = [[WZZBaseNVC alloc] initWithRootViewController:vc];
+    NSMutableArray * vcArr = [NSMutableArray arrayWithArray:self.viewControllers];
+    [vcArr addObject:nvc];
+    self.viewControllers = vcArr;
+}
+
+//MARK:tabbar点击回调
+- (void)itemDidSelected:(BOOL (^)(NSInteger))selectClick {
+    _tabbarItemDidSelected = selectClick;
+}
+
+#pragma mark - tabbarController代理
+- (BOOL)tabBarController:(UITabBarController *)tabBarController
+shouldSelectViewController:(UIViewController *)viewController {
+    if (_tabbarItemDidSelected) {
+        return _tabbarItemDidSelected([self.viewControllers indexOfObject:viewController]);
+    }
+    return YES;
 }
 
 @end
