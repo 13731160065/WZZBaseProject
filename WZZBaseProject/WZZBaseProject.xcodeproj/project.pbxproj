@@ -73,6 +73,7 @@
 		71DCFACE20A949E200DF0FAB /* tmpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tmpViewController.h; sourceTree = "<group>"; };
 		71DCFACF20A949E200DF0FAB /* tmpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tmpViewController.m; sourceTree = "<group>"; };
 		71DCFAD020A949E200DF0FAB /* tmpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tmpViewController.xib; sourceTree = "<group>"; };
+		71E269FA20B503830002B24A /* AttributeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +216,7 @@
 				7192332520A820F600735249 /* PrefixHeader.pch */,
 				7192332620A8210700735249 /* ImportHeader.h */,
 				7192332720A8212100735249 /* DefineHeader.h */,
+				71E269FA20B503830002B24A /* AttributeHeader.h */,
 				71DCFACC20A93E6100DF0FAB /* WZZDefineTool.h */,
 				7192333920A8251100735249 /* WZZPCHExtern.h */,
 				7192333A20A8251100735249 /* WZZPCHExtern.m */,

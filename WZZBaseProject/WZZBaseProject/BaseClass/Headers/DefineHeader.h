@@ -37,9 +37,6 @@ colorWithRed:((double)cr)/255.0f \
 green:((double)cg)/255.0f \
 blue:((double)cb)/255.0f alpha:((double)ca)]
 
-//主色调
-#define DEF_MAINCOLOR DEF_HEXCOLOR(0x2f222b)
-
 #pragma mark - 尺寸
 
 //屏幕宽
