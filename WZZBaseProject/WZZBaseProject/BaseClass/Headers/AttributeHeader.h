@@ -9,7 +9,7 @@
 #ifndef AttributeHeader_h
 #define AttributeHeader_h
 
-#pargram mark - 颜色
+#pragma mark - 颜色
 
 //主色调
 #define DEF_MAINCOLOR DEF_HEXCOLOR(0x2f222b)

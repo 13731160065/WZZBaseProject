@@ -18,7 +18,7 @@
 
 #pragma mark - 系统方法
 
-//MAKR:APP已经启动
+//MARK:APP已经启动
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self setup];
@@ -26,7 +26,7 @@
     return YES;
 }
 
-//MAKR:APP将要失去活动
+//MARK:APP将要失去活动
 - (void)applicationWillResignActive:(UIApplication *)application {
     
 }
@@ -36,17 +36,17 @@
     
 }
 
-//MAKR:APP将要进入后台
+//MARK:APP将要进入后台
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     
 }
 
-//MAKR:APP已经变为活动的
+//MARK:APP已经变为活动的
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
 }
 
-//MAKR:APP将要销毁
+//MARK:APP将要销毁
 - (void)applicationWillTerminate:(UIApplication *)application {
     
 }
@@ -75,6 +75,12 @@
     ba3.basevc_tabbarPlace = YES;
     ba3.basevc_navigationBarHidden = YES;
     [tabbarVC addVC:ba3 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
+    
+    //添加vc
+    tmpViewController * ba4 = [[tmpViewController alloc] init];
+    ba4.basevc_tabbarPlace = YES;
+    ba4.basevc_navigationBarHidden = YES;
+    [tabbarVC addVC:ba4 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
     
     //window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
