@@ -44,7 +44,7 @@ blue:((double)cb)/255.0f alpha:((double)ca)]
 //屏幕高
 #define DEF_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height-DEF_BOTTOM_SAFEAREA_HEIGHT)
 
-#define DEF_
+//#define DEF_
 
 
 #endif /* DefineHeader_h */
