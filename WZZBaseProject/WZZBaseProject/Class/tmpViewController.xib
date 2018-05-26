@@ -60,10 +60,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T8-zl-Kqp">
-                    <rect key="frame" x="164" y="318.5" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="171.5" y="318.5" width="31" height="30"/>
+                    <state key="normal" title="跳转"/>
                     <connections>
                         <action selector="next:" destination="-1" eventType="touchUpInside" id="sjB-95-N6D"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf3-OZ-vZr">
+                    <rect key="frame" x="164" y="356.5" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="VbR-Ko-DGm"/>
+                        <constraint firstAttribute="height" constant="30" id="dLX-4t-O1k"/>
+                    </constraints>
+                    <state key="normal" title="测试"/>
+                    <connections>
+                        <action selector="test:" destination="-1" eventType="touchUpInside" id="yNc-VF-6ja"/>
                     </connections>
                 </button>
             </subviews>
@@ -77,11 +88,13 @@
                 <constraint firstItem="4GA-FM-mmj" firstAttribute="top" secondItem="NWa-Uv-5U0" secondAttribute="bottom" id="RZd-Q8-Xaw"/>
                 <constraint firstItem="NWa-Uv-5U0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TZ1-c9-P7d"/>
                 <constraint firstItem="NWa-Uv-5U0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tu6-9e-ARy"/>
+                <constraint firstItem="vf3-OZ-vZr" firstAttribute="centerX" secondItem="3T8-zl-Kqp" secondAttribute="centerX" id="URY-ln-Bz8"/>
                 <constraint firstAttribute="trailing" secondItem="BG5-Tm-qfv" secondAttribute="trailing" id="Wb1-L4-sHM"/>
                 <constraint firstAttribute="trailing" secondItem="NWa-Uv-5U0" secondAttribute="trailing" id="ba2-Y1-HvF"/>
                 <constraint firstItem="BG5-Tm-qfv" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="bjh-8c-Qmg"/>
                 <constraint firstItem="4GA-FM-mmj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bsj-8p-CKW"/>
                 <constraint firstItem="I1y-O3-Lib" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="e8t-Jd-v52"/>
+                <constraint firstItem="vf3-OZ-vZr" firstAttribute="top" secondItem="3T8-zl-Kqp" secondAttribute="bottom" constant="8" id="f57-Gb-5Yw"/>
                 <constraint firstItem="3T8-zl-Kqp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nxQ-IV-73l"/>
             </constraints>
         </view>

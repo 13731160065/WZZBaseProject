@@ -17,6 +17,15 @@
 
 @implementation WZZBaseVC
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.basevc_navigationBarColor = DEF_MAINCOLOR;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
