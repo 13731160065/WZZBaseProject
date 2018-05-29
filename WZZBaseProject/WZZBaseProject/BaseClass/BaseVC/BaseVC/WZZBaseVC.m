@@ -9,9 +9,6 @@
 #import "WZZBaseVC.h"
 
 @interface WZZBaseVC ()
-{
-    UIView * realSelfView;
-}
 
 @end
 
@@ -45,10 +42,10 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     //处理view适配
-    realSelfView = self.view;
+    _realSelfView = self.view;
     UIView * selfView = [[UIView alloc] initWithFrame:self.view.bounds];
     self.view = selfView;
-    [self.view addSubview:realSelfView];
+    [self.view addSubview:_realSelfView];
     
     //创建stateBar
     _basevc_stateBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEF_SCREEN_WIDTH, DEF_STATEBAR_HEIGHT)];
@@ -57,6 +54,21 @@
     //创建navigationBar
     _basevc_navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_basevc_stateBar.frame), _basevc_stateBar.bounds.size.width, 44)];
     [self.view addSubview:_basevc_navigationBar];
+    
+    const CGFloat barItemWidth = (DEF_SCREEN_WIDTH-8*4)/4.0f;
+    const CGFloat barItemHeight = 30.0f;
+    
+    __weak WZZBaseVC * weakSelf = self;
+    _basevc_leftButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:[UIImage imageNamed:@"base_back"] rightImage:nil clickBlock:^{
+        [weakSelf basevc_backClick];
+    }];
+    [_basevc_navigationBar addSubview:_basevc_leftButton];
+    
+    _basevc_titleLabel = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_leftButton.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth*2, barItemHeight) text:self.title textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:17.0f] leftImage:nil rightImage:nil clickBlock:nil];
+    [_basevc_navigationBar addSubview:_basevc_titleLabel];
+    
+    _basevc_rightButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_titleLabel.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:nil rightImage:[UIImage imageNamed:@"base_back"] clickBlock:nil];
+    [_basevc_navigationBar addSubview:_basevc_rightButton];
     
     self.basevc_navigationBarColor = DEF_MAINCOLOR;
     
@@ -67,10 +79,16 @@
     //视图
     CGFloat upspace = _basevc_navigationBarHidden?DEF_STATEBAR_HEIGHT:(DEF_STATEBAR_HEIGHT+44);
     CGFloat bottomspace = _basevc_tabbarPlace?(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):DEF_BOTTOM_SAFEAREA_HEIGHT;
-    [realSelfView setFrame:CGRectMake(0, upspace, self.view.bounds.size.width, self.view.bounds.size.height-upspace-bottomspace)];
+    [_realSelfView setFrame:CGRectMake(0, upspace, self.view.bounds.size.width, self.view.bounds.size.height-upspace-bottomspace)];
     
     //导航栏
     _basevc_navigationBar.hidden = _basevc_navigationBarHidden;
+}
+
+- (void)basevc_backClick {
+    if (self.navigationController) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - 属性

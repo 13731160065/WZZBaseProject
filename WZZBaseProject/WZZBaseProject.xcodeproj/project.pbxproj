@@ -16,6 +16,7 @@
 		7192333420A8236C00735249 /* WZZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333220A8236C00735249 /* WZZBaseVC.m */; };
 		7192333820A8239100735249 /* WZZBaseNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333720A8239100735249 /* WZZBaseNVC.m */; };
 		7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333A20A8251100735249 /* WZZPCHExtern.m */; };
+		71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */; };
 		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
 		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
 		71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
@@ -60,6 +61,8 @@
 		7192333720A8239100735249 /* WZZBaseNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVC.m; sourceTree = "<group>"; };
 		7192333920A8251100735249 /* WZZPCHExtern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZPCHExtern.h; sourceTree = "<group>"; };
 		7192333A20A8251100735249 /* WZZPCHExtern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZPCHExtern.m; sourceTree = "<group>"; };
+		71A7E80320BD496D0069920C /* WZZBaseNVCItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNVCItemView.h; sourceTree = "<group>"; };
+		71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVCItemView.m; sourceTree = "<group>"; };
 		71DB203220A82DBD00147BAE /* LibReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LibReadme.md; sourceTree = "<group>"; };
 		71DB203320A82DF900147BAE /* ClassReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ClassReadme.md; sourceTree = "<group>"; };
 		71DB203420A82E2E00147BAE /* HeaderReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HeaderReadme.md; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 			children = (
 				7192333120A8236C00735249 /* WZZBaseVC.h */,
 				7192333220A8236C00735249 /* WZZBaseVC.m */,
+				71A7E80220BD49590069920C /* View */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -260,6 +264,15 @@
 				7192333720A8239100735249 /* WZZBaseNVC.m */,
 			);
 			path = BaseNVC;
+			sourceTree = "<group>";
+		};
+		71A7E80220BD49590069920C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71A7E80320BD496D0069920C /* WZZBaseNVCItemView.h */,
+				71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +414,7 @@
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
 				7192333420A8236C00735249 /* WZZBaseVC.m in Sources */,
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
+				71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

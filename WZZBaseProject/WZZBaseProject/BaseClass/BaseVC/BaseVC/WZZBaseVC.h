@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WZZBaseNVCItemView.h"
 
 typedef enum : NSUInteger {
     WZZBaseVC_StateBarTintColor_Auto = 0,//自动
@@ -46,6 +47,27 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) WZZBaseVC_StateBarTintColor basevc_stateBarTintColor;
 
+/**
+ 真实selfview
+ ，xib加在这个view上
+ */
+@property (nonatomic, strong) UIView * realSelfView;
+
+/**
+ 左按钮
+ */
+@property (nonatomic, strong) WZZBaseNVCItemView * basevc_leftButton;
+
+/**
+ 右按钮
+ */
+@property (nonatomic, strong) WZZBaseNVCItemView * basevc_rightButton;
+
+/**
+ 标题
+ */
+@property (nonatomic, strong) WZZBaseNVCItemView * basevc_titleLabel;
+
 #pragma mark - 辅助方法
 
 /**
@@ -55,5 +77,10 @@ typedef enum : NSUInteger {
  @return bool
  */
 + (BOOL)isLightColor:(UIColor *)color;
+
+/**
+ 返回按钮点击，可重写
+ */
+- (void)basevc_backClick;
 
 @end
