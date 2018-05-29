@@ -30,7 +30,7 @@
 - (void)addVC:(WZZBaseVC *)vc
   selectImage:(UIImage *)selectImage
   normalImage:(UIImage *)normalImage {
-    
+    vc.tabBarItem.title = nil;
     vc.tabBarItem.image = [normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     CGFloat offset = (DEF_TABBAR_HEIGHT-selectImage.size.width)/2;
