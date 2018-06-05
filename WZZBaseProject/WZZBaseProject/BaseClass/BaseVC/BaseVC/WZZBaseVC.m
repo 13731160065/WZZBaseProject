@@ -93,6 +93,11 @@
 
 #pragma mark - 属性
 
+- (void)setTitle:(NSString *)title {
+    [super setTitle:title];
+    [_basevc_titleLabel.titleLabel setText:title];
+}
+
 - (void)setBasevc_navigationBarHidden:(BOOL)basevc_navigationBarHidden {
     _basevc_navigationBarHidden = basevc_navigationBarHidden;
     [self reloadUI];
