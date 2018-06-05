@@ -42,10 +42,10 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     //处理view适配
-    _realSelfView = self.view;
+    ___realSelfView = self.view;
     UIView * selfView = [[UIView alloc] initWithFrame:self.view.bounds];
     self.view = selfView;
-    [self.view addSubview:_realSelfView];
+    [self.view addSubview:___realSelfView];
     
     //创建stateBar
     _basevc_stateBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEF_SCREEN_WIDTH, DEF_STATEBAR_HEIGHT)];
@@ -79,7 +79,7 @@
     //视图
     CGFloat upspace = _basevc_navigationBarHidden?DEF_STATEBAR_HEIGHT:(DEF_STATEBAR_HEIGHT+44);
     CGFloat bottomspace = _basevc_tabbarPlace?(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):DEF_BOTTOM_SAFEAREA_HEIGHT;
-    [_realSelfView setFrame:CGRectMake(0, upspace, self.view.bounds.size.width, self.view.bounds.size.height-upspace-bottomspace)];
+    [___realSelfView setFrame:CGRectMake(0, upspace, self.view.bounds.size.width, self.view.bounds.size.height-upspace-bottomspace)];
     
     //导航栏
     _basevc_navigationBar.hidden = _basevc_navigationBarHidden;

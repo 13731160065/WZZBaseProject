@@ -49,9 +49,9 @@ typedef enum : NSUInteger {
 
 /**
  真实selfview
- ，xib加在这个view上
+ ，xib加在这个view上，一般用不到
  */
-@property (nonatomic, strong) UIView * realSelfView;
+@property (nonatomic, strong) UIView * __realSelfView;
 
 /**
  左按钮
