@@ -61,4 +61,9 @@
                         space:(CGFloat)space
                    clickBlock:(void (^)(void))clickBlock;
 
+/**
+ 居中
+ */
+- (void)makeCenter;
+
 @end

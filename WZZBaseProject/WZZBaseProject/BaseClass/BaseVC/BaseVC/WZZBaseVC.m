@@ -44,6 +44,7 @@
     //处理view适配
     ___realSelfView = self.view;
     UIView * selfView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [selfView setBackgroundColor:[UIColor whiteColor]];
     self.view = selfView;
     [self.view addSubview:___realSelfView];
     [___realSelfView setBackgroundColor:[UIColor clearColor]];
@@ -65,7 +66,7 @@
     }];
     [_basevc_navigationBar addSubview:_basevc_leftButton];
     
-    _basevc_titleLabel = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_leftButton.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth*2, barItemHeight) text:self.title textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:17.0f] leftImage:nil rightImage:nil clickBlock:nil];
+    _basevc_titleLabel = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_leftButton.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth*2, barItemHeight) text:self.title?self.title:@"" textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:17.0f] leftImage:nil rightImage:nil clickBlock:nil];
     [_basevc_navigationBar addSubview:_basevc_titleLabel];
     
     _basevc_rightButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_titleLabel.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:nil leftImageWidth:30.0f rightImage:nil rightImageWidth:0.0f space:0.0f clickBlock:nil];
