@@ -46,6 +46,7 @@
     UIView * selfView = [[UIView alloc] initWithFrame:self.view.bounds];
     self.view = selfView;
     [self.view addSubview:___realSelfView];
+    [___realSelfView setBackgroundColor:[UIColor clearColor]];
     
     //创建stateBar
     _basevc_stateBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEF_SCREEN_WIDTH, DEF_STATEBAR_HEIGHT)];
