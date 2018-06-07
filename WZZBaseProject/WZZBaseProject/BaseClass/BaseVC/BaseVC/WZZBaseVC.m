@@ -56,10 +56,10 @@
     [self.view addSubview:_basevc_navigationBar];
     
     const CGFloat barItemWidth = (DEF_SCREEN_WIDTH-8*4)/4.0f;
-    const CGFloat barItemHeight = 30.0f;
+    const CGFloat barItemHeight = 44.0f;
     
     __weak WZZBaseVC * weakSelf = self;
-    _basevc_leftButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:[UIImage imageNamed:@"base_back"] rightImage:nil clickBlock:^{
+    _basevc_leftButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:@"返回" textColor:nil font:nil leftImage:[UIImage imageNamed:@"base_back"] leftImageWidth:30.0f rightImage:nil rightImageWidth:0 space:0.0f clickBlock:^{
         [weakSelf basevc_backClick];
     }];
     [_basevc_navigationBar addSubview:_basevc_leftButton];
@@ -67,7 +67,7 @@
     _basevc_titleLabel = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_leftButton.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth*2, barItemHeight) text:self.title textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:17.0f] leftImage:nil rightImage:nil clickBlock:nil];
     [_basevc_navigationBar addSubview:_basevc_titleLabel];
     
-    _basevc_rightButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_titleLabel.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:nil rightImage:[UIImage imageNamed:@"base_back"] clickBlock:nil];
+    _basevc_rightButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_titleLabel.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:nil leftImageWidth:30.0f rightImage:nil rightImageWidth:0.0f space:0.0f clickBlock:nil];
     [_basevc_navigationBar addSubview:_basevc_rightButton];
     
     self.basevc_navigationBarColor = DEF_MAINCOLOR;

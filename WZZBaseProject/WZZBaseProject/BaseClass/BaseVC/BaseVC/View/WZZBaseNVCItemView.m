@@ -16,6 +16,7 @@
 
 @implementation WZZBaseNVCItemView
 
+//快速初始化
 - (instancetype)initWithFrame:(CGRect)frame
                          text:(NSString *)text
                     textColor:(UIColor *)textColor
@@ -23,32 +24,77 @@
                     leftImage:(id)leftImage
                    rightImage:(id)rightImage
                    clickBlock:(void (^)(void))clickBlock {
+    return [self initWithFrame:frame text:text textColor:textColor font:font leftImage:leftImage leftImageWidth:0 rightImage:rightImage rightImageWidth:0 space:8.0f clickBlock:clickBlock];
+}
+
+//快速初始化，带图片控制
+- (instancetype)initWithFrame:(CGRect)frame
+                         text:(NSString *)text
+                    textColor:(UIColor *)textColor
+                         font:(UIFont *)font
+                    leftImage:(id)leftImage
+               leftImageWidth:(CGFloat)leftImageWidth
+                   rightImage:(id)rightImage
+              rightImageWidth:(CGFloat)rightImageWidth
+                        space:(CGFloat)space
+                   clickBlock:(void (^)(void))clickBlock {
     self = [super initWithFrame:frame];
     if (self) {
         //左图
         if (leftImage) {
-            _leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.height)];
-            [self addSubview:_leftImageView];
-            [_leftImageView setImage:leftImage];
-            [_leftImageView setContentMode:UIViewContentModeScaleAspectFit];
+            if ([leftImage isKindOfClass:[UIImage class]]) {
+                UIImage * lImage = leftImage;
+                CGFloat lImageHeight = leftImageWidth/lImage.size.width*lImage.size.height;
+                if (!leftImageWidth) {
+                    leftImageWidth = frame.size.height;
+                    lImageHeight = leftImageWidth;
+                }
+                _leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, frame.size.height/2.0f-lImageHeight/2.0f, leftImageWidth, lImageHeight)];
+                [self addSubview:_leftImageView];
+                [_leftImageView setImage:leftImage];
+                [_leftImageView setContentMode:UIViewContentModeScaleAspectFit];
+            }
         }
+        
         //右图
         if (rightImage) {
-            _rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width-frame.size.height, 0.0f, frame.size.height, frame.size.height)];
+            UIImage * rImage = rightImage;
+            CGFloat rImageHeight = rightImageWidth/rImage.size.width*rImage.size.height;
+            if (!rightImageWidth) {
+                rightImageWidth = frame.size.height;
+                rImageHeight = rightImageWidth;
+            }
+            _rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(frame.size.width-rightImageWidth, frame.size.height/2.0f-rImageHeight/2.0f, rightImageWidth, rImageHeight)];
             [self addSubview:_rightImageView];
             [_rightImageView setImage:leftImage];
             [_rightImageView setContentMode:UIViewContentModeScaleAspectFit];
         }
+        
         //标题
         if (text) {
-            _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_leftImageView.frame)+(leftImage?8.0f:0.0f), 0.0f, frame.size.width-(_rightImageView.frame.size.width+_leftImageView.frame.size.width)-(rightImage?8.0f:0.0f)-(leftImage?8.0f:0.0f), frame.size.height)];
+            _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_leftImageView.frame)+(leftImage?space:0.0f), 0.0f, frame.size.width-(_rightImageView.frame.size.width+_leftImageView.frame.size.width)-(rightImage?space:0.0f)-(leftImage?space:0.0f), frame.size.height)];
             [self addSubview:_titleLabel];
             [_titleLabel setText:text];
-            [_titleLabel setTextAlignment:NSTextAlignmentCenter];
-            [_titleLabel setTextColor:textColor];
-            [_titleLabel setFont:font];
+            [_titleLabel setTextColor:[UIColor blackColor]];
+            [_titleLabel setFont:[UIFont systemFontOfSize:15.0f]];
+            if (leftImage && rightImage) {
+                [_titleLabel setTextAlignment:NSTextAlignmentCenter];
+            } else if (leftImage) {
+                [_titleLabel setTextAlignment:NSTextAlignmentLeft];
+            } else if (rightImage) {
+                [_titleLabel setTextAlignment:NSTextAlignmentRight];
+            } else {
+                [_titleLabel setTextAlignment:NSTextAlignmentCenter];
+            }
+            if (textColor) {
+                [_titleLabel setTextColor:textColor];
+            }
+            if (font) {
+                [_titleLabel setFont:font];
+            }
         }
         
+        //点击事件
         self.clickBlock = clickBlock;
     }
     return self;
