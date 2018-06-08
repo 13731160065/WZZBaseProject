@@ -9,6 +9,20 @@
 #ifndef DefineHeader_h
 #define DefineHeader_h
 
+#pragma mark - 系统宏
+
+//获取系统版本号
+#define DEF_SYSTEM_VERSION [UIDevice currentDevice].systemVersion.doubleValue
+
+//获取app的bundleid
+#define DEF_APP_BUNDLEID [[NSBundle mainBundle] bundleIdentifier]
+
+//获取app的build号
+#define DEF_APP_BUILDNUM [[[NSBundle mainBundle]infoDictionary] objectForKey:@"CFBundleVersion"]
+
+//获取app的版本号
+#define DEF_APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
 #pragma mark - iPhoneX适配宏
 
 //是不是IPhoneX
