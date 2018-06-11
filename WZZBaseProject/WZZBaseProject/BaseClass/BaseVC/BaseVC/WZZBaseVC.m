@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createUI];
+    [self _superCreateUI];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -37,7 +37,7 @@
 }
 
 //MARK:创建UI
-- (void)createUI {
+- (void)_superCreateUI {
     //view颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
@@ -74,10 +74,10 @@
     
     self.basevc_navigationBarColor = DEF_MAINCOLOR;
     
-    [self reloadUI];
+    [self _superReloadUI];
 }
 
-- (void)reloadUI {
+- (void)_superReloadUI {
     //视图
     CGFloat upspace = _basevc_navigationBarHidden?DEF_STATEBAR_HEIGHT:(DEF_STATEBAR_HEIGHT+44);
     CGFloat bottomspace = _basevc_tabbarPlace?(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):DEF_BOTTOM_SAFEAREA_HEIGHT;
@@ -102,7 +102,7 @@
 
 - (void)setBasevc_navigationBarHidden:(BOOL)basevc_navigationBarHidden {
     _basevc_navigationBarHidden = basevc_navigationBarHidden;
-    [self reloadUI];
+    [self _superReloadUI];
 }
 
 - (void)setBasevc_navigationBarColor:(UIColor *)basevc_navigationBarColor {
@@ -113,7 +113,7 @@
 
 - (void)setBasevc_tabbarPlace:(BOOL)basevc_tabbarPlace {
     _basevc_tabbarPlace = basevc_tabbarPlace;
-    [self reloadUI];
+    [self _superReloadUI];
 }
 
 - (void)setBasevc_stateBarTintColor:(WZZBaseVC_StateBarTintColor)basevc_stateBarTintColor {
