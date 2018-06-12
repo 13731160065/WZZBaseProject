@@ -13,7 +13,7 @@ pod 'MJExtension', '~> 3.0.13' #json转model
 pod 'TOWebViewController', '~> 2.2.7' #web控制器
 
 # wzz工具
-pod 'WZZHttpTool', '~> 1.0.0' #http请求工具
+pod 'WZZHttpTool', '~> 1.0.3' #http请求工具
 pod 'WZZSecret', '~> 1.0.5' #加密处理工具
 
 end
