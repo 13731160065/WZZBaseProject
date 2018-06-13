@@ -16,6 +16,8 @@
 		7192333420A8236C00735249 /* WZZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333220A8236C00735249 /* WZZBaseVC.m */; };
 		7192333820A8239100735249 /* WZZBaseNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333720A8239100735249 /* WZZBaseNVC.m */; };
 		7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333A20A8251100735249 /* WZZPCHExtern.m */; };
+		7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807720D1311900ABA2F1 /* WZZSingleManager.m */; };
+		7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */; };
 		71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */; };
 		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
 		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
@@ -61,6 +63,10 @@
 		7192333720A8239100735249 /* WZZBaseNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVC.m; sourceTree = "<group>"; };
 		7192333920A8251100735249 /* WZZPCHExtern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZPCHExtern.h; sourceTree = "<group>"; };
 		7192333A20A8251100735249 /* WZZPCHExtern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZPCHExtern.m; sourceTree = "<group>"; };
+		7198807620D1311900ABA2F1 /* WZZSingleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZSingleManager.h; sourceTree = "<group>"; };
+		7198807720D1311900ABA2F1 /* WZZSingleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZSingleManager.m; sourceTree = "<group>"; };
+		7198807920D1312800ABA2F1 /* WZZUserInfoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZUserInfoObject.h; sourceTree = "<group>"; };
+		7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZUserInfoObject.m; sourceTree = "<group>"; };
 		71A7E80320BD496D0069920C /* WZZBaseNVCItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNVCItemView.h; sourceTree = "<group>"; };
 		71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVCItemView.m; sourceTree = "<group>"; };
 		71DB203220A82DBD00147BAE /* LibReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LibReadme.md; sourceTree = "<group>"; };
@@ -160,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				71DB203C20A8302300147BAE /* ToolReadme.md */,
+				7198807520D1310900ABA2F1 /* WZZSingleManager */,
+				7198807420D1310800ABA2F1 /* WZZUserInfoObject */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -266,6 +274,24 @@
 				7192333720A8239100735249 /* WZZBaseNVC.m */,
 			);
 			path = BaseNVC;
+			sourceTree = "<group>";
+		};
+		7198807420D1310800ABA2F1 /* WZZUserInfoObject */ = {
+			isa = PBXGroup;
+			children = (
+				7198807920D1312800ABA2F1 /* WZZUserInfoObject.h */,
+				7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */,
+			);
+			path = WZZUserInfoObject;
+			sourceTree = "<group>";
+		};
+		7198807520D1310900ABA2F1 /* WZZSingleManager */ = {
+			isa = PBXGroup;
+			children = (
+				7198807620D1311900ABA2F1 /* WZZSingleManager.h */,
+				7198807720D1311900ABA2F1 /* WZZSingleManager.m */,
+			);
+			path = WZZSingleManager;
 			sourceTree = "<group>";
 		};
 		71A7E80220BD49590069920C /* View */ = {
@@ -411,12 +437,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
+				7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */,
 				7192333820A8239100735249 /* WZZBaseNVC.m in Sources */,
 				7192331D20A81FDE00735249 /* main.m in Sources */,
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
 				7192333420A8236C00735249 /* WZZBaseVC.m in Sources */,
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
 				71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */,
+				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
