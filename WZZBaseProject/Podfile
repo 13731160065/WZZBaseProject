@@ -11,6 +11,7 @@ pod 'SDCycleScrollView', '~> 1.75' #轮播图
 pod 'MJRefresh', '~> 3.1.15.3' #刷新加载
 pod 'MJExtension', '~> 3.0.13' #json转model
 pod 'TOWebViewController', '~> 2.2.7' #web控制器
+pod 'Masonry', '~> 1.1.0' #布局
 
 # wzz工具
 pod 'WZZHttpTool', '~> 1.0.3' #http请求工具
