@@ -6,6 +6,7 @@
 //  Copyright © 2018年 王泽众. All rights reserved.
 //
 
+//开关，用之前先打开
 #define WZZShareManager_Open 0
 
 #import "WZZShareManager.h"
