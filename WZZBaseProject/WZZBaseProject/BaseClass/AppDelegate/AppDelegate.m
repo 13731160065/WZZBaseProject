@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WZZTabbarVC.h"
 #import "tmpViewController.h"
+#import "WZZSingleManager.h"
 
 @interface AppDelegate ()
 
@@ -55,38 +56,9 @@
 
 //MARK:初始化
 - (void)setup {
-    //tabbar
-    WZZTabbarVC * tabbarVC = [[WZZTabbarVC alloc] init];
-    
-    //添加vc
-    tmpViewController * ba = [[tmpViewController alloc] init];
-    ba.basevc_tabbarPlace = YES;
-    ba.basevc_navigationBarHidden = YES;
-    [tabbarVC addVC:ba selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
-    
-    //添加vc
-    tmpViewController * ba2 = [[tmpViewController alloc] init];
-    ba2.basevc_tabbarPlace = YES;
-    ba2.basevc_navigationBarHidden = YES;
-    [tabbarVC addVC:ba2 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
-    
-    //添加vc
-    tmpViewController * ba3 = [[tmpViewController alloc] init];
-    ba3.basevc_tabbarPlace = YES;
-    ba3.basevc_navigationBarHidden = YES;
-    [tabbarVC addVC:ba3 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
-    
-    //添加vc
-    tmpViewController * ba4 = [[tmpViewController alloc] init];
-    ba4.basevc_tabbarPlace = YES;
-    ba4.basevc_navigationBarHidden = YES;
-    [tabbarVC addVC:ba4 selectImage:[UIImage imageNamed:@"tmpimage2"] normalImage:[UIImage imageNamed:@"tmpImage"]];
-    
-    //window
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = tabbarVC;
-    [self.window makeKeyAndVisible];
-    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [WZZSingleManager shareInstance].appDelegate = self;
+    [[WZZSingleManager shareInstance] setupTabbar];
+    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Login];
 }
 
 #pragma mark - 三方框架
