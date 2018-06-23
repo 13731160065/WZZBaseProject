@@ -13,5 +13,8 @@
 #import "WZZPCHExtern.h"
 #import "WZZBaseVC.h"
 #import "WZZBaseNVC.h"
+#import "WZZSingleManager.h"
+#import "WZZUserInfoObject.h"
+#import "HttpHandler.h"
 
 #endif /* ImportHeader_h */

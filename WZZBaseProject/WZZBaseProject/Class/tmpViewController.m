@@ -45,7 +45,8 @@
 }
 
 - (IBAction)test:(id)sender {
-    self.basevc_navigationBarHidden = !self.basevc_navigationBarHidden;
+//    self.basevc_navigationBarHidden = !self.basevc_navigationBarHidden;
+    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
 }
 
 @end
