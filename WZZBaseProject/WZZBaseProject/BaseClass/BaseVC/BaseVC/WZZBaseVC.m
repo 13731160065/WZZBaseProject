@@ -57,6 +57,11 @@
     _basevc_navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_basevc_stateBar.frame), _basevc_stateBar.bounds.size.width, 44)];
     [self.view addSubview:_basevc_navigationBar];
     
+    //横线
+    _barLineView = [[UIView alloc] initWithFrame:CGRectMake(0, _basevc_navigationBar.frame.size.height-1, _basevc_navigationBar.frame.size.width, 1)];
+    [_basevc_navigationBar addSubview:_barLineView];
+    [_barLineView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    
     const CGFloat barItemWidth = (DEF_SCREEN_WIDTH-8*4)/4.0f;
     const CGFloat barItemHeight = 44.0f;
     

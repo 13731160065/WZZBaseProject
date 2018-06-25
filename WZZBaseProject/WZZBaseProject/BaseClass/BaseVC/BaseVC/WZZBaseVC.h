@@ -68,6 +68,11 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, strong) WZZBaseNVCItemView * basevc_titleLabel;
 
+/**
+ 底部线
+ */
+@property (nonatomic, strong) UIView * barLineView;
+
 #pragma mark - 辅助方法
 
 /**
