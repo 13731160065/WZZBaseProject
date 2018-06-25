@@ -10,6 +10,10 @@
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
+		713F1F7320E08FFA00E60C93 /* WZZBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6B20E08FFA00E60C93 /* WZZBaseButton.m */; };
+		713F1F7420E08FFA00E60C93 /* WZZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */; };
+		713F1F7520E08FFA00E60C93 /* WZZBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */; };
+		713F1F7620E08FFA00E60C93 /* WZZBaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */; };
 		719232EC20A81DE500735249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
 		719232FC20A81DE500735249 /* WZZBaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719232FB20A81DE500735249 /* WZZBaseProjectTests.m */; };
 		7192330720A81DE500735249 /* WZZBaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192330620A81DE500735249 /* WZZBaseProjectUITests.m */; };
@@ -51,6 +55,14 @@
 		71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HttpHandler+WZZExt.m"; sourceTree = "<group>"; };
 		71012D3120DE21A100B4EE8C /* WZZShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZShareManager.h; sourceTree = "<group>"; };
 		71012D3220DE21A100B4EE8C /* WZZShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZShareManager.m; sourceTree = "<group>"; };
+		713F1F6B20E08FFA00E60C93 /* WZZBaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseButton.m; sourceTree = "<group>"; };
+		713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseView.m; sourceTree = "<group>"; };
+		713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseLabel.m; sourceTree = "<group>"; };
+		713F1F6E20E08FFA00E60C93 /* WZZBaseImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseImageView.h; sourceTree = "<group>"; };
+		713F1F6F20E08FFA00E60C93 /* WZZBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseView.h; sourceTree = "<group>"; };
+		713F1F7020E08FFA00E60C93 /* WZZBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseButton.h; sourceTree = "<group>"; };
+		713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseImageView.m; sourceTree = "<group>"; };
+		713F1F7220E08FFA00E60C93 /* WZZBaseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseLabel.h; sourceTree = "<group>"; };
 		719232DF20A81DE500735249 /* WZZBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZZBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719232EB20A81DE500735249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719232F720A81DE500735249 /* WZZBaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZZBaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +150,21 @@
 				71012D3220DE21A100B4EE8C /* WZZShareManager.m */,
 			);
 			path = ShareTool;
+			sourceTree = "<group>";
+		};
+		713F1F6A20E08FFA00E60C93 /* WZZBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				713F1F6B20E08FFA00E60C93 /* WZZBaseButton.m */,
+				713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */,
+				713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */,
+				713F1F6E20E08FFA00E60C93 /* WZZBaseImageView.h */,
+				713F1F6F20E08FFA00E60C93 /* WZZBaseView.h */,
+				713F1F7020E08FFA00E60C93 /* WZZBaseButton.h */,
+				713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */,
+				713F1F7220E08FFA00E60C93 /* WZZBaseLabel.h */,
+			);
+			path = WZZBaseView;
 			sourceTree = "<group>";
 		};
 		719232D620A81DE500735249 = {
@@ -275,6 +302,7 @@
 				7192332920A8227C00735249 /* TabbarVC */,
 				7192332A20A8227C00735249 /* BaseVC */,
 				7192332B20A8227C00735249 /* BaseNVC */,
+				713F1F6A20E08FFA00E60C93 /* WZZBaseView */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -468,7 +496,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
+				713F1F7420E08FFA00E60C93 /* WZZBaseView.m in Sources */,
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
+				713F1F7320E08FFA00E60C93 /* WZZBaseButton.m in Sources */,
 				7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */,
 				7192333820A8239100735249 /* WZZBaseNVC.m in Sources */,
 				7192331D20A81FDE00735249 /* main.m in Sources */,
@@ -480,6 +510,8 @@
 				71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */,
 				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
+				713F1F7520E08FFA00E60C93 /* WZZBaseLabel.m in Sources */,
+				713F1F7620E08FFA00E60C93 /* WZZBaseImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
