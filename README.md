@@ -4,11 +4,21 @@
 
 <br/>
 
-##功能简介
+## 文件介绍
+
+**addhead_wzz.sh**：给本文件夹内文件批量添加前缀，用法./addhead_wzz.sh xxx，本文件夹内的所有文件都会加xxx前缀
+
+**addend_wzz.sh**：给本文件夹内文件批量添加前缀，用法./addend_wzz.sh @3x png，本文件夹内所有png文件都会加上@3x后缀
+
+**changeBaseProName_wzz.sh**：修改基础项目名，包括项目内文件夹，依赖于changeFileContent_wzz文件
+
+**changeFileContent_wzz**：修改内容
+
+## 功能简介
 
 通过该项目，可以快速创建一个空的项目，包括已集成好的各类基础框架及基本项目结构
 
-##使用说明
+## 使用说明
 
 1. **修改项目名称**
 
