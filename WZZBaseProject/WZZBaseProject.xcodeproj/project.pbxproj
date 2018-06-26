@@ -155,14 +155,14 @@
 		713F1F6A20E08FFA00E60C93 /* WZZBaseView */ = {
 			isa = PBXGroup;
 			children = (
-				713F1F6B20E08FFA00E60C93 /* WZZBaseButton.m */,
-				713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */,
-				713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */,
-				713F1F6E20E08FFA00E60C93 /* WZZBaseImageView.h */,
 				713F1F6F20E08FFA00E60C93 /* WZZBaseView.h */,
+				713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */,
+				713F1F6B20E08FFA00E60C93 /* WZZBaseButton.m */,
 				713F1F7020E08FFA00E60C93 /* WZZBaseButton.h */,
+				713F1F6E20E08FFA00E60C93 /* WZZBaseImageView.h */,
 				713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */,
 				713F1F7220E08FFA00E60C93 /* WZZBaseLabel.h */,
+				713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */,
 			);
 			path = WZZBaseView;
 			sourceTree = "<group>";

@@ -16,5 +16,9 @@
 #import "WZZSingleManager.h"
 #import "WZZUserInfoObject.h"
 #import "HttpHandler.h"
+#import "WZZBaseView.h"
+#import "WZZBaseImageView.h"
+#import "WZZBaseButton.h"
+#import "WZZBaseLabel.h"
 
 #endif /* ImportHeader_h */
