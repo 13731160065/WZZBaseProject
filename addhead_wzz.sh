@@ -1,5 +1,5 @@
 #!/bin/sh
-cmdfile="addhead.sh"
+cmdfile="addhead_wzz.sh"
 addr="$1"
 
 for filename in `ls`
