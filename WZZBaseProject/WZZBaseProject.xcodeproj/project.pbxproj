@@ -29,6 +29,7 @@
 		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
 		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
 		71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
+		71F79E8320E26C4B00E677AA /* UIView+WZZAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F79E8220E26C4B00E677AA /* UIView+WZZAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		71DCFAD020A949E200DF0FAB /* tmpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tmpViewController.xib; sourceTree = "<group>"; };
 		71E269FA20B503830002B24A /* AttributeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeHeader.h; sourceTree = "<group>"; };
 		71ED752A20CAAC90009B5CD5 /* ControlHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlHeader.h; sourceTree = "<group>"; };
+		71F79E8120E26C4B00E677AA /* UIView+WZZAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WZZAnimation.h"; sourceTree = "<group>"; };
+		71F79E8220E26C4B00E677AA /* UIView+WZZAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZZAnimation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */,
 				713F1F7220E08FFA00E60C93 /* WZZBaseLabel.h */,
 				713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */,
+				71F79E8120E26C4B00E677AA /* UIView+WZZAnimation.h */,
+				71F79E8220E26C4B00E677AA /* UIView+WZZAnimation.m */,
 			);
 			path = WZZBaseView;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */,
 				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
+				71F79E8320E26C4B00E677AA /* UIView+WZZAnimation.m in Sources */,
 				713F1F7520E08FFA00E60C93 /* WZZBaseLabel.m in Sources */,
 				713F1F7620E08FFA00E60C93 /* WZZBaseImageView.m in Sources */,
 			);

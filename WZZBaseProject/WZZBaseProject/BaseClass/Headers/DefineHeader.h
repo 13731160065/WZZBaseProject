@@ -34,6 +34,12 @@
 //StateBar高度
 #define DEF_STATEBAR_HEIGHT (DEF_ISIPHONEX ? 44.0f : 20.0f)
 
+//NavigationBar高度
+#define DEF_NAVIGATIONBAR_HEIGHT (44.0f)
+
+//StateBar+NavigationBar高度
+#define DEF_UPBAR_HEIGHT (DEF_ISIPHONEX ? 44.0f : 20.0f)
+
 //tabbar高度
 #define DEF_TABBAR_HEIGHT 48.0f
 
