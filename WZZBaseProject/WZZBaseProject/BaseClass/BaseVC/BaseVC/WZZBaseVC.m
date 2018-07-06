@@ -43,7 +43,7 @@
     
     //处理view适配
     ___realSelfView = self.view;
-    UIView * selfView = [[UIView alloc] initWithFrame:self.view.bounds];
+    UIView * selfView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [selfView setBackgroundColor:[UIColor whiteColor]];
     self.view = selfView;
     [self.view addSubview:___realSelfView];
