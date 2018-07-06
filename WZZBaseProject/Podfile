@@ -15,5 +15,7 @@ pod 'Masonry', '~> 1.1.0' #布局
 # wzz工具
 pod 'WZZHttpTool', '~> 1.0.3' #http请求工具
 pod 'WZZSecret', '~> 1.0.5' #加密处理工具
+pod 'WZZTagView', '~> 1.0.0' #标签排布视图
+pod 'WZZAlertView', '~> 1.0.2' #仿系统弹框
 
 end
