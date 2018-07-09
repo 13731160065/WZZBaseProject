@@ -10,11 +10,10 @@
 
 typedef enum : NSUInteger {
     HttpHandler_Code_Success = 200,//成功
-    HttpHandler_Code_TokenOut = 900,//token失效
-    HttpHandler_Code_NeedPhone = 901,//需要手机
     HttpHandler_Code_500 = 500,//服务器内部错误
-    HttpHandler_Code_400 = 400//请求错误
-} SiNanHttpHandler_Code;
+    HttpHandler_Code_400 = 400,//请求错误
+    HttpHandler_Code_TokenOut = 999999//token失效
+} HttpHandler_Code;
 
 @interface HttpHandler : NSObject
 
