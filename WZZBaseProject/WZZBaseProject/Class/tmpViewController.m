@@ -10,6 +10,7 @@
 
 @interface tmpViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
 
 @end
 
@@ -46,7 +47,11 @@
 
 - (IBAction)test:(id)sender {
 //    self.basevc_navigationBarHidden = !self.basevc_navigationBarHidden;
-    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
+//    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
+    [_topLabel wzz_startLoadingWithStyle:UIViewWZZLoading_Style_WiteBlack];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_topLabel wzz_endLoading];
+    });
 }
 
 @end

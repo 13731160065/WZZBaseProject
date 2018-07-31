@@ -14,6 +14,7 @@
 		713F1F7420E08FFA00E60C93 /* WZZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */; };
 		713F1F7520E08FFA00E60C93 /* WZZBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */; };
 		713F1F7620E08FFA00E60C93 /* WZZBaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */; };
+		717496CE21103AAA00FEFF7D /* UIView+WZZLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */; };
 		719232EC20A81DE500735249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
 		719232FC20A81DE500735249 /* WZZBaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719232FB20A81DE500735249 /* WZZBaseProjectTests.m */; };
 		7192330720A81DE500735249 /* WZZBaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192330620A81DE500735249 /* WZZBaseProjectUITests.m */; };
@@ -64,6 +65,8 @@
 		713F1F7020E08FFA00E60C93 /* WZZBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseButton.h; sourceTree = "<group>"; };
 		713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseImageView.m; sourceTree = "<group>"; };
 		713F1F7220E08FFA00E60C93 /* WZZBaseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseLabel.h; sourceTree = "<group>"; };
+		717496CC21103AAA00FEFF7D /* UIView+WZZLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WZZLoading.h"; sourceTree = "<group>"; };
+		717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZZLoading.m"; sourceTree = "<group>"; };
 		719232DF20A81DE500735249 /* WZZBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZZBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719232EB20A81DE500735249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719232F720A81DE500735249 /* WZZBaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZZBaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +171,8 @@
 				713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */,
 				71F79E8120E26C4B00E677AA /* UIView+WZZAnimation.h */,
 				71F79E8220E26C4B00E677AA /* UIView+WZZAnimation.m */,
+				717496CC21103AAA00FEFF7D /* UIView+WZZLoading.h */,
+				717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */,
 			);
 			path = WZZBaseView;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
+				717496CE21103AAA00FEFF7D /* UIView+WZZLoading.m in Sources */,
 				713F1F7420E08FFA00E60C93 /* WZZBaseView.m in Sources */,
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
 				713F1F7320E08FFA00E60C93 /* WZZBaseButton.m in Sources */,
