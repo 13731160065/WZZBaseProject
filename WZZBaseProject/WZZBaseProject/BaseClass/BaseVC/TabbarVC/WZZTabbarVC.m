@@ -33,7 +33,7 @@
     vc.tabBarItem.title = nil;
     vc.tabBarItem.image = [normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CGFloat offset = (DEF_TABBAR_HEIGHT-selectImage.size.width)/2;
+    CGFloat offset = 6;
     
     vc.tabBarItem.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
     
