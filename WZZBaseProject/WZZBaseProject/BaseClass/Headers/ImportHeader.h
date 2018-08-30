@@ -21,5 +21,6 @@
 #import "WZZBaseButton.h"
 #import "WZZBaseLabel.h"
 #import "UIView+WZZLoading.h"
+#import "WZZLogTool.h"
 
 #endif /* ImportHeader_h */

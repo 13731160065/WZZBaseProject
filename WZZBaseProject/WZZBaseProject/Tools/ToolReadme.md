@@ -15,3 +15,9 @@
 
 **WZZUserInfoObject**
 用户登录信息
+
+**LogTool**
+日志工具
+
+**Categary**
+分类都放在这里边

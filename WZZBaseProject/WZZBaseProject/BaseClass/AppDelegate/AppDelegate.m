@@ -10,6 +10,7 @@
 #import "WZZTabbarVC.h"
 #import "tmpViewController.h"
 #import "WZZSingleManager.h"
+#import "WZZLogTool.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self setup];
+    [self setupLog];
     
     return YES;
 }
@@ -59,6 +61,11 @@
     [WZZSingleManager shareInstance].appDelegate = self;
     [[WZZSingleManager shareInstance] setupTabbar];
     [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Login];
+}
+
+//MARK:初始化log工具
+- (void)setupLog {
+    [WZZLogTool registerShowLog:WZZLogTool_ShowAction_PointView];
 }
 
 #pragma mark - 三方框架

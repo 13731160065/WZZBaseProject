@@ -9,6 +9,9 @@
 #import "tmpViewController.h"
 
 @interface tmpViewController ()
+{
+    NSInteger number;
+}
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
 
@@ -21,6 +24,7 @@
     self = [super init];
     if (self) {
         self.title = @"标题";
+        number = 0;
     }
     return self;
 }
@@ -49,7 +53,11 @@
 //    self.basevc_navigationBarHidden = !self.basevc_navigationBarHidden;
 //    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
     [_topLabel wzz_startLoadingWithStyle:UIViewWZZLoading_Style_WiteBlack];
+    number++;
+    NSLog(@"开始加载%zd", number);
+    NSLog(@"%s", __func__);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"结束加载:%zd", number);
         [_topLabel wzz_endLoading];
     });
 }
