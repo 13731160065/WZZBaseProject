@@ -95,6 +95,7 @@ static WZZSingleManager * singleManager;
         default:
             break;
     }
+    [WZZLogTool registerShowLog:WZZLogTool_ShowAction_PointView];
 }
 
 //变到tabbar

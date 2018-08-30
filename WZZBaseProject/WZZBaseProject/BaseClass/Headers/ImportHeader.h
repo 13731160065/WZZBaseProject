@@ -21,6 +21,9 @@
 #import "WZZBaseButton.h"
 #import "WZZBaseLabel.h"
 #import "UIView+WZZLoading.h"
+
+//日志工具是否启用
+#define WZZLogTool_Is_log_def_open 1
 #import "WZZLogTool.h"
 
 #endif /* ImportHeader_h */

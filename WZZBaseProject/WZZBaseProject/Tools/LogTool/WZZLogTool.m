@@ -23,10 +23,12 @@ static WZZLogTool * wzzLogTool;
 @implementation WZZLogTool
 
 + (instancetype)shareInstance {
+#if WZZLogTool_Is_log_def_open
     if (!wzzLogTool) {
         wzzLogTool = [[WZZLogTool alloc] init];
         wzzLogTool.logStr = [NSMutableString string];
     }
+#endif
     return wzzLogTool;
 }
 
@@ -39,6 +41,16 @@ static WZZLogTool * wzzLogTool;
 }
 
 + (void)registerShowLog:(WZZLogTool_ShowAction)action {
+    [self registerShowLog:action window:[UIApplication sharedApplication].keyWindow];
+}
+
++ (void)registerShowLog:(WZZLogTool_ShowAction)action
+                 window:(UIWindow *)window {
+#if WZZLogTool_Is_log_def_open
+#else
+    return;
+#endif
+    action = WZZLogTool_ShowAction_PointView;
     switch (action) {
         case WZZLogTool_ShowAction_DoubleVoiceUpDoubleVoiceDown:
         {
@@ -47,17 +59,18 @@ static WZZLogTool * wzzLogTool;
             break;
         case WZZLogTool_ShowAction_PointView:
         {
-            [WZZLogTool shareInstance].logPointView = [[UILabel alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height/2.0f, 50, 50)];
-            [WZZLogTool shareInstance].logPointView.text = @"日志";
-            [WZZLogTool shareInstance].logPointView.textColor = [UIColor whiteColor];
-            [WZZLogTool shareInstance].logPointView.textAlignment = NSTextAlignmentCenter;
-            [WZZLogTool shareInstance].logPointView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
-            [WZZLogTool shareInstance].logPointView.userInteractionEnabled = YES;
-            [[UIApplication sharedApplication].keyWindow addSubview:[WZZLogTool shareInstance].logPointView];
-            UIPanGestureRecognizer * panGes = [[UIPanGestureRecognizer alloc] initWithTarget:[WZZLogTool shareInstance] action:@selector(panGes:)];
-            [[WZZLogTool shareInstance].logPointView addGestureRecognizer:panGes];
-            UITapGestureRecognizer * tapGes = [[UITapGestureRecognizer alloc] initWithTarget:[WZZLogTool shareInstance] action:@selector(logTap:)];
-            [[WZZLogTool shareInstance].logPointView addGestureRecognizer:tapGes];
+            if (![WZZLogTool shareInstance].logPointView) {
+                [WZZLogTool shareInstance].logPointView = [[UILabel alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height/2.0f, 50, 50)];
+                [WZZLogTool shareInstance].logPointView.text = @"日志";
+                [WZZLogTool shareInstance].logPointView.textColor = [UIColor whiteColor];
+                [WZZLogTool shareInstance].logPointView.textAlignment = NSTextAlignmentCenter;
+                [WZZLogTool shareInstance].logPointView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
+                [WZZLogTool shareInstance].logPointView.userInteractionEnabled = YES;
+                UIPanGestureRecognizer * panGes = [[UIPanGestureRecognizer alloc] initWithTarget:[WZZLogTool shareInstance] action:@selector(panGes:)];
+                [[WZZLogTool shareInstance].logPointView addGestureRecognizer:panGes];
+                UITapGestureRecognizer * tapGes = [[UITapGestureRecognizer alloc] initWithTarget:[WZZLogTool shareInstance] action:@selector(logTap:)];
+                [[WZZLogTool shareInstance].logPointView addGestureRecognizer:tapGes];
+            }
         }
             break;
             
@@ -65,17 +78,21 @@ static WZZLogTool * wzzLogTool;
             break;
     }
     
-    [WZZLogTool shareInstance].logBackView = [[[NSBundle mainBundle] loadNibNamed:@"WZZLogView" owner:nil options:nil] firstObject];
-    [WZZLogTool shareInstance].logBackView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-200, [UIScreen mainScreen].bounds.size.width, 200);
-    [[UIApplication sharedApplication].keyWindow addSubview:[WZZLogTool shareInstance].logBackView];
-    [WZZLogTool shareInstance].logBackView.hidden = YES;
-    [WZZLogTool shareInstance].logBackView.clearClick = ^{
-        [WZZLogTool shareInstance].logStr = [NSMutableString string];
-    };
-    [WZZLogTool shareInstance].logBackView.closeClick = ^{
-        [WZZLogTool shareInstance].logPointView.hidden = NO;
+    if (![WZZLogTool shareInstance].logBackView) {
+        [WZZLogTool shareInstance].logBackView = [[[NSBundle mainBundle] loadNibNamed:@"WZZLogView" owner:nil options:nil] firstObject];
+        [WZZLogTool shareInstance].logBackView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-200, [UIScreen mainScreen].bounds.size.width, 200);
         [WZZLogTool shareInstance].logBackView.hidden = YES;
-    };
+        [WZZLogTool shareInstance].logBackView.clearClick = ^{
+            [WZZLogTool shareInstance].logStr = [NSMutableString string];
+        };
+        [WZZLogTool shareInstance].logBackView.closeClick = ^{
+            [WZZLogTool shareInstance].logPointView.hidden = NO;
+            [WZZLogTool shareInstance].logBackView.hidden = YES;
+        };
+    }
+    
+    [window addSubview:[WZZLogTool shareInstance].logPointView];
+    [window addSubview:[WZZLogTool shareInstance].logBackView];
 }
 
 //MARK:点击手势
@@ -87,7 +104,7 @@ static WZZLogTool * wzzLogTool;
 
 //MARK:平移手势
 - (void)panGes:(UIPanGestureRecognizer*)pan {
-    CGPoint point = [pan translationInView:[UIApplication sharedApplication].keyWindow];
+    CGPoint point = [pan translationInView:pan.view];
     pan.view.center = CGPointMake(pan.view.center.x+point.x, pan.view.center.y+point.y);
     [pan setTranslation:CGPointMake(0, 0) inView:pan.view];
 }

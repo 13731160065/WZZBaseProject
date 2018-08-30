@@ -6,6 +6,7 @@
 //  Copyright © 2018年 王泽众. All rights reserved.
 //  该工具类需要在pch全局引用以替换所有NSLog函数
 //  使用Is_log_def_open可以控制该工具替换log是否起作用，默认情况下关闭
+//  如果切换了rootviewcontroller，需要重新调用register方法注册
 
 #import <Foundation/Foundation.h>
 
@@ -24,7 +25,7 @@
 #endif
 
 typedef enum : NSUInteger {
-    WZZLogTool_ShowAction_DoubleVoiceUpDoubleVoiceDown,//两下音量加，两下音量减
+    WZZLogTool_ShowAction_DoubleVoiceUpDoubleVoiceDown,//两下音量加，两下音量减，暂时没有
     WZZLogTool_ShowAction_PointView//小圆点
 } WZZLogTool_ShowAction;
 
@@ -34,10 +35,19 @@ typedef enum : NSUInteger {
 
 /**
  注册显示log监听
-
+ 
  @param action 显示log
  */
 + (void)registerShowLog:(WZZLogTool_ShowAction)action;
+
+/**
+ 注册显示log监听
+
+ @param action 显示log
+ @param window 窗体
+ */
++ (void)registerShowLog:(WZZLogTool_ShowAction)action
+                 window:(UIWindow *)window;
 
 /**
  记录log

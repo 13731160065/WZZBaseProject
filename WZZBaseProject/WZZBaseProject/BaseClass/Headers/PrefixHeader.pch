@@ -9,6 +9,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+//控制宏文件
+#import "ControlHeader.h"
+
 //全局引用文件
 #import "ImportHeader.h"
 
@@ -17,8 +20,5 @@
 
 //配置属性文件
 #import "AttributeHeader.h"
-
-//控制宏文件
-#import "ControlHeader.h"
 
 #endif /* PrefixHeader_pch */
