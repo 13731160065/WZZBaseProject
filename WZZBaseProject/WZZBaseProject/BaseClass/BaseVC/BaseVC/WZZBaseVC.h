@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WZZBaseNVCItemView.h"
 
+#define WZZBaseVC_UseNaviView 1//不使用原生navigationbar，以view代替
+
 typedef enum : NSUInteger {
     WZZBaseVC_StateBarTintColor_Auto = 0,//自动
     WZZBaseVC_StateBarTintColor_Black,//黑色
@@ -16,6 +18,11 @@ typedef enum : NSUInteger {
 } WZZBaseVC_StateBarTintColor;
 
 @interface WZZBaseVC : UIViewController
+
+/**
+ xib只在self.view布局，默认开启，关闭后可以在整个包括navigation视图进行布局
+ */
+@property (nonatomic, assign) BOOL xibJustInSelfView;
 
 /**
  状态栏
@@ -62,6 +69,16 @@ typedef enum : NSUInteger {
  右按钮
  */
 @property (nonatomic, strong) WZZBaseNVCItemView * basevc_rightButton;
+
+/**
+ 左按钮数组
+ */
+@property (nonatomic, strong) NSMutableArray <WZZBaseNVCItemView *>* basevc_leftButtonArr;
+
+/**
+ 右按钮数组
+ */
+@property (nonatomic, strong) NSMutableArray <WZZBaseNVCItemView *>* basevc_rightButtonArr;
 
 /**
  标题

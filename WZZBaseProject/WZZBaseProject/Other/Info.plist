@@ -16,18 +16,6 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>访问媒体资料库</string>
-	<key>NSCameraUsageDescription</key>
-	<string>访问相机</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>访问麦克风</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>访问相册</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -61,11 +49,8 @@
 			</array>
 		</dict>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>wechat</string>
@@ -110,6 +95,21 @@
 		<string>wtlogintimV1</string>
 		<string>timapiV1</string>
 	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>访问媒体资料库</string>
+	<key>NSCameraUsageDescription</key>
+	<string>访问相机</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>访问麦克风</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>访问相册</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -29,6 +29,8 @@
 		71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */; };
 		71B4B201213704A100D309BB /* WZZLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B200213704A100D309BB /* WZZLogView.m */; };
 		71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B4B202213704AA00D309BB /* WZZLogView.xib */; };
+		71BEE94A214226B700470421 /* WZZBaseNVCAutoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BEE949214226B700470421 /* WZZBaseNVCAutoItemView.m */; };
+		71BEE94D2142375900470421 /* UIView+WZZSubviewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BEE94C2142375900470421 /* UIView+WZZSubviewAction.m */; };
 		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
 		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
 		71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
@@ -103,6 +105,10 @@
 		71B4B1FF213704A100D309BB /* WZZLogView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZLogView.h; sourceTree = "<group>"; };
 		71B4B200213704A100D309BB /* WZZLogView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZLogView.m; sourceTree = "<group>"; };
 		71B4B202213704AA00D309BB /* WZZLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WZZLogView.xib; sourceTree = "<group>"; };
+		71BEE948214226B700470421 /* WZZBaseNVCAutoItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNVCAutoItemView.h; sourceTree = "<group>"; };
+		71BEE949214226B700470421 /* WZZBaseNVCAutoItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVCAutoItemView.m; sourceTree = "<group>"; };
+		71BEE94B2142375900470421 /* UIView+WZZSubviewAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WZZSubviewAction.h"; sourceTree = "<group>"; };
+		71BEE94C2142375900470421 /* UIView+WZZSubviewAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZZSubviewAction.m"; sourceTree = "<group>"; };
 		71DB203220A82DBD00147BAE /* LibReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LibReadme.md; sourceTree = "<group>"; };
 		71DB203320A82DF900147BAE /* ClassReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ClassReadme.md; sourceTree = "<group>"; };
 		71DB203420A82E2E00147BAE /* HeaderReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HeaderReadme.md; sourceTree = "<group>"; };
@@ -188,6 +194,8 @@
 				71F79E8220E26C4B00E677AA /* UIView+WZZAnimation.m */,
 				717496CC21103AAA00FEFF7D /* UIView+WZZLoading.h */,
 				717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */,
+				71BEE94B2142375900470421 /* UIView+WZZSubviewAction.h */,
+				71BEE94C2142375900470421 /* UIView+WZZSubviewAction.m */,
 			);
 			path = WZZBaseView;
 			sourceTree = "<group>";
@@ -385,6 +393,8 @@
 			children = (
 				71A7E80320BD496D0069920C /* WZZBaseNVCItemView.h */,
 				71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */,
+				71BEE948214226B700470421 /* WZZBaseNVCAutoItemView.h */,
+				71BEE949214226B700470421 /* WZZBaseNVCAutoItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -562,9 +572,11 @@
 				71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */,
 				71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */,
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
+				71BEE94D2142375900470421 /* UIView+WZZSubviewAction.m in Sources */,
 				71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */,
 				71B4B201213704A100D309BB /* WZZLogView.m in Sources */,
 				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
+				71BEE94A214226B700470421 /* WZZBaseNVCAutoItemView.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
 				71DD3122213789EE00BCEB3C /* NSString+WZZRegular.m in Sources */,
 				71F79E8320E26C4B00E677AA /* UIView+WZZAnimation.m in Sources */,

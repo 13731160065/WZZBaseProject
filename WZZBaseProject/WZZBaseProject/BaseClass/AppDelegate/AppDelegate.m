@@ -25,6 +25,7 @@
     
     [self setup];
     [self setupLog];
+    [self setupListenAddSubview];
     
     return YES;
 }
@@ -66,6 +67,11 @@
 //MARK:初始化log工具
 - (void)setupLog {
     [WZZLogTool registerShowLog:WZZLogTool_ShowAction_PointView];
+}
+
+//MARK:注册监听addsubview方法
+- (void)setupListenAddSubview {
+    [UIView wzz_registerAddSubviewAction];
 }
 
 #pragma mark - 三方框架

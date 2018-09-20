@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //隐藏原始navigationbar
     [self.navigationBar setHidden:YES];
     
     [self createUI];
