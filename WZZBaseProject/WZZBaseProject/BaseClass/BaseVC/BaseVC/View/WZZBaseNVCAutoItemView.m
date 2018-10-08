@@ -10,6 +10,10 @@
 
 @implementation WZZBaseNVCAutoItemView
 
++ (instancetype)itemWithItemArr:(NSArray *)itemArr {
+    return [self itemWithItemArr:itemArr clickBlock:nil];
+}
+
 + (instancetype)itemWithItemArr:(NSArray *)itemArr
                      clickBlock:(void (^)(void))clickBlock {
     WZZBaseNVCAutoItemView * view = [[WZZBaseNVCAutoItemView alloc] init];
@@ -58,20 +62,30 @@
                 [NSLayoutConstraint constraintWithItem:aView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:aa.imgHeight].active = YES;
             }
             leftView = aView;
+        } else if ([aView isKindOfClass:[WZZBaseNVCAutoItemView class]])  {
+            WZZBaseNVCAutoItemView * aa = (WZZBaseNVCAutoItemView *)aView;
+            [view addSubview:aa];
+            //上左下
+            [NSLayoutConstraint constraintWithItem:aView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
+            [NSLayoutConstraint constraintWithItem:aView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:leftView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+            [NSLayoutConstraint constraintWithItem:aView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:0].active = YES;
+            leftView = aView;
         }
         aView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     [NSLayoutConstraint constraintWithItem:leftView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
     
-    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [view addSubview:button];
-    [button addTarget:view action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    button.translatesAutoresizingMaskIntoConstraints = NO;
-    //上下左右
-    [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
-    [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
-    [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
-    [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:0].active = YES;
+    if (clickBlock) {
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [view addSubview:button];
+        [button addTarget:view action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        button.translatesAutoresizingMaskIntoConstraints = NO;
+        //上下左右
+        [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
+        [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
+        [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+        [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:0].active = YES;
+    }
     
     return view;
 }

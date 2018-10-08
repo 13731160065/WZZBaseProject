@@ -16,6 +16,14 @@
 /**
  初始化item
 
+ @param itemArr item数组
+ @return 点击事件
+ */
++ (instancetype)itemWithItemArr:(NSArray *)itemArr;
+
+/**
+ 初始化item
+
  @param itemArr item内容数组
  @param clickBlock 点击事件
  @return item

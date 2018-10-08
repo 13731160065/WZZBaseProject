@@ -61,6 +61,11 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) UIView * __realSelfView;
 
 /**
+ 标题
+ */
+@property (nonatomic, strong) WZZBaseNVCItemView * basevc_titleButton;
+
+/**
  左按钮
  */
 @property (nonatomic, strong) WZZBaseNVCItemView * basevc_leftButton;
@@ -71,14 +76,19 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) WZZBaseNVCItemView * basevc_rightButton;
 
 /**
+ 标题按钮数组
+ */
+@property (nonatomic, strong) NSArray <WZZBaseNVCItemView *>* basevc_titleButtonArr;
+
+/**
  左按钮数组
  */
-@property (nonatomic, strong) NSMutableArray <WZZBaseNVCItemView *>* basevc_leftButtonArr;
+@property (nonatomic, strong) NSArray <WZZBaseNVCItemView *>* basevc_leftButtonArr;
 
 /**
  右按钮数组
  */
-@property (nonatomic, strong) NSMutableArray <WZZBaseNVCItemView *>* basevc_rightButtonArr;
+@property (nonatomic, strong) NSArray <WZZBaseNVCItemView *>* basevc_rightButtonArr;
 
 /**
  标题
