@@ -26,6 +26,11 @@
  */
 @property (strong, nonatomic) NSLayoutConstraint * navgation_HeightCon;
 
+/**
+ 状态栏高度
+ */
+@property (strong, nonatomic) NSLayoutConstraint * stateBar_HeightCon;
+
 @end
 
 @implementation WZZBaseVC
@@ -131,9 +136,12 @@
     //视图
     _navgation_HeightCon.constant = _basevc_navigationBarHidden?0:44;
     _realSelfView_BottomCon.constant = _basevc_tabbarPlace?-(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):-DEF_BOTTOM_SAFEAREA_HEIGHT;
-
+    
     //导航栏
     _basevc_navigationBar.hidden = _basevc_navigationBarHidden;
+    
+    //状态栏
+    _stateBar_HeightCon.constant = UIDeviceOrientationIsPortrait([self getOrientation])?DEF_STATEBAR_HEIGHT:0;
 }
 
 //MARK:返回点击
@@ -242,15 +250,16 @@
 #pragma mark - 初始化UI
 //状态栏
 - (void)createStateBar {
-        _basevc_stateBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEF_SCREEN_WIDTH, DEF_STATEBAR_HEIGHT)];
-        [self.view addSubview:_basevc_stateBar];
-        
-        //给statebar布局，上左右高
-        _basevc_stateBar.translatesAutoresizingMaskIntoConstraints = NO;
-        [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
-        [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
-        [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
-        [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:DEF_STATEBAR_HEIGHT].active = YES;
+    _basevc_stateBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEF_SCREEN_WIDTH, DEF_STATEBAR_HEIGHT)];
+    [self.view addSubview:_basevc_stateBar];
+    
+    //给statebar布局，上左右高
+    _basevc_stateBar.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+    self.stateBar_HeightCon = [NSLayoutConstraint constraintWithItem:_basevc_stateBar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:DEF_STATEBAR_HEIGHT];
+    self.stateBar_HeightCon.active = YES;
 }
 
 - (void)createNavigationBar {
@@ -305,7 +314,16 @@
     }
 }
 
+- (BOOL)shouldAutorotate {
+    [self _superReloadUI];
+    return YES;
+}
+
 #pragma mark - 辅助方法
+
+- (UIDeviceOrientation)getOrientation {
+    return [UIDevice currentDevice].orientation;
+}
 
 //判断颜色是不是亮色
 + (BOOL)isLightColor:(UIColor *)color {
