@@ -9,11 +9,8 @@
 #import "WZZBaseVC.h"
 #import "WZZBaseNVCAutoItemView.h"
 
-#define WZZBaseVC_UseConstant 1
-
 @interface WZZBaseVC ()
 
-#if WZZBaseVC_UseConstant
 /**
  顶部约束
  */
@@ -28,7 +25,6 @@
  nav高度约束
  */
 @property (strong, nonatomic) NSLayoutConstraint * navgation_HeightCon;
-#endif
 
 @end
 
@@ -82,7 +78,6 @@
     //横线
     [self createBarLineView];
     
-#if WZZBaseVC_UseConstant
     //左按钮
     WZZBaseNVCAutoItemSpace * b_space = [WZZBaseNVCAutoItemSpace spaceWithWidth:8];
     WZZBaseNVCAutoItemImage * b_img = [WZZBaseNVCAutoItemImage imageWithWidth:30.0f];
@@ -114,24 +109,6 @@
     }];
     self.basevc_rightButtonArr = @[rightBtn];
     
-#else
-    const CGFloat barItemWidth = (DEF_SCREEN_WIDTH-8*4)/4.0f;
-    const CGFloat barItemHeight = 44.0f;
-    //-左按钮
-    __weak WZZBaseVC * weakSelf = self;
-    _basevc_leftButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:@"返回" textColor:nil font:nil leftImage:[UIImage imageNamed:@"base_back"] leftImageWidth:30.0f rightImage:nil rightImageWidth:0 space:0.0f clickBlock:^{
-        [weakSelf basevc_backClick];
-    }];
-    [_basevc_navigationBar addSubview:_basevc_leftButton];
-    //-标题
-    _basevc_titleLabel = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_leftButton.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth*2, barItemHeight) text:self.title?self.title:@"" textColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:17.0f] leftImage:nil rightImage:nil clickBlock:nil];
-    [_basevc_navigationBar addSubview:_basevc_titleLabel];
-    //-右按钮
-    _basevc_rightButton = [[WZZBaseNVCItemView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_basevc_titleLabel.frame)+8, _basevc_navigationBar.frame.size.height/2.0f-barItemHeight/2.0f, barItemWidth, barItemHeight) text:nil textColor:nil font:nil leftImage:nil leftImageWidth:30.0f rightImage:nil rightImageWidth:0.0f space:0.0f clickBlock:nil];
-    [_basevc_navigationBar addSubview:_basevc_rightButton];
-#endif
-    
-#if WZZBaseVC_UseConstant
     //使用constant布局，frame布局将无效
     //以下方法关闭frame到autolayout的转换过渡
     //_basevc_stateBar.translatesAutoresizingMaskIntoConstraints = NO;
@@ -144,23 +121,17 @@
     [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
     _realSelfView_BottomCon = [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:-DEF_BOTTOM_SAFEAREA_HEIGHT];
     _realSelfView_BottomCon.active = YES;
-#endif
     
+    //刷新ui
     [self _superReloadUI];
 }
 
 //MARK:刷新UI
 - (void)_superReloadUI {
     //视图
-#if WZZBaseVC_UseConstant
     _navgation_HeightCon.constant = _basevc_navigationBarHidden?0:44;
     _realSelfView_BottomCon.constant = _basevc_tabbarPlace?-(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):-DEF_BOTTOM_SAFEAREA_HEIGHT;
-#else
-    CGFloat upspace = _basevc_navigationBarHidden?DEF_STATEBAR_HEIGHT:(DEF_STATEBAR_HEIGHT+44);
-    CGFloat bottomspace = _basevc_tabbarPlace?(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):DEF_BOTTOM_SAFEAREA_HEIGHT;
-    [___realSelfView setFrame:CGRectMake(0, upspace, self.view.bounds.size.width, self.view.bounds.size.height-upspace-bottomspace)];
-#endif
-    
+
     //导航栏
     _basevc_navigationBar.hidden = _basevc_navigationBarHidden;
 }
@@ -174,7 +145,7 @@
 
 #pragma mark - 属性
 //MARK:标题
-- (void)setBasevc_titleButtonArr:(NSArray <WZZBaseNVCItemView *> *)basevc_titleButtonArr {
+- (void)setBasevc_titleButtonArr:(NSArray <WZZBaseNVCAutoItemView *> *)basevc_titleButtonArr {
     [_basevc_titleLabel removeFromSuperview];
     _basevc_titleButtonArr = basevc_titleButtonArr;
     if (_basevc_titleButtonArr.count) {
@@ -190,7 +161,7 @@
 }
 
 //MARK:左按钮
-- (void)setBasevc_leftButtonArr:(NSArray <WZZBaseNVCItemView *> *)basevc_leftButtonArr {
+- (void)setBasevc_leftButtonArr:(NSArray <WZZBaseNVCAutoItemView *> *)basevc_leftButtonArr {
     [_basevc_leftButton removeFromSuperview];
     _basevc_leftButtonArr = basevc_leftButtonArr;
     if (basevc_leftButtonArr.count) {
@@ -206,7 +177,7 @@
 }
 
 //MARK:右按钮
-- (void)setBasevc_rightButtonArr:(NSArray <WZZBaseNVCItemView *> *)basevc_rightButtonArr {
+- (void)setBasevc_rightButtonArr:(NSArray <WZZBaseNVCAutoItemView *> *)basevc_rightButtonArr {
     [_basevc_rightButton removeFromSuperview];
     _basevc_rightButtonArr = basevc_rightButtonArr;
     if (basevc_rightButtonArr.count) {
@@ -224,7 +195,22 @@
 //MARK:设置标题
 - (void)setTitle:(NSString *)title {
     [super setTitle:title];
-    [_basevc_titleLabel.titleLabel setText:title];
+    for (UIView * view in self.basevc_titleLabel.autoItemArr) {
+        if ([view isKindOfClass:[WZZBaseNVCAutoItemLabel class]]) {
+            WZZBaseNVCAutoItemLabel * label = (WZZBaseNVCAutoItemLabel *)view;
+            label.text = title;
+            return;
+        } else if ([view isKindOfClass:[WZZBaseNVCAutoItemView class]]) {
+            WZZBaseNVCAutoItemView * v2 = (WZZBaseNVCAutoItemView *)view;
+            for (UIView * view2 in v2.autoItemArr) {
+                if ([view2 isKindOfClass:[WZZBaseNVCAutoItemLabel class]]) {
+                    WZZBaseNVCAutoItemLabel * label = (WZZBaseNVCAutoItemLabel *)view2;
+                    label.text = title;
+                    return;
+                }
+            }
+        }
+    }
 }
 
 //MARK:隐藏导航栏

@@ -8,7 +8,7 @@
 
 #import "WZZBaseNVCItemView.h"
 
-@interface WZZBaseNVCAutoItemView : WZZBaseNVCItemView
+@interface WZZBaseNVCAutoItemView : UIView
 
 @property (nonatomic, strong, readonly) NSArray * autoItemArr;
 @property (nonatomic, strong) void(^itemClickBlock)(void);

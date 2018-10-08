@@ -49,8 +49,10 @@
 }
 
 - (IBAction)test:(id)sender {
+    self.title = [self.title isEqualToString:@"一二三四五六七八九"]?@"标题":@"一二三四五六七八九";
+    
 //    self.basevc_navigationBarHidden = !self.basevc_navigationBarHidden;
-    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
+//    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
 //    [_topLabel wzz_startLoadingWithStyle:UIViewWZZLoading_Style_WiteBlack];
 //    number++;
 //    NSLog(@"开始加载%zd", number);

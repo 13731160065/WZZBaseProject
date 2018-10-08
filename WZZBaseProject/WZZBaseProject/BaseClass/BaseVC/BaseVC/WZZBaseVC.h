@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WZZBaseNVCItemView.h"
+#import "WZZBaseNVCAutoItemView.h"
 
 #define WZZBaseVC_UseNaviView 1//不使用原生navigationbar，以view代替
 
@@ -19,20 +19,7 @@ typedef enum : NSUInteger {
 
 @interface WZZBaseVC : UIViewController
 
-/**
- xib只在self.view布局，默认开启，关闭后可以在整个包括navigation视图进行布局
- */
-@property (nonatomic, assign) BOOL xibJustInSelfView;
-
-/**
- 状态栏
- */
-@property (nonatomic, strong) UIView * basevc_stateBar;
-
-/**
- 导航栏
- */
-@property (nonatomic, strong) UIView * basevc_navigationBar;
+#pragma mark - 操作属性
 
 /**
  导航栏隐藏
@@ -54,6 +41,23 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) WZZBaseVC_StateBarTintColor basevc_stateBarTintColor;
 
+#pragma mark - 视图属性
+
+/**
+ xib只在self.view布局，默认开启，关闭后可以在整个包括navigation视图进行布局
+ */
+@property (nonatomic, assign) BOOL xibJustInSelfView;
+
+/**
+ 状态栏
+ */
+@property (nonatomic, strong) UIView * basevc_stateBar;
+
+/**
+ 导航栏
+ */
+@property (nonatomic, strong) UIView * basevc_navigationBar;
+
 /**
  真实selfview
  ，xib加在这个view上，一般用不到
@@ -63,37 +67,32 @@ typedef enum : NSUInteger {
 /**
  标题
  */
-@property (nonatomic, strong) WZZBaseNVCItemView * basevc_titleButton;
+@property (nonatomic, strong) WZZBaseNVCAutoItemView * basevc_titleLabel;
 
 /**
  左按钮
  */
-@property (nonatomic, strong) WZZBaseNVCItemView * basevc_leftButton;
+@property (nonatomic, strong) WZZBaseNVCAutoItemView * basevc_leftButton;
 
 /**
  右按钮
  */
-@property (nonatomic, strong) WZZBaseNVCItemView * basevc_rightButton;
+@property (nonatomic, strong) WZZBaseNVCAutoItemView * basevc_rightButton;
 
 /**
  标题按钮数组
  */
-@property (nonatomic, strong) NSArray <WZZBaseNVCItemView *>* basevc_titleButtonArr;
+@property (nonatomic, strong) NSArray <WZZBaseNVCAutoItemView *>* basevc_titleButtonArr;
 
 /**
  左按钮数组
  */
-@property (nonatomic, strong) NSArray <WZZBaseNVCItemView *>* basevc_leftButtonArr;
+@property (nonatomic, strong) NSArray <WZZBaseNVCAutoItemView *>* basevc_leftButtonArr;
 
 /**
  右按钮数组
  */
-@property (nonatomic, strong) NSArray <WZZBaseNVCItemView *>* basevc_rightButtonArr;
-
-/**
- 标题
- */
-@property (nonatomic, strong) WZZBaseNVCItemView * basevc_titleLabel;
+@property (nonatomic, strong) NSArray <WZZBaseNVCAutoItemView *>* basevc_rightButtonArr;
 
 /**
  底部线
