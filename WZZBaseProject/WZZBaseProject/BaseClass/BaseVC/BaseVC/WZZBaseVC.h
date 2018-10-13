@@ -27,6 +27,11 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) BOOL basevc_navigationBarHidden;
 
 /**
+ 状态栏隐藏
+ */
+@property (nonatomic, assign) BOOL basevc_stateBarHidden;
+
+/**
  导航栏颜色
  */
 @property (nonatomic, strong) UIColor * basevc_navigationBarColor;

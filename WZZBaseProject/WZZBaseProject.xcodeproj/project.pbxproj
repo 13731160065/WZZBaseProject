@@ -14,6 +14,8 @@
 		713F1F7420E08FFA00E60C93 /* WZZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6C20E08FFA00E60C93 /* WZZBaseView.m */; };
 		713F1F7520E08FFA00E60C93 /* WZZBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F6D20E08FFA00E60C93 /* WZZBaseLabel.m */; };
 		713F1F7620E08FFA00E60C93 /* WZZBaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */; };
+		7165FAA6216CA3B100AFD180 /* SafeAreaDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */; };
+		7165FAA7216CA3B100AFD180 /* SafeAreaDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */; };
 		717496CE21103AAA00FEFF7D /* UIView+WZZLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */; };
 		719232EC20A81DE500735249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
 		719232FC20A81DE500735249 /* WZZBaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719232FB20A81DE500735249 /* WZZBaseProjectTests.m */; };
@@ -73,6 +75,9 @@
 		713F1F7020E08FFA00E60C93 /* WZZBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseButton.h; sourceTree = "<group>"; };
 		713F1F7120E08FFA00E60C93 /* WZZBaseImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseImageView.m; sourceTree = "<group>"; };
 		713F1F7220E08FFA00E60C93 /* WZZBaseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseLabel.h; sourceTree = "<group>"; };
+		7165FAA3216CA3B100AFD180 /* SafeAreaDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeAreaDemoVC.h; sourceTree = "<group>"; };
+		7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeAreaDemoVC.m; sourceTree = "<group>"; };
+		7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafeAreaDemoVC.xib; sourceTree = "<group>"; };
 		717496CC21103AAA00FEFF7D /* UIView+WZZLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WZZLoading.h"; sourceTree = "<group>"; };
 		717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZZLoading.m"; sourceTree = "<group>"; };
 		719232DF20A81DE500735249 /* WZZBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZZBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +305,9 @@
 				71DCFACE20A949E200DF0FAB /* tmpViewController.h */,
 				71DCFACF20A949E200DF0FAB /* tmpViewController.m */,
 				71DCFAD020A949E200DF0FAB /* tmpViewController.xib */,
+				7165FAA3216CA3B100AFD180 /* SafeAreaDemoVC.h */,
+				7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */,
+				7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -532,6 +540,7 @@
 				71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */,
 				71DD311E213784E500BCEB3C /* logMove@2x.png in Resources */,
 				7192331E20A81FDE00735249 /* Info.plist in Resources */,
+				7165FAA7216CA3B100AFD180 /* SafeAreaDemoVC.xib in Resources */,
 				719232EC20A81DE500735249 /* Assets.xcassets in Resources */,
 				71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */,
 			);
@@ -558,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7165FAA6216CA3B100AFD180 /* SafeAreaDemoVC.m in Sources */,
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
 				717496CE21103AAA00FEFF7D /* UIView+WZZLoading.m in Sources */,
 				713F1F7420E08FFA00E60C93 /* WZZBaseView.m in Sources */,
@@ -735,7 +745,7 @@
 					"DEF_DEBUG=1",
 				);
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -752,7 +762,7 @@
 				DEVELOPMENT_TEAM = GMLKLDG682;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff;
 				PRODUCT_NAME = "$(TARGET_NAME)";

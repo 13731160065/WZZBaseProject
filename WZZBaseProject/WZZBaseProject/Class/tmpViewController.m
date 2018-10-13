@@ -7,6 +7,7 @@
 //
 
 #import "tmpViewController.h"
+#import "SafeAreaDemoVC.h"
 
 @interface tmpViewController ()
 {
@@ -49,7 +50,11 @@
 }
 
 - (IBAction)test:(id)sender {
-    self.title = [self.title isEqualToString:@"一二三四五六七八九"]?@"标题":@"一二三四五六七八九";
+    
+    SafeAreaDemoVC * vc = [[SafeAreaDemoVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+//    self.title = [self.title isEqualToString:@"一二三四五六七八九"]?@"标题":@"一二三四五六七八九";
     
 //    self.basevc_navigationBarHidden = !self.basevc_navigationBarHidden;
 //    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];

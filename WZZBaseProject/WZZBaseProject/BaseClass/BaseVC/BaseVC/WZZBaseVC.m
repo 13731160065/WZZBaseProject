@@ -40,6 +40,7 @@
     self = [super init];
     if (self) {
         self.basevc_navigationBarColor = DEF_MAINCOLOR;
+        self.xibJustInSelfView = YES;
     }
     return self;
 }
@@ -62,17 +63,19 @@
     //view颜色
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    /**
-     处理view适配
-     将self.view交给___realSelfView
-     xib加在___realSelfView上，而代码视图加在self.view上
-     **/
-    ___realSelfView = self.view;
-    UIView * selfView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.view = selfView;
-    [selfView setBackgroundColor:[UIColor whiteColor]];
-    [self.view addSubview:___realSelfView];
-    [___realSelfView setBackgroundColor:[UIColor clearColor]];
+    if (self.xibJustInSelfView) {
+        /**
+         处理view适配
+         将self.view交给___realSelfView
+         xib加在___realSelfView上，而代码视图加在self.view上
+         **/
+        ___realSelfView = self.view;
+        UIView * selfView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        self.view = selfView;
+        [selfView setBackgroundColor:[UIColor whiteColor]];
+        [self.view addSubview:___realSelfView];
+        [___realSelfView setBackgroundColor:[UIColor clearColor]];
+    }
     
     //状态栏
     [self createStateBar];
@@ -134,14 +137,20 @@
 //MARK:刷新UI
 - (void)_superReloadUI {
     //视图
-    _navgation_HeightCon.constant = _basevc_navigationBarHidden?0:44;
     _realSelfView_BottomCon.constant = _basevc_tabbarPlace?-(DEF_BOTTOM_SAFEAREA_HEIGHT+DEF_TABBAR_HEIGHT):-DEF_BOTTOM_SAFEAREA_HEIGHT;
     
     //导航栏
+    _navgation_HeightCon.constant = _basevc_navigationBarHidden?0:44;
     _basevc_navigationBar.hidden = _basevc_navigationBarHidden;
     
     //状态栏
-    _stateBar_HeightCon.constant = UIDeviceOrientationIsPortrait([self getOrientation])?DEF_STATEBAR_HEIGHT:0;
+    CGFloat stateBarHeight = DEF_STATEBAR_HEIGHT;
+    _basevc_stateBarHidden = !UIDeviceOrientationIsPortrait([self getOrientation]);//状态栏在横屏状态下隐藏
+    if (_basevc_stateBarHidden) {//当状态栏为隐藏时高度为0
+        stateBarHeight = 0;
+    }
+    _stateBar_HeightCon.constant = stateBarHeight;
+    _basevc_stateBar.hidden = _basevc_stateBarHidden;
 }
 
 //MARK:返回点击
@@ -227,6 +236,12 @@
     [self _superReloadUI];
 }
 
+//MARK:隐藏状态栏
+- (void)setBasevc_stateBarHidden:(BOOL)basevc_stateBarHidden {
+    _basevc_stateBarHidden = basevc_stateBarHidden;
+    [self _superReloadUI];
+}
+
 //MARK:导航栏颜色
 - (void)setBasevc_navigationBarColor:(UIColor *)basevc_navigationBarColor {
     _basevc_navigationBarColor = basevc_navigationBarColor;
@@ -293,6 +308,10 @@
 }
 
 #pragma mark - 系统方法
+//- (BOOL)prefersStatusBarHidden {
+//    return _basevc_stateBarHidden;
+//}
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     switch (_basevc_stateBarTintColor) {
         case WZZBaseVC_StateBarTintColor_Black:
