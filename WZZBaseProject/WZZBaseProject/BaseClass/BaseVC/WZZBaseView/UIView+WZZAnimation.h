@@ -35,10 +35,25 @@
  @param speed 速度
  @param fromPoint 从哪
  @param toPoint 到哪
+ @param complete 结束
  */
 - (void)moveWithSpeed:(double)speed
             fromPoint:(CGPoint)fromPoint
-              toPoint:(CGPoint)toPoint;
+              toPoint:(CGPoint)toPoint
+             complete:(void (^)(void))complete;
+
+/**
+ 移动
+
+ @param time 时间
+ @param fromPoint 从哪
+ @param toPoint 到哪
+ @param complete 结束
+ */
+- (void)moveWithDuration:(NSTimeInterval)time
+               fromPoint:(CGPoint)fromPoint
+                 toPoint:(CGPoint)toPoint
+                complete:(void (^)(void))complete;
 
 
 @end

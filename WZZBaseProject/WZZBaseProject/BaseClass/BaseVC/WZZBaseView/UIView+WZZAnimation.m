@@ -39,4 +39,35 @@
     }];
 }
 
+- (void)moveWithSpeed:(double)speed
+            fromPoint:(CGPoint)fromPoint
+              toPoint:(CGPoint)toPoint
+             complete:(void (^)(void))complete {
+    CGFloat xabs = (fromPoint.x > toPoint.x)?(fromPoint.x-toPoint.x):(toPoint.x-fromPoint.x);
+    CGFloat yabs = (fromPoint.y > toPoint.y)?(fromPoint.y-toPoint.y):(toPoint.y-fromPoint.y);
+    CGFloat s2 = pow(xabs, 2)+pow(yabs, 2);
+    CGFloat s = sqrt(s2);
+    
+    NSTimeInterval time = s/speed;
+    [self moveWithDuration:time fromPoint:fromPoint toPoint:toPoint complete:complete];
+}
+
+- (void)moveWithDuration:(NSTimeInterval)time
+               fromPoint:(CGPoint)fromPoint
+                 toPoint:(CGPoint)toPoint
+                complete:(void (^)(void))complete {
+    CGRect frame = self.frame;
+    frame.origin = fromPoint;
+    self.frame = frame;
+    [UIView animateWithDuration:time animations:^{
+        CGRect frame = self.frame;
+        frame.origin = toPoint;
+        self.frame = frame;
+    } completion:^(BOOL finished) {
+        if (complete) {
+            complete();
+        }
+    }];
+}
+
 @end

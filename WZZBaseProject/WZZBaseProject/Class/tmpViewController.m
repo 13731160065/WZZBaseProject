@@ -8,6 +8,7 @@
 
 #import "tmpViewController.h"
 #import "SafeAreaDemoVC.h"
+#import "UIView+WZZAnimation.h"
 
 @interface tmpViewController ()
 {
@@ -50,9 +51,14 @@
 }
 
 - (IBAction)test:(id)sender {
+//    [_rightLabel dismissLikeLaunchPadDuration:0.3f complete:nil];
     
-    SafeAreaDemoVC * vc = [[SafeAreaDemoVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    [_rightLabel moveWithDuration:0.3f fromPoint:_rightLabel.frame.origin toPoint:CGPointMake(_rightLabel.frame.origin.x-50, _rightLabel.frame.origin.y) complete:nil];
+    
+//    [_rightLabel moveWithSpeed:50/0.3 fromPoint:_rightLabel.frame.origin toPoint:CGPointMake(_rightLabel.frame.origin.x-50, _rightLabel.frame.origin.y) complete:nil];
+    
+//    SafeAreaDemoVC * vc = [[SafeAreaDemoVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 //    self.title = [self.title isEqualToString:@"一二三四五六七八九"]?@"标题":@"一二三四五六七八九";
     
