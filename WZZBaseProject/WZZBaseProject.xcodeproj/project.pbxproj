@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04EA58D721C376F9005AEC5C /* WZZSuperXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA58D621C376F9005AEC5C /* WZZSuperXibView.m */; };
+		04EA58DA21C37721005AEC5C /* WZZTmpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA58D921C37721005AEC5C /* WZZTmpView.m */; };
+		04EA58DC21C3772E005AEC5C /* WZZTmpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA58DB21C3772E005AEC5C /* WZZTmpView.xib */; };
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
@@ -21,7 +24,6 @@
 		719232FC20A81DE500735249 /* WZZBaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719232FB20A81DE500735249 /* WZZBaseProjectTests.m */; };
 		7192330720A81DE500735249 /* WZZBaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192330620A81DE500735249 /* WZZBaseProjectUITests.m */; };
 		7192331D20A81FDE00735249 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192331620A81FDD00735249 /* main.m */; };
-		7192331E20A81FDE00735249 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7192331720A81FDD00735249 /* Info.plist */; };
 		7192332320A8205000735249 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192332220A8205000735249 /* AppDelegate.m */; };
 		7192333420A8236C00735249 /* WZZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333220A8236C00735249 /* WZZBaseVC.m */; };
 		7192333820A8239100735249 /* WZZBaseNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333720A8239100735249 /* WZZBaseNVC.m */; };
@@ -61,6 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04EA58D521C376F9005AEC5C /* WZZSuperXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZSuperXibView.h; sourceTree = "<group>"; };
+		04EA58D621C376F9005AEC5C /* WZZSuperXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZSuperXibView.m; sourceTree = "<group>"; };
+		04EA58D821C37721005AEC5C /* WZZTmpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZTmpView.h; sourceTree = "<group>"; };
+		04EA58D921C37721005AEC5C /* WZZTmpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZTmpView.m; sourceTree = "<group>"; };
+		04EA58DB21C3772E005AEC5C /* WZZTmpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WZZTmpView.xib; sourceTree = "<group>"; };
 		71012D2A20DE12C900B4EE8C /* HttpHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHandler.h; sourceTree = "<group>"; };
 		71012D2B20DE12C900B4EE8C /* HttpHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHandler.m; sourceTree = "<group>"; };
 		71012D2D20DE12F200B4EE8C /* HttpHandler+WZZExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpHandler+WZZExt.h"; sourceTree = "<group>"; };
@@ -201,6 +208,8 @@
 				717496CD21103AAA00FEFF7D /* UIView+WZZLoading.m */,
 				71BEE94B2142375900470421 /* UIView+WZZSubviewAction.h */,
 				71BEE94C2142375900470421 /* UIView+WZZSubviewAction.m */,
+				04EA58D521C376F9005AEC5C /* WZZSuperXibView.h */,
+				04EA58D621C376F9005AEC5C /* WZZSuperXibView.m */,
 			);
 			path = WZZBaseView;
 			sourceTree = "<group>";
@@ -308,6 +317,9 @@
 				7165FAA3216CA3B100AFD180 /* SafeAreaDemoVC.h */,
 				7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */,
 				7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */,
+				04EA58D821C37721005AEC5C /* WZZTmpView.h */,
+				04EA58D921C37721005AEC5C /* WZZTmpView.m */,
+				04EA58DB21C3772E005AEC5C /* WZZTmpView.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -492,12 +504,12 @@
 		719232D720A81DE500735249 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "王泽众";
 				TargetAttributes = {
 					719232DE20A81DE500735249 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					719232F620A81DE500735249 = {
 						CreatedOnToolsVersion = 9.2;
@@ -539,9 +551,9 @@
 				71DD311D213784E500BCEB3C /* logMove@3x.png in Resources */,
 				71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */,
 				71DD311E213784E500BCEB3C /* logMove@2x.png in Resources */,
-				7192331E20A81FDE00735249 /* Info.plist in Resources */,
 				7165FAA7216CA3B100AFD180 /* SafeAreaDemoVC.xib in Resources */,
 				719232EC20A81DE500735249 /* Assets.xcassets in Resources */,
+				04EA58DC21C3772E005AEC5C /* WZZTmpView.xib in Resources */,
 				71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EA58D721C376F9005AEC5C /* WZZSuperXibView.m in Sources */,
 				7165FAA6216CA3B100AFD180 /* SafeAreaDemoVC.m in Sources */,
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
 				717496CE21103AAA00FEFF7D /* UIView+WZZLoading.m in Sources */,
@@ -579,6 +592,7 @@
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
 				7192333420A8236C00735249 /* WZZBaseVC.m in Sources */,
 				71F65AF32136FD5B0017788A /* WZZLogTool.m in Sources */,
+				04EA58DA21C37721005AEC5C /* WZZTmpView.m in Sources */,
 				71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */,
 				71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */,
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
@@ -641,6 +655,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -648,6 +663,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -696,6 +712,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -703,6 +720,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -736,7 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GMLKLDG682;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -747,8 +765,9 @@
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff;
+				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff333;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = wzznormalDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -758,14 +777,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GMLKLDG682;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff;
+				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff333;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
