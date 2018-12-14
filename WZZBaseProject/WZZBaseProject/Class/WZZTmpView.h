@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WZZSuperXibView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WZZTmpView : UIView
+@interface WZZTmpView : WZZSuperXibView
 
 @end
 

@@ -8,14 +8,19 @@
 
 #import "WZZTmpView.h"
 
+@interface WZZTmpView ()
+
+
+@property (weak, nonatomic) IBOutlet UILabel *aLabel;
+@property (assign, nonatomic) NSInteger idxx;
+
+@end
+
 @implementation WZZTmpView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (IBAction)buttonClick:(id)sender {
+    _aLabel.text = @(_idxx++).stringValue;
 }
-*/
+
 
 @end
