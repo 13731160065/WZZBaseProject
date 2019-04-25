@@ -121,14 +121,16 @@
     //以下方法关闭frame到autolayout的转换过渡
     //_basevc_stateBar.translatesAutoresizingMaskIntoConstraints = NO;
     
-    ___realSelfView.translatesAutoresizingMaskIntoConstraints = NO;
-    //给xib所在的___realSelfView初始布局
-    _realSelfView_topCon = [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_basevc_navigationBar attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
-    _realSelfView_topCon.active = YES;
-    [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
-    [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
-    _realSelfView_BottomCon = [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:-DEF_BOTTOM_SAFEAREA_HEIGHT];
-    _realSelfView_BottomCon.active = YES;
+    if (self.xibJustInSelfView) {
+        ___realSelfView.translatesAutoresizingMaskIntoConstraints = NO;
+        //给xib所在的___realSelfView初始布局
+        _realSelfView_topCon = [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_basevc_navigationBar attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+        _realSelfView_topCon.active = YES;
+        [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
+        [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+        _realSelfView_BottomCon = [NSLayoutConstraint constraintWithItem:___realSelfView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:-DEF_BOTTOM_SAFEAREA_HEIGHT];
+        _realSelfView_BottomCon.active = YES;
+    }
     
     //刷新ui
     [self _superReloadUI];
@@ -211,7 +213,6 @@
 
 //MARK:设置标题
 - (void)setTitle:(NSString *)title {
-    [super setTitle:title];
     for (UIView * view in self.basevc_titleLabel.autoItemArr) {
         if ([view isKindOfClass:[WZZBaseNVCAutoItemLabel class]]) {
             WZZBaseNVCAutoItemLabel * label = (WZZBaseNVCAutoItemLabel *)view;
