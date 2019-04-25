@@ -509,7 +509,7 @@
 				TargetAttributes = {
 					719232DE20A81DE500735249 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					719232F620A81DE500735249 = {
 						CreatedOnToolsVersion = 9.2;
@@ -754,7 +754,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GMLKLDG682;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -767,7 +768,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff333;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = wzznormalDev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -777,8 +778,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMLKLDG682;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = WZZBaseProject/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

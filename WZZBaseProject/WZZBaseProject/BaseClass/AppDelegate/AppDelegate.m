@@ -59,9 +59,15 @@
 
 //MARK:初始化
 - (void)setup {
-    [WZZSingleManager shareInstance].appDelegate = self;
-    [[WZZSingleManager shareInstance] setupTabbar];
-    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Login];
+    //window
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [self.window makeKeyAndVisible];
+        [self.window setBackgroundColor:[UIColor whiteColor]];
+    });
+    
+    [[WZZSingleManager shareInstance] changeWindowRoot:WZZSingleManager_ChangeWindowRoot_Tabbar];
 }
 
 //MARK:初始化log工具
