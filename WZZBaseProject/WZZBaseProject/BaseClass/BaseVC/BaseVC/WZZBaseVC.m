@@ -342,7 +342,7 @@
 #pragma mark - 辅助方法
 
 - (UIDeviceOrientation)getOrientation {
-    return [UIDevice currentDevice].orientation;
+    return (UIDeviceOrientation)[[UIApplication sharedApplication] statusBarOrientation];
 }
 
 //判断颜色是不是亮色
