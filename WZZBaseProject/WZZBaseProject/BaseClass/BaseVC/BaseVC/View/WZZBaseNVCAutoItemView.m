@@ -8,6 +8,12 @@
 
 #import "WZZBaseNVCAutoItemView.h"
 
+@interface WZZBaseNVCAutoItemView ()
+
+@property (strong, nonatomic) UIButton * clickButton;
+
+@end
+
 @implementation WZZBaseNVCAutoItemView
 
 + (instancetype)itemWithItemArr:(NSArray *)itemArr {
@@ -76,6 +82,7 @@
     [NSLayoutConstraint constraintWithItem:leftView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    view.clickButton = button;
     [view addSubview:button];
     [button addTarget:view action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
@@ -85,7 +92,22 @@
     [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
     [NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1 constant:0].active = YES;
     
+    if (clickBlock) {
+        button.hidden = NO;
+    } else {
+        button.hidden = YES;
+    }
+    
     return view;
+}
+
+- (void)setItemClickBlock:(void (^)(void))itemClickBlock {
+    _itemClickBlock = itemClickBlock;
+    if (itemClickBlock) {
+        self.clickButton.hidden = NO;
+    } else {
+        self.clickButton.hidden = YES;
+    }
 }
 
 - (void)buttonClick {
