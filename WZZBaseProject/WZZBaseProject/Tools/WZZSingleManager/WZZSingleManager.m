@@ -65,13 +65,6 @@ static WZZSingleManager * singleManager;
     myVC.basevc_navigationBarHidden = NO;
     [tabbarVC addVC:myVC selectImage:[UIImage imageNamed:@"我的_hover"] normalImage:[UIImage imageNamed:@"我的_normal"]];
     
-    //window
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        self.appDelegate.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        [self.appDelegate.window makeKeyAndVisible];
-        [self.appDelegate.window setBackgroundColor:[UIColor whiteColor]];
-    });
     self.appDelegate.window.rootViewController = tabbarVC;
 }
 

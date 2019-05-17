@@ -59,6 +59,7 @@
 
 //MARK:初始化
 - (void)setup {
+    [WZZSingleManager shareInstance].appDelegate = self;
     //window
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
