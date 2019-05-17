@@ -16,7 +16,11 @@ static BOOL WZZPCHExternIsIphoneX;//是不是iphonex
 + (BOOL)isIphoneX {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        WZZPCHExternIsIphoneX = ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO);
+        if (@available(iOS 11.0, *)) {
+            WZZPCHExternIsIphoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;
+        } else {
+            WZZPCHExternIsIphoneX = NO;
+        }
     });
     return WZZPCHExternIsIphoneX;
 }
