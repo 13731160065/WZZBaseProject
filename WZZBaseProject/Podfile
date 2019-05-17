@@ -18,6 +18,6 @@ pod 'WZZAFHttpTool', '~> 1.0.1' #http请求工具，基于AFNetworking
 pod 'WZZSecret', '~> 1.0.5' #加密处理工具
 pod 'WZZTagView', '~> 1.0.0' #标签排布视图
 pod 'WZZAlertView', '~> 1.0.2' #仿系统弹框
-# pod 'WZZViewTool', '~> 1.0.0' #视图工具
+pod 'WZZViewTool', '~> 1.0.0' #视图工具
 
 end
