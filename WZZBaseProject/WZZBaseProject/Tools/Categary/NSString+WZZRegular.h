@@ -11,6 +11,14 @@
 @interface NSString (WZZRegular)
 
 /**
+ 正则匹配判断
+ 
+ @param ruleStr 正则
+ @return 是否匹配
+ */
+- (BOOL)wzz_matchWithRegularStr:(NSString *)ruleStr;
+
+/**
  正则表达式查找字符串
  
  @param ruleStr 正则

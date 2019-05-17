@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04EA58DA21C37721005AEC5C /* WZZTmpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA58D921C37721005AEC5C /* WZZTmpView.m */; };
-		04EA58DC21C3772E005AEC5C /* WZZTmpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA58DB21C3772E005AEC5C /* WZZTmpView.xib */; };
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
@@ -55,9 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04EA58D821C37721005AEC5C /* WZZTmpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZTmpView.h; sourceTree = "<group>"; };
-		04EA58D921C37721005AEC5C /* WZZTmpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZTmpView.m; sourceTree = "<group>"; };
-		04EA58DB21C3772E005AEC5C /* WZZTmpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WZZTmpView.xib; sourceTree = "<group>"; };
 		71012D2A20DE12C900B4EE8C /* HttpHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHandler.h; sourceTree = "<group>"; };
 		71012D2B20DE12C900B4EE8C /* HttpHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHandler.m; sourceTree = "<group>"; };
 		71012D2D20DE12F200B4EE8C /* HttpHandler+WZZExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpHandler+WZZExt.h"; sourceTree = "<group>"; };
@@ -270,9 +265,6 @@
 				7165FAA3216CA3B100AFD180 /* SafeAreaDemoVC.h */,
 				7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */,
 				7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */,
-				04EA58D821C37721005AEC5C /* WZZTmpView.h */,
-				04EA58D921C37721005AEC5C /* WZZTmpView.m */,
-				04EA58DB21C3772E005AEC5C /* WZZTmpView.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -505,7 +497,6 @@
 				71DD311E213784E500BCEB3C /* logMove@2x.png in Resources */,
 				7165FAA7216CA3B100AFD180 /* SafeAreaDemoVC.xib in Resources */,
 				719232EC20A81DE500735249 /* Assets.xcassets in Resources */,
-				04EA58DC21C3772E005AEC5C /* WZZTmpView.xib in Resources */,
 				71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,7 +531,6 @@
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
 				7192333420A8236C00735249 /* WZZBaseVC.m in Sources */,
 				71F65AF32136FD5B0017788A /* WZZLogTool.m in Sources */,
-				04EA58DA21C37721005AEC5C /* WZZTmpView.m in Sources */,
 				71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */,
 				71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */,
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,

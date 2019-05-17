@@ -16,12 +16,6 @@
 #import "WZZSingleManager.h"
 #import "WZZUserInfoObject.h"
 #import "HttpHandler.h"
-#import "WZZBaseView.h"
-#import "WZZBaseImageView.h"
-#import "WZZBaseButton.h"
-#import "WZZBaseLabel.h"
-#import "UIView+WZZLoading.h"
-#import "UIView+WZZSubviewAction.h"
 
 //日志工具是否启用
 //#define WZZLogTool_Is_log_def_open 1

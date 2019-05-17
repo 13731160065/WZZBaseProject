@@ -10,6 +10,12 @@
 
 @implementation NSString (WZZRegular)
 
+- (BOOL)wzz_matchWithRegularStr:(NSString *)ruleStr {
+    NSString *regex = ruleStr;
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [pred evaluateWithObject:self];
+}
+
 - (NSRange)wzz_firstRangeOfRegularStr:(NSString *)ruleStr {
     NSError * err;
     //正则
