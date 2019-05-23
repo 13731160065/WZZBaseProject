@@ -24,7 +24,7 @@
 #define DEF_APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
 //弱引用self
-#define DEF_WeakSelf typeof(self) weakSelf = self
+#define DEF_WeakSelf __weak typeof(self) weakSelf = self
 
 #pragma mark - iPhoneX适配宏
 
