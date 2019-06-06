@@ -107,6 +107,7 @@ static WZZUserInfoObject * wzzUserInfoObject;
     NSString * archiveKey = [[NSString stringWithUTF8String:object_getClassName(self)] stringByAppendingString:@"_archiveKey"];
     NSData * data = [NSKeyedArchiver archivedDataWithRootObject:self];
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:archiveKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 //解归档自己
