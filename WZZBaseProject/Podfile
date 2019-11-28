@@ -9,8 +9,17 @@ pod 'IQKeyboardManager', '~> 6.0.3' #自动管理键盘
 pod 'SVProgressHUD', '~> 2.2.5' #提示框
 pod 'SDCycleScrollView', '~> 1.75' #轮播图
 pod 'MJRefresh', '~> 3.1.15.3' #刷新加载
-pod 'MJExtension', '~> 3.0.13' #json转model
 pod 'Masonry', '~> 1.1.0' #布局
+
+# 知名三方框架
+# pod 'ReactiveObjC', '~> 3.1.1' # RAC
+pod 'MJExtension', '~> 3.0.13' #json转model
+
+# 三方框架
+# pod 'HMSegmentedControl' # segment
+# pod 'JhtMarquee' # 跑马灯
+# pod 'BRPickerView' #选择器
+# pod 'TZImagePickerController' # 图片选择器
 
 # wzz工具
 # pod 'WZZHttpTool', '~> 1.0.3' #http请求工具
