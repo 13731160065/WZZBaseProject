@@ -147,7 +147,10 @@
     
     //状态栏
     CGFloat stateBarHeight = DEF_STATEBAR_HEIGHT;
-    _basevc_stateBarHidden = !UIDeviceOrientationIsPortrait([self getOrientation]);//状态栏在横屏状态下隐藏
+    BOOL shuping = !UIDeviceOrientationIsPortrait([self getOrientation]);//状态栏在横屏状态下隐藏
+    if (shuping) {
+        _basevc_stateBarHidden = NO;
+    }
     if (_basevc_stateBarHidden) {//当状态栏为隐藏时高度为0
         stateBarHeight = 0;
     }
