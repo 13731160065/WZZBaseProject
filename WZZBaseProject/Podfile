@@ -1,19 +1,19 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'WZZBaseProject' do
 
 # 常用框架
 # pod 'AFNetworking', '~> 3.2.1' #网络请求
-pod 'SDWebImage', '~> 4.3.3' #加载网络图片
-pod 'IQKeyboardManager', '~> 6.0.3' #自动管理键盘
-pod 'SVProgressHUD', '~> 2.2.5' #提示框
-pod 'SDCycleScrollView', '~> 1.75' #轮播图
-pod 'MJRefresh', '~> 3.1.15.3' #刷新加载
-pod 'Masonry', '~> 1.1.0' #布局
+pod 'SDWebImage' #加载网络图片
+pod 'IQKeyboardManager' #自动管理键盘
+pod 'SVProgressHUD' #提示框
+# pod 'SDCycleScrollView' #轮播图
+pod 'MJRefresh' #刷新加载
+pod 'Masonry' #布局
 
 # 知名三方框架
 # pod 'ReactiveObjC', '~> 3.1.1' # RAC
-pod 'MJExtension', '~> 3.0.13' #json转model
+# pod 'MJExtension' #json转model
 
 # 三方框架
 # pod 'HMSegmentedControl' # segment
@@ -23,10 +23,10 @@ pod 'MJExtension', '~> 3.0.13' #json转model
 
 # wzz工具
 # pod 'WZZHttpTool', '~> 1.0.3' #http请求工具
-pod 'WZZAFHttpTool', '~> 1.0.1' #http请求工具，基于AFNetworking
-pod 'WZZSecret', '~> 1.0.5' #加密处理工具
-pod 'WZZTagView', '~> 1.0.0' #标签排布视图
-pod 'WZZAlertView', '~> 1.0.2' #仿系统弹框
-pod 'WZZViewTool', '~> 1.0.0' #视图工具
+pod 'WZZAFHttpTool' #http请求工具，基于AFNetworking
+pod 'WZZSecret' #加密处理工具
+pod 'WZZTagView' #标签排布视图
+pod 'WZZAlertView' #仿系统弹框
+pod 'WZZViewTool' #视图工具
 
 end
