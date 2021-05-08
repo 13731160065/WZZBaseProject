@@ -16,8 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.basevc_navigationBarHidden = YES;
-    self.basevc_stateBarHidden = YES;
+    
 }
 
 @end

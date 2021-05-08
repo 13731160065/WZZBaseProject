@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52070529264678FB00A3E3A8 /* WZZBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */; };
+		5207052F26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */; };
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
@@ -22,10 +24,8 @@
 		7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333A20A8251100735249 /* WZZPCHExtern.m */; };
 		7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807720D1311900ABA2F1 /* WZZSingleManager.m */; };
 		7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */; };
-		71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */; };
 		71B4B201213704A100D309BB /* WZZLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B200213704A100D309BB /* WZZLogView.m */; };
 		71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B4B202213704AA00D309BB /* WZZLogView.xib */; };
-		71BEE94A214226B700470421 /* WZZBaseNVCAutoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BEE949214226B700470421 /* WZZBaseNVCAutoItemView.m */; };
 		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
 		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
 		71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
@@ -53,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52070527264678FB00A3E3A8 /* WZZBaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBar.h; sourceTree = "<group>"; };
+		52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBar.m; sourceTree = "<group>"; };
+		5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBarItem.h; sourceTree = "<group>"; };
+		5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBarItem.m; sourceTree = "<group>"; };
 		71012D2A20DE12C900B4EE8C /* HttpHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHandler.h; sourceTree = "<group>"; };
 		71012D2B20DE12C900B4EE8C /* HttpHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHandler.m; sourceTree = "<group>"; };
 		71012D2D20DE12F200B4EE8C /* HttpHandler+WZZExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpHandler+WZZExt.h"; sourceTree = "<group>"; };
@@ -87,13 +91,9 @@
 		7198807720D1311900ABA2F1 /* WZZSingleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZSingleManager.m; sourceTree = "<group>"; };
 		7198807920D1312800ABA2F1 /* WZZUserInfoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZUserInfoObject.h; sourceTree = "<group>"; };
 		7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZUserInfoObject.m; sourceTree = "<group>"; };
-		71A7E80320BD496D0069920C /* WZZBaseNVCItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNVCItemView.h; sourceTree = "<group>"; };
-		71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVCItemView.m; sourceTree = "<group>"; };
 		71B4B1FF213704A100D309BB /* WZZLogView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZLogView.h; sourceTree = "<group>"; };
 		71B4B200213704A100D309BB /* WZZLogView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZLogView.m; sourceTree = "<group>"; };
 		71B4B202213704AA00D309BB /* WZZLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WZZLogView.xib; sourceTree = "<group>"; };
-		71BEE948214226B700470421 /* WZZBaseNVCAutoItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNVCAutoItemView.h; sourceTree = "<group>"; };
-		71BEE949214226B700470421 /* WZZBaseNVCAutoItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNVCAutoItemView.m; sourceTree = "<group>"; };
 		71DB203220A82DBD00147BAE /* LibReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LibReadme.md; sourceTree = "<group>"; };
 		71DB203320A82DF900147BAE /* ClassReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ClassReadme.md; sourceTree = "<group>"; };
 		71DB203420A82E2E00147BAE /* HeaderReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HeaderReadme.md; sourceTree = "<group>"; };
@@ -355,10 +355,10 @@
 		71A7E80220BD49590069920C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				71A7E80320BD496D0069920C /* WZZBaseNVCItemView.h */,
-				71A7E80420BD496D0069920C /* WZZBaseNVCItemView.m */,
-				71BEE948214226B700470421 /* WZZBaseNVCAutoItemView.h */,
-				71BEE949214226B700470421 /* WZZBaseNVCAutoItemView.m */,
+				52070527264678FB00A3E3A8 /* WZZBaseNavigationBar.h */,
+				52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */,
+				5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */,
+				5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,19 +525,19 @@
 				7165FAA6216CA3B100AFD180 /* SafeAreaDemoVC.m in Sources */,
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
+				5207052F26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m in Sources */,
 				7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */,
 				7192333820A8239100735249 /* WZZBaseNVC.m in Sources */,
 				7192331D20A81FDE00735249 /* main.m in Sources */,
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
 				7192333420A8236C00735249 /* WZZBaseVC.m in Sources */,
+				52070529264678FB00A3E3A8 /* WZZBaseNavigationBar.m in Sources */,
 				71F65AF32136FD5B0017788A /* WZZLogTool.m in Sources */,
 				71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */,
 				71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */,
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
-				71A7E80520BD496D0069920C /* WZZBaseNVCItemView.m in Sources */,
 				71B4B201213704A100D309BB /* WZZLogView.m in Sources */,
 				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
-				71BEE94A214226B700470421 /* WZZBaseNVCAutoItemView.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
 				71DD3122213789EE00BCEB3C /* NSString+WZZRegular.m in Sources */,
 			);

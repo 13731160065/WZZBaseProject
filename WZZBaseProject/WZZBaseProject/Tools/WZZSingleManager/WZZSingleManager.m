@@ -43,26 +43,18 @@ static WZZSingleManager * singleManager;
     
     //添加vc
     tmpViewController * homeVC = [[tmpViewController alloc] init];
-    homeVC.basevc_tabbarPlace = YES;
-    homeVC.basevc_navigationBarHidden = NO;
     [tabbarVC addVC:homeVC selectImage:[UIImage imageNamed:@"首页_hover"] normalImage:[UIImage imageNamed:@"首页_normal"]];
     
     //添加vc
     tmpViewController * starLetterVC = [[tmpViewController alloc] init];
-    starLetterVC.basevc_tabbarPlace = YES;
-    starLetterVC.basevc_navigationBarHidden = NO;
     [tabbarVC addVC:starLetterVC selectImage:[UIImage imageNamed:@"星信_hover"] normalImage:[UIImage imageNamed:@"星信_normal"]];
     
     //添加vc
     tmpViewController * ba3 = [[tmpViewController alloc] init];
-    ba3.basevc_tabbarPlace = YES;
-    ba3.basevc_navigationBarHidden = NO;
     [tabbarVC addVC:ba3 selectImage:[UIImage imageNamed:@"星语_hover"] normalImage:[UIImage imageNamed:@"星语_normal"]];
     
     //添加vc
     tmpViewController * myVC = [[tmpViewController alloc] init];
-    myVC.basevc_tabbarPlace = YES;
-    myVC.basevc_navigationBarHidden = NO;
     [tabbarVC addVC:myVC selectImage:[UIImage imageNamed:@"我的_hover"] normalImage:[UIImage imageNamed:@"我的_normal"]];
     
     self.appDelegate.window.rootViewController = tabbarVC;
@@ -125,7 +117,6 @@ static WZZSingleManager * singleManager;
         case WZZSingleManager_ChangeWindowAnimation_Present:
         {
             _loginVC = [[tmpViewController alloc] init];
-            [_loginVC.basevc_leftButton removeFromSuperview];
             WZZBaseNVC * nvc = [[WZZBaseNVC alloc] initWithRootViewController:_loginVC];
             [self.appDelegate.window.rootViewController presentViewController:nvc animated:YES completion:nil];
         }
