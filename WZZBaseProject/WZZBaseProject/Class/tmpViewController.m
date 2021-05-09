@@ -7,7 +7,7 @@
 //
 
 #import "tmpViewController.h"
-#import "SafeAreaDemoVC.h"
+#import "TestVC.h"
 
 @interface tmpViewController ()
 {
@@ -24,8 +24,7 @@
 {
     self = [super init];
     if (self) {
-        self.title = @"标题";
-        number = 0;
+        self.basevc_stateBarTintColor = WZZBaseVC_StateBarTintColor_Black;
     }
     return self;
 }
@@ -33,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = [NSString stringWithFormat:@"标题%zd", self.navigationController.viewControllers.count];
 }
 
 - (IBAction)next:(id)sender {
@@ -42,6 +42,8 @@
 }
 
 - (IBAction)test:(id)sender {
+    TestVC * vc = [[TestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

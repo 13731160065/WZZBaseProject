@@ -12,8 +12,9 @@
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
-		7165FAA6216CA3B100AFD180 /* SafeAreaDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */; };
-		7165FAA7216CA3B100AFD180 /* SafeAreaDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */; };
+		7179F87E2647C3D3007567CF /* NormalNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179F87D2647C3D3007567CF /* NormalNavigationBar.m */; };
+		7179F8882647F091007567CF /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179F8862647F091007567CF /* TestVC.m */; };
+		7179F8892647F091007567CF /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7179F8872647F091007567CF /* TestVC.xib */; };
 		719232EC20A81DE500735249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
 		719232FC20A81DE500735249 /* WZZBaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719232FB20A81DE500735249 /* WZZBaseProjectTests.m */; };
 		7192330720A81DE500735249 /* WZZBaseProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192330620A81DE500735249 /* WZZBaseProjectUITests.m */; };
@@ -63,9 +64,11 @@
 		71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HttpHandler+WZZExt.m"; sourceTree = "<group>"; };
 		71012D3120DE21A100B4EE8C /* WZZShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZShareManager.h; sourceTree = "<group>"; };
 		71012D3220DE21A100B4EE8C /* WZZShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZShareManager.m; sourceTree = "<group>"; };
-		7165FAA3216CA3B100AFD180 /* SafeAreaDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeAreaDemoVC.h; sourceTree = "<group>"; };
-		7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeAreaDemoVC.m; sourceTree = "<group>"; };
-		7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SafeAreaDemoVC.xib; sourceTree = "<group>"; };
+		7179F87C2647C3D3007567CF /* NormalNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalNavigationBar.h; sourceTree = "<group>"; };
+		7179F87D2647C3D3007567CF /* NormalNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalNavigationBar.m; sourceTree = "<group>"; };
+		7179F8852647F091007567CF /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		7179F8862647F091007567CF /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		7179F8872647F091007567CF /* TestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
 		719232DF20A81DE500735249 /* WZZBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZZBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719232EB20A81DE500735249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719232F720A81DE500735249 /* WZZBaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZZBaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,9 +265,9 @@
 				71DCFACE20A949E200DF0FAB /* tmpViewController.h */,
 				71DCFACF20A949E200DF0FAB /* tmpViewController.m */,
 				71DCFAD020A949E200DF0FAB /* tmpViewController.xib */,
-				7165FAA3216CA3B100AFD180 /* SafeAreaDemoVC.h */,
-				7165FAA4216CA3B100AFD180 /* SafeAreaDemoVC.m */,
-				7165FAA5216CA3B100AFD180 /* SafeAreaDemoVC.xib */,
+				7179F8852647F091007567CF /* TestVC.h */,
+				7179F8862647F091007567CF /* TestVC.m */,
+				7179F8872647F091007567CF /* TestVC.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -359,6 +362,8 @@
 				52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */,
 				5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */,
 				5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */,
+				7179F87C2647C3D3007567CF /* NormalNavigationBar.h */,
+				7179F87D2647C3D3007567CF /* NormalNavigationBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,8 +499,8 @@
 			files = (
 				71DD311D213784E500BCEB3C /* logMove@3x.png in Resources */,
 				71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */,
+				7179F8892647F091007567CF /* TestVC.xib in Resources */,
 				71DD311E213784E500BCEB3C /* logMove@2x.png in Resources */,
-				7165FAA7216CA3B100AFD180 /* SafeAreaDemoVC.xib in Resources */,
 				719232EC20A81DE500735249 /* Assets.xcassets in Resources */,
 				71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */,
 			);
@@ -522,7 +527,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7165FAA6216CA3B100AFD180 /* SafeAreaDemoVC.m in Sources */,
+				7179F87E2647C3D3007567CF /* NormalNavigationBar.m in Sources */,
+				7179F8882647F091007567CF /* TestVC.m in Sources */,
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
 				5207052F26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m in Sources */,

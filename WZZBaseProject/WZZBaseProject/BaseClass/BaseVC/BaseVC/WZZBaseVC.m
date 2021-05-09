@@ -9,16 +9,89 @@
 #import "WZZBaseVC.h"
 
 @interface WZZBaseVC ()
+{
+    NSString * _title;
+}
 
 @property (strong, nonatomic) NSString * context;
+@property (strong, nonatomic) UIView * noXibNavigationBackView;
 
 @end
 
 @implementation WZZBaseVC
 
+- (void)setTitle:(NSString *)title {
+    self.titleItem.label.text = title;
+}
+
+- (NSString *)title {
+    if (!_title) {
+        _title = @"";
+    }
+    return _title;
+}
+
+- (UIView *)wzz_navigationBarBackView {
+    if (!_wzz_navigationBarBackView) {
+        return self.noXibNavigationBackView;
+    }
+    return _wzz_navigationBarBackView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //导航栏
+    self.wzz_navigationBar = [[NormalNavigationBar alloc] init];
+    
+    //设置默认导航栏和xib拖拽导航栏
+    if (_wzz_navigationBarBackView) {
+        [self.wzz_navigationBarBackView addSubview:self.wzz_navigationBar];
+        [self makeNavigation];
+    } else {
+        self.noXibNavigationBackView = [[UIView alloc] init];
+        [self.view addSubview:self.noXibNavigationBackView];
+        [self.noXibNavigationBackView addSubview:self.wzz_navigationBar];
+        self.noXibNavigationBackView.translatesAutoresizingMaskIntoConstraints = NO;
+        [NSLayoutConstraint constraintWithItem:self.noXibNavigationBackView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:DEF_STATEBAR_HEIGHT].active = YES;
+        [NSLayoutConstraint constraintWithItem:self.noXibNavigationBackView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:44].active = YES;
+        [NSLayoutConstraint constraintWithItem:self.noXibNavigationBackView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
+        [NSLayoutConstraint constraintWithItem:self.noXibNavigationBackView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+        [self makeNavigation];
+    }
+    
+    [self.wzz_navigationBar addTitleConfig:^(UILabel *label, UIImageView *imageView) {
+        label.font = [UIFont systemFontOfSize:18];
+    }];
+    [self.wzz_navigationBar addLeftConfig:^(UILabel *label, UIImageView *imageView) {
+        label.font = [UIFont systemFontOfSize:15];
+        label.textColor = [UIColor blackColor];
+    }];
+    [self.wzz_navigationBar addRightConfig:^(UILabel *label, UIImageView *imageView) {
+        label.font = [UIFont systemFontOfSize:15];
+        label.textColor = [UIColor blackColor];
+    }];
+    
+    //标题
+    self.titleItem = [self.wzz_navigationBar addItemWithText:self.title place:NormalNavigationBarPlace_Title onClick:nil];
+    
+    //返回按钮
+    DEF_WeakSelf;
+    self.backItem = [self.wzz_navigationBar addItemWithImage:[UIImage imageNamed:@"通用_返回"] imageWidth:@(10) place:NormalNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
+        [weakSelf basevc_backClick];
+    }];
+    
+    //导航栏刷新UI
+    [self.wzz_navigationBar createUI];
+}
+
+/// 创建导航栏约束
+- (void)makeNavigation {
+    self.wzz_navigationBar.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint constraintWithItem:self.wzz_navigationBar attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.wzz_navigationBar.superview attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
+    [NSLayoutConstraint constraintWithItem:self.wzz_navigationBar attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.wzz_navigationBar.superview attribute:NSLayoutAttributeBottom multiplier:1 constant:0].active = YES;
+    [NSLayoutConstraint constraintWithItem:self.wzz_navigationBar attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.wzz_navigationBar.superview attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
+    [NSLayoutConstraint constraintWithItem:self.wzz_navigationBar attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.wzz_navigationBar.superview attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
 }
 
 //MARK:返回点击

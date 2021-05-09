@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WZZBaseNavigationBarItem.h"
 
-@interface WZZBaseNavigationBar : UIView
+typedef void(^WZZBaseNavigationBarConfigBlock)(UILabel * label, UIImageView * imageView);
 
-@property (strong, nonatomic) WZZBaseNavigationBarItem * titleItem;
-@property (strong, nonatomic) UIView * lineView;
+@interface WZZBaseNavigationBar : UIView
 
 /// 标题控件间隔
 @property (strong, nonatomic) NSNumber * titleSpace;
@@ -32,30 +31,19 @@
 /// 右边数据源
 @property (strong, nonatomic) NSMutableArray <WZZBaseNavigationBarItem *>* rightArr;
 
-/// 创建左边按钮
-/// @param text 文字
-/// @param onClick 点击事件
-- (void)addItemWithText:(NSString *)text
-                onClick:(void(^)(WZZBaseNavigationBarItem * obj))onClick;
+/// 标题item样式配置
+@property (strong, nonatomic) NSMutableArray <WZZBaseNavigationBarConfigBlock>* titleConfigs;
+/// 左边item样式配置
+@property (strong, nonatomic) NSMutableArray <WZZBaseNavigationBarConfigBlock>* leftConfigs;
+/// 右边item样式配置
+@property (strong, nonatomic) NSMutableArray <WZZBaseNavigationBarConfigBlock>* rightConfigs;
 
-/// 创建左边按钮
-/// @param image 图片
-/// @param imageWidth 图片宽度
-/// @param onClick 点击事件
-- (void)createUIWithImage:(UIImage *)image
-               imageWidth:(NSNumber *)imageWidth
-                  onClick:(void(^)(WZZBaseNavigationBarItem * obj))onClick;
-
-/// 创建左边按钮
-/// @param text 文字
-/// @param image 图片
-/// @param imageWidth 图片宽度
-/// @param onClick 点击事件
-- (void)createUIWithText:(NSString *)text
-                   image:(UIImage *)image
-              imageWidth:(NSNumber *)imageWidth
-                    sort:(WZZBaseNavigationBarItemSort)sort
-                 onClick:(void(^)(WZZBaseNavigationBarItem * obj))onClick;
+/// 标题item样式配置
+- (void)addTitleConfig:(WZZBaseNavigationBarConfigBlock)config;
+/// 左边item样式配置
+- (void)addLeftConfig:(WZZBaseNavigationBarConfigBlock)config;
+/// 右边item样式配置
+- (void)addRightConfig:(WZZBaseNavigationBarConfigBlock)config;
 
 /// 创建UI
 - (void)createUI;

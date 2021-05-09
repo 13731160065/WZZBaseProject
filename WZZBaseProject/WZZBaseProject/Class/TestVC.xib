@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wzz_navigationBarBackView" destination="lvt-GY-abO" id="LMd-5c-dgX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="服务_渐变背景" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-X4-hyR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="288"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvt-GY-abO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Mpt-bj-IOa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4fd-X4-hyR" firstAttribute="bottom" secondItem="lvt-GY-abO" secondAttribute="bottom" constant="200" id="IgW-fO-6fd"/>
+                <constraint firstItem="lvt-GY-abO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="KE2-wW-6Rv"/>
+                <constraint firstItem="lvt-GY-abO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="c3F-by-gA0"/>
+                <constraint firstItem="4fd-X4-hyR" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="cgc-rP-5u9"/>
+                <constraint firstItem="4fd-X4-hyR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lGb-hb-ckk"/>
+                <constraint firstItem="4fd-X4-hyR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="mCs-O5-kLb"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="lvt-GY-abO" secondAttribute="trailing" id="zxJ-xH-5ZH"/>
+            </constraints>
+            <point key="canvasLocation" x="-23.188405797101453" y="37.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="服务_渐变背景" width="562.5" height="474.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

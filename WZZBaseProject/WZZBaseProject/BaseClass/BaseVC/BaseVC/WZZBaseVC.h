@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NormalNavigationBar.h"
+#import "WZZBaseNavigationBarItem.h"
 
 typedef enum : NSUInteger {
     WZZBaseVC_StateBarTintColor_Auto = 0,//自动
@@ -17,6 +19,18 @@ typedef enum : NSUInteger {
 @interface WZZBaseVC : UIViewController
 
 #pragma mark - 操作属性
+
+/// 导航栏背景
+@property (nonatomic, weak) IBOutlet UIView * wzz_navigationBarBackView;
+
+/// 导航栏
+@property (nonatomic, strong) NormalNavigationBar * wzz_navigationBar;
+
+/// 标题item
+@property (nonatomic, strong) WZZBaseNavigationBarItem * titleItem;
+
+/// 返回item
+@property (nonatomic, strong) WZZBaseNavigationBarItem * backItem;
 
 /**
  statebar前景色(文字颜色)
