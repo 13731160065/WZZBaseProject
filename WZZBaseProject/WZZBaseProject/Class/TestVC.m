@@ -21,13 +21,13 @@
     self.wzz_navigationBar.leftSpace = @(10);
     self.wzz_navigationBar.rightSpace = @(10);
     self.wzz_navigationBar.titleSpace = @(10);
-    [self.wzz_navigationBar addItemWithText:@"测试" image:[UIImage imageNamed:@"tmpImage"] imageWidth:@(20) sort:WZZBaseNavigationBarItemSort_Image_Label place:NormalNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
+    [self.wzz_navigationBar addItemWithText:@"测试" image:[UIImage imageNamed:@"tmpImage"] imageWidth:@(20) sort:WZZBaseNavigationBarItemSort_Image_Label place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
         NSLog(@"测试点击");
     }];
-    [self.wzz_navigationBar addItemWithText:@"筛选" place:NormalNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
+    [self.wzz_navigationBar addItemWithText:@"筛选" place:WZZBaseNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
         NSLog(@"筛选点击");
     }];
-    [self.wzz_navigationBar addItemWithText:@"排序" place:NormalNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
+    [self.wzz_navigationBar addItemWithText:@"排序" place:WZZBaseNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
         NSLog(@"排序点击");
     }];
     [self.wzz_navigationBar addTitleConfig:^(UILabel *label, UIImageView *imageView) {

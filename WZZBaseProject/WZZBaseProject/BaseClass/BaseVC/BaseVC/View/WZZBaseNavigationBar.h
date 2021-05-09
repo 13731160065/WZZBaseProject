@@ -11,6 +11,12 @@
 
 typedef void(^WZZBaseNavigationBarConfigBlock)(UILabel * label, UIImageView * imageView);
 
+typedef enum : NSUInteger {
+    WZZBaseNavigationBarPlace_Right,
+    WZZBaseNavigationBarPlace_Left,
+    WZZBaseNavigationBarPlace_Title,
+} WZZBaseNavigationBarPlace;
+
 @interface WZZBaseNavigationBar : UIView
 
 /// 标题控件间隔
@@ -47,6 +53,37 @@ typedef void(^WZZBaseNavigationBarConfigBlock)(UILabel * label, UIImageView * im
 
 /// 创建UI
 - (void)createUI;
+
+/// 添加按钮
+/// @param text 文字
+/// @param onClick 点击事件
+/// @return 创建的item，用来修改属性
+- (WZZBaseNavigationBarItem *)addItemWithText:(NSString *)text
+                  place:(WZZBaseNavigationBarPlace)place
+                onClick:(void(^)(WZZBaseNavigationBarItem * obj))onClick;
+
+/// 添加按钮
+/// @param image 图片
+/// @param imageWidth 图片宽度
+/// @param onClick 点击事件
+/// @return 创建的item，用来修改属性
+- (WZZBaseNavigationBarItem *)addItemWithImage:(UIImage *)image
+              imageWidth:(NSNumber *)imageWidth
+                   place:(WZZBaseNavigationBarPlace)place
+                 onClick:(void(^)(WZZBaseNavigationBarItem * obj))onClick;
+
+/// 添加按钮
+/// @param text 文字
+/// @param image 图片
+/// @param imageWidth 图片宽度
+/// @param onClick 点击事件
+/// @return 创建的item，用来修改属性
+- (WZZBaseNavigationBarItem *)addItemWithText:(NSString *)text
+                  image:(UIImage *)image
+             imageWidth:(NSNumber *)imageWidth
+                   sort:(WZZBaseNavigationBarItemSort)sort
+                  place:(WZZBaseNavigationBarPlace)place
+                onClick:(void(^)(WZZBaseNavigationBarItem * obj))onClick;
 
 @end
 

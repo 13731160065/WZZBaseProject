@@ -73,11 +73,11 @@
     }];
     
     //标题
-    self.titleItem = [self.wzz_navigationBar addItemWithText:self.title place:NormalNavigationBarPlace_Title onClick:nil];
+    self.titleItem = [self.wzz_navigationBar addItemWithText:self.title place:WZZBaseNavigationBarPlace_Title onClick:nil];
     
     //返回按钮
     DEF_WeakSelf;
-    self.backItem = [self.wzz_navigationBar addItemWithImage:[UIImage imageNamed:@"通用_返回"] imageWidth:@(10) place:NormalNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
+    self.backItem = [self.wzz_navigationBar addItemWithImage:[UIImage imageNamed:@"通用_返回"] imageWidth:@(10) place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
         [weakSelf basevc_backClick];
     }];
     
