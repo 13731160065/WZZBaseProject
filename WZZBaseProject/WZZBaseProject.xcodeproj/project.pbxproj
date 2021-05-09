@@ -12,7 +12,6 @@
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
-		7179F87E2647C3D3007567CF /* NormalNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179F87D2647C3D3007567CF /* NormalNavigationBar.m */; };
 		7179F8882647F091007567CF /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179F8862647F091007567CF /* TestVC.m */; };
 		7179F8892647F091007567CF /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7179F8872647F091007567CF /* TestVC.xib */; };
 		719232EC20A81DE500735249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
@@ -64,8 +63,6 @@
 		71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HttpHandler+WZZExt.m"; sourceTree = "<group>"; };
 		71012D3120DE21A100B4EE8C /* WZZShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZShareManager.h; sourceTree = "<group>"; };
 		71012D3220DE21A100B4EE8C /* WZZShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZShareManager.m; sourceTree = "<group>"; };
-		7179F87C2647C3D3007567CF /* NormalNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalNavigationBar.h; sourceTree = "<group>"; };
-		7179F87D2647C3D3007567CF /* NormalNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalNavigationBar.m; sourceTree = "<group>"; };
 		7179F8852647F091007567CF /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		7179F8862647F091007567CF /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		7179F8872647F091007567CF /* TestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
@@ -362,8 +359,6 @@
 				52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */,
 				5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */,
 				5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */,
-				7179F87C2647C3D3007567CF /* NormalNavigationBar.h */,
-				7179F87D2647C3D3007567CF /* NormalNavigationBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,7 +522,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7179F87E2647C3D3007567CF /* NormalNavigationBar.m in Sources */,
 				7179F8882647F091007567CF /* TestVC.m in Sources */,
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,

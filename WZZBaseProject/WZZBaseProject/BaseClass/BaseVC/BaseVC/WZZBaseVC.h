@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NormalNavigationBar.h"
+#import "WZZBaseNavigationBar.h"
 #import "WZZBaseNavigationBarItem.h"
 
 typedef enum : NSUInteger {
@@ -24,7 +24,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, weak) IBOutlet UIView * wzz_navigationBarBackView;
 
 /// 导航栏
-@property (nonatomic, strong) NormalNavigationBar * wzz_navigationBar;
+@property (nonatomic, strong) WZZBaseNavigationBar * wzz_navigationBar;
 
 /// 标题item
 @property (nonatomic, strong) WZZBaseNavigationBarItem * titleItem;

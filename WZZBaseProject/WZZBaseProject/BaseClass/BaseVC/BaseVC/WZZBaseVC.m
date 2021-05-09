@@ -42,7 +42,7 @@
     [super viewDidLoad];
     
     //导航栏
-    self.wzz_navigationBar = [[NormalNavigationBar alloc] init];
+    self.wzz_navigationBar = [[WZZBaseNavigationBar alloc] init];
     
     //设置默认导航栏和xib拖拽导航栏
     if (_wzz_navigationBarBackView) {
