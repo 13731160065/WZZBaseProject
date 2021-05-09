@@ -25,7 +25,6 @@
 #endif
 
 typedef enum : NSUInteger {
-    WZZLogTool_ShowAction_DoubleVoiceUpDoubleVoiceDown,//两下音量加，两下音量减，暂时没有
     WZZLogTool_ShowAction_PointView//小圆点
 } WZZLogTool_ShowAction;
 

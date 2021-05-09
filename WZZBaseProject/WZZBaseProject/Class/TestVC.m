@@ -7,6 +7,7 @@
 //
 
 #import "TestVC.h"
+#import "WebTestVC.h"
 
 @interface TestVC ()
 
@@ -18,14 +19,17 @@
     [super viewDidLoad];
     self.title = @"导航栏透明测试";
     
+    DEF_WeakSelf;
     [self.wzz_navigationBar addItemWithText:@"测试" image:[UIImage imageNamed:@"tmpImage"] imageWidth:@(20) sort:WZZBaseNavigationBarItemSort_Image_Label place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
         NSLog(@"测试点击");
     }];
-    [self.wzz_navigationBar addItemWithText:@"筛选" place:WZZBaseNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
-        NSLog(@"筛选点击");
+    [self.wzz_navigationBar addItemWithText:@"修复web" place:WZZBaseNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
+        NSLog(@"修复网页问题");
+        [WZZSingleManager shareInstance].webTestStr = @"WebTestVC";
     }];
-    [self.wzz_navigationBar addItemWithText:@"排序" place:WZZBaseNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
-        NSLog(@"排序点击");
+    [self.wzz_navigationBar addItemWithText:@"查看web" place:WZZBaseNavigationBarPlace_Right onClick:^(WZZBaseNavigationBarItem *obj) {
+        WebTestVC * vc = [[WebTestVC alloc] init];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
     [self.wzz_navigationBar addTitleConfig:^(UILabel *label, UIImageView *imageView) {
         label.textColor = [UIColor whiteColor];

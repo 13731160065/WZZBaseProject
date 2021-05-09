@@ -12,6 +12,12 @@
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
+		712A0DC0264825CE006C1801 /* WebTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0DBE264825CE006C1801 /* WebTestVC.m */; };
+		712A0DC1264825CE006C1801 /* WebTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712A0DBF264825CE006C1801 /* WebTestVC.xib */; };
+		712A0DCB26482826006C1801 /* WZZWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0DC726482826006C1801 /* WZZWebView.m */; };
+		712A0DCC26482826006C1801 /* webtest.html in Resources */ = {isa = PBXBuildFile; fileRef = 712A0DC826482826006C1801 /* webtest.html */; };
+		712A0DCD26482826006C1801 /* wzz_webview.js in Resources */ = {isa = PBXBuildFile; fileRef = 712A0DC926482826006C1801 /* wzz_webview.js */; };
+		712A0DCE26482826006C1801 /* WZZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0DCA26482826006C1801 /* WZZWebViewController.m */; };
 		7179F8882647F091007567CF /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179F8862647F091007567CF /* TestVC.m */; };
 		7179F8892647F091007567CF /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7179F8872647F091007567CF /* TestVC.xib */; };
 		719232EC20A81DE500735249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
@@ -63,6 +69,15 @@
 		71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HttpHandler+WZZExt.m"; sourceTree = "<group>"; };
 		71012D3120DE21A100B4EE8C /* WZZShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZShareManager.h; sourceTree = "<group>"; };
 		71012D3220DE21A100B4EE8C /* WZZShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZShareManager.m; sourceTree = "<group>"; };
+		712A0DBD264825CE006C1801 /* WebTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebTestVC.h; sourceTree = "<group>"; };
+		712A0DBE264825CE006C1801 /* WebTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTestVC.m; sourceTree = "<group>"; };
+		712A0DBF264825CE006C1801 /* WebTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebTestVC.xib; sourceTree = "<group>"; };
+		712A0DC526482826006C1801 /* WZZWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZWebViewController.h; sourceTree = "<group>"; };
+		712A0DC626482826006C1801 /* WZZWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZWebView.h; sourceTree = "<group>"; };
+		712A0DC726482826006C1801 /* WZZWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZWebView.m; sourceTree = "<group>"; };
+		712A0DC826482826006C1801 /* webtest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webtest.html; sourceTree = "<group>"; };
+		712A0DC926482826006C1801 /* wzz_webview.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wzz_webview.js; sourceTree = "<group>"; };
+		712A0DCA26482826006C1801 /* WZZWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZWebViewController.m; sourceTree = "<group>"; };
 		7179F8852647F091007567CF /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		7179F8862647F091007567CF /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		7179F8872647F091007567CF /* TestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
@@ -162,6 +177,19 @@
 			path = ShareTool;
 			sourceTree = "<group>";
 		};
+		712A0DBC26482500006C1801 /* WebTool */ = {
+			isa = PBXGroup;
+			children = (
+				712A0DC826482826006C1801 /* webtest.html */,
+				712A0DC926482826006C1801 /* wzz_webview.js */,
+				712A0DC626482826006C1801 /* WZZWebView.h */,
+				712A0DC726482826006C1801 /* WZZWebView.m */,
+				712A0DC526482826006C1801 /* WZZWebViewController.h */,
+				712A0DCA26482826006C1801 /* WZZWebViewController.m */,
+			);
+			path = WebTool;
+			sourceTree = "<group>";
+		};
 		719232D620A81DE500735249 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				71DB203C20A8302300147BAE /* ToolReadme.md */,
+				712A0DBC26482500006C1801 /* WebTool */,
 				71DD311F2137899D00BCEB3C /* Categary */,
 				71F65AF02136FD370017788A /* LogTool */,
 				71012D3020DE21A100B4EE8C /* ShareTool */,
@@ -265,6 +294,9 @@
 				7179F8852647F091007567CF /* TestVC.h */,
 				7179F8862647F091007567CF /* TestVC.m */,
 				7179F8872647F091007567CF /* TestVC.xib */,
+				712A0DBD264825CE006C1801 /* WebTestVC.h */,
+				712A0DBE264825CE006C1801 /* WebTestVC.m */,
+				712A0DBF264825CE006C1801 /* WebTestVC.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -495,7 +527,10 @@
 				71DD311D213784E500BCEB3C /* logMove@3x.png in Resources */,
 				71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */,
 				7179F8892647F091007567CF /* TestVC.xib in Resources */,
+				712A0DCD26482826006C1801 /* wzz_webview.js in Resources */,
 				71DD311E213784E500BCEB3C /* logMove@2x.png in Resources */,
+				712A0DC1264825CE006C1801 /* WebTestVC.xib in Resources */,
+				712A0DCC26482826006C1801 /* webtest.html in Resources */,
 				719232EC20A81DE500735249 /* Assets.xcassets in Resources */,
 				71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */,
 			);
@@ -538,8 +573,11 @@
 				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
 				71B4B201213704A100D309BB /* WZZLogView.m in Sources */,
 				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
+				712A0DCE26482826006C1801 /* WZZWebViewController.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
 				71DD3122213789EE00BCEB3C /* NSString+WZZRegular.m in Sources */,
+				712A0DC0264825CE006C1801 /* WebTestVC.m in Sources */,
+				712A0DCB26482826006C1801 /* WZZWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

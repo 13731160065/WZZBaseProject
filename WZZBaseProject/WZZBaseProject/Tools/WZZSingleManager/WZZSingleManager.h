@@ -18,6 +18,9 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, weak) AppDelegate * appDelegate;
 
+/// 测试web用，正式使用可删除
+@property (nonatomic, strong) NSString * webTestStr;
+
 /**
  单例
  

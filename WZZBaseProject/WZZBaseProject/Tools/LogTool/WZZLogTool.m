@@ -50,13 +50,7 @@ static WZZLogTool * wzzLogTool;
 #else
     return;
 #endif
-    action = WZZLogTool_ShowAction_PointView;
     switch (action) {
-        case WZZLogTool_ShowAction_DoubleVoiceUpDoubleVoiceDown:
-        {
-            
-        }
-            break;
         case WZZLogTool_ShowAction_PointView:
         {
             if (![WZZLogTool shareInstance].logPointView) {

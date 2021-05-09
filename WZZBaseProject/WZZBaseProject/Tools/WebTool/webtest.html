@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <style>
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none !important;
+                margin: 0;
+            }
+            input:focus{outline:none;}
+        </style>
+        <script src="./wzz_webview.js"></script>
+        <script>
+            function otherClick() {
+
+            }
+
+            function wzzvc_callBackFunc(params) {
+                if (params['wzz_funcName'] == 'wzzvc_getParams') {
+                    document.getElementById('params').innerHTML = '传入参数：'+JSON.stringify(params);
+                }
+                wzz_log(JSON.stringify(params))
+            }
+        </script>
+    </head>
+    <body>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;margin-top: 44px;">
+            👷：改页面施工中，请稍后再来吧～
+        </div>
+        <div id="params">
+        </div>
+        <div onclick="otherClick()">
+
+        </div>
+    </body>
+    <script>
+        wzzvc_getParams()
+    </script>
+</html>
+
+
