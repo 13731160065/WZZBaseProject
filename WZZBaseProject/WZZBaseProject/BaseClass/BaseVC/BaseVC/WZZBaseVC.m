@@ -81,6 +81,11 @@
         [weakSelf basevc_backClick];
     }];
     
+    //设置间距
+    self.wzz_navigationBar.leftSpace = @(10);
+    self.wzz_navigationBar.rightSpace = @(10);
+    self.wzz_navigationBar.titleSpace = @(10);
+    
     //导航栏刷新UI
     [self.wzz_navigationBar createUI];
 }

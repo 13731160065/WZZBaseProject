@@ -18,9 +18,6 @@
     [super viewDidLoad];
     self.title = @"导航栏透明测试";
     
-    self.wzz_navigationBar.leftSpace = @(10);
-    self.wzz_navigationBar.rightSpace = @(10);
-    self.wzz_navigationBar.titleSpace = @(10);
     [self.wzz_navigationBar addItemWithText:@"测试" image:[UIImage imageNamed:@"tmpImage"] imageWidth:@(20) sort:WZZBaseNavigationBarItemSort_Image_Label place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
         NSLog(@"测试点击");
     }];
