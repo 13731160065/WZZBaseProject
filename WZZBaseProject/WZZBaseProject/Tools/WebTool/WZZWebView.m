@@ -174,7 +174,7 @@ static NSUInteger WZZWebView_AutoId = 0;
     //原生返回
     if ([message.name isEqualToString:@"wzz_backClick"]) {
         UIViewController * vc = [self getCurrentVC:self];
-        if (vc) {
+        if (!vc) {
             vc = self.superVC;
         }
         if (vc.navigationController) {
@@ -295,6 +295,7 @@ static NSUInteger WZZWebView_AutoId = 0;
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
 //    [self.webView evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout='none';" completionHandler:nil];
 //    [self.webView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none';"completionHandler:nil];
+    [self callJSFunc:@"wzzvc_callBackFunc" async:NO params:@{@"wzz_funcName":@"wzz_loadFinish"} response:nil];
 }
 
 - (void)webView:(WKWebView *)webView

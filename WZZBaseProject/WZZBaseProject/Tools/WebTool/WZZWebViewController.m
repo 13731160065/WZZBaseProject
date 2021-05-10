@@ -44,6 +44,10 @@
     [super viewDidLoad];
     self.webView = [[WZZWebView alloc] init];
     [self.view addSubview:self.webView];
+    if (self.file) {
+        NSString * filePath = [[NSBundle mainBundle] pathForResource:self.file ofType:@""];
+        self.url = filePath;
+    }
     if (self.url) {
         NSURL * loadUrl = [NSURL URLWithString:@""];
         if ([self.url hasPrefix:@"http"]) {
@@ -96,8 +100,9 @@
         }
     }];
     [self.webView registerJSFunc:@"wzzvc_getParams" response:^(NSString *funcName, NSDictionary *respDic) {
-        NSMutableDictionary * mdic = [NSMutableDictionary dictionaryWithDictionary:respDic];
-        [mdic addEntriesFromDictionary:self.paramDic];
+        NSMutableDictionary * mdic = [NSMutableDictionary dictionaryWithDictionary:self.paramDic];
+        [mdic addEntriesFromDictionary:respDic];
+        mdic[@"wzzvc_safeAreaTop"] = @(DEF_STATEBAR_HEIGHT).stringValue;
         [weakSelf callWeb:mdic];
     }];
     [self.webView registerJSFunc:@"wzzvc_callBack" response:^(NSString *funcName, NSDictionary *respDic) {
@@ -156,6 +161,7 @@
     
     vc.url = dic[@"wzz_url"];
     vc.html = dic[@"wzz_html"];
+    vc.file = dic[@"wzz_file"];
     vc.paramDic = dic;
     vc.callBack = ^(WZZWebViewController * lastVC, NSDictionary *paramDic) {
         [lastVC.webView callJSFunc:@"wzzvc_callBackFunc" async:NO params:paramDic response:nil];

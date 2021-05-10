@@ -33,7 +33,7 @@
     if ([testStr isEqualToString:NSStringFromClass([viewController class])]) {
         WZZWebViewController * vc = [[WZZWebViewController alloc] init];
         NSMutableDictionary * mdic = [NSMutableDictionary dictionary];
-        vc.url = [[NSBundle mainBundle] pathForResource:@"webtest" ofType:@"html"];
+        vc.file = @"webtest.html";
         vc.paramDic = mdic;
         [vc paramDicFromObj:viewController];
         [super pushViewController:vc animated:YES];

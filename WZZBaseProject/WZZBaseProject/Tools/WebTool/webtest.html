@@ -10,6 +10,23 @@
                 margin: 0;
             }
             input:focus{outline:none;}
+            .navBarHeight {
+                height: 44px;
+            }
+            .fixedNavBar {
+                display: flex;
+                background-color: blanchedalmond;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                right: 0px; 
+            }
         </style>
         <script src="./wzz_webview.js"></script>
         <script>
@@ -30,26 +47,71 @@
             }
 
             function wzzvc_callBackFunc(params) {
+                wzz_log(JSON.stringify(params))
+                if (params['wzz_funcName'] == 'wzz_loadFinish') {
+                    wzzvc_getParams();
+                }
                 if (params['wzz_funcName'] == 'wzzvc_getParams') {
                     document.getElementById('params').innerHTML = '传入参数：'+JSON.stringify(params);
+                    document.getElementById('navBar').style = 'padding-top: '+params['wzzvc_safeAreaTop']+'px;';
+                    document.getElementById('navBar2').style = 'padding-top: '+params['wzzvc_safeAreaTop']+'px;';
                 }
-                wzz_log(JSON.stringify(params))
+            }
+
+            function backClick() {
+                wzz_log(String(wzz_backClick));
+                wzz_backClick();
+            }
+            
+            function openClick() {
+                wzz_openUrl('http://baidu.com');
+            }
+
+            function pushWeb() {
+                wzzvc_pushWeb({'wzz_file':'webtest.html'});
+            }
+
+            function presentWeb() {
+                wzzvc_presentWeb({'wzz_url':'http://baidu.com'});
             }
         </script>
     </head>
     <body>
-        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;margin-top: 44px;">
+        <div class="navBarHeight fixedNavBar" id="navBar">
+            <div onclick="backClick()" style="display: flex;flex: 1;">
+                返回
+            </div>
+            <div style="display: flex;flex: 2; flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">
+                导航栏
+            </div>
+            <div style="display: flex;flex: 1;">
+                
+            </div>
+        </div>
+        <div class="navBarHeight" id="navBar2">
+
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;margin-top: 10px;">
             👷：改页面施工中，请稍后再来吧～
         </div>
-        <div id="params">
-        </div>
+        <p id="params">
+        </p>
         <div onclick="otherClick()">
             跳转原生
+        </div> 
+        <div>
+            ---------测试----------
+        </div>
+        <div onclick="openClick()">
+            打开地址
+        </div>
+        <div onclick="pushWeb()">
+            wzzvc_pushWeb
+        </div>
+        <div onclick="presentWeb()">
+            wzzvc_presentWeb
         </div>
     </body>
-    <script>
-        wzzvc_getParams()
-    </script>
 </html>
 
 

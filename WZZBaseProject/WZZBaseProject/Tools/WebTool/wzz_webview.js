@@ -19,7 +19,7 @@ function wzz_backClick() {
         window.webkit.messageHandlers.wzz_backClick.postMessage('');
     }
     if (pf == 'android') {
-
+        window.androiddyy.wzz_backClick();
     }
 }
 
@@ -29,7 +29,7 @@ function wzz_openUrl(url) {
         window.webkit.messageHandlers.wzz_openUrl.postMessage(url);
     }
     if (pf == 'android') {
-
+        window.androiddyy.wzz_openUrl(url)
     }
 }
 
@@ -39,7 +39,7 @@ function wzz_log(logStr) {
         window.webkit.messageHandlers.wzz_log.postMessage(logStr);
     }
     if (pf == 'android') {
-
+        window.androiddyy.wzz_openUrl(logStr)
     }
 }
 
@@ -55,28 +55,53 @@ function wzz_webToNative(funcName, autoId, params) {
         window.webkit.messageHandlers.wzz_webToNative.postMessage(params);
     }
     if (pf == 'android') {
-
+        window.androiddyy.wzz_webToNative(params)
     }
 }
 
 function wzzvc_pushWeb(params) {
-    wzz_webToNative('wzzvc_pushWeb', null, params);
+    var pf = wzz_checkPlatform();
+    if (pf == 'ios') {
+        wzz_webToNative('wzzvc_pushWeb', null, params);
+    } else {
+        window.androiddyy.wzzvc_pushWeb(params)
+    }
 }
 
 function wzzvc_presentWeb(params) {
-    wzz_webToNative('wzzvc_presentWeb', null, params);
+    var pf = wzz_checkPlatform();
+    if (pf == 'ios') {
+        wzz_webToNative('wzzvc_presentWeb', null, params);
+    } else {
+        window.androiddyy.wzzvc_presentWeb(params)
+    }
 }
 
 function wzzvc_pushVC(params) {
-    wzz_webToNative('wzzvc_pushVC', null, params);
+    var pf = wzz_checkPlatform();
+    if (pf == 'ios') {
+        wzz_webToNative('wzzvc_pushVC', null, params);
+    } else {
+        window.androiddyy.wzzvc_pushVC(params)
+    }
 }
 
 function wzzvc_callBack(params) {
-    wzz_webToNative('wzzvc_callBack', null, params);
+    var pf = wzz_checkPlatform();
+    if (pf == 'ios') {
+        wzz_webToNative('wzzvc_callBack', null, params);
+    } else {
+        window.androiddyy.wzzvc_callBack(params)
+    }
 }
 
 function wzzvc_getParams() {
-    wzz_webToNative('wzzvc_getParams', null, {});
+    var pf = wzz_checkPlatform();
+    if (pf == 'ios') {
+        wzz_webToNative('wzzvc_getParams', null, {});
+    } else {
+        window.androiddyy.wzzvc_getParams()
+    }
 }
 
 function wzzvc_callBackFunc(params) {
