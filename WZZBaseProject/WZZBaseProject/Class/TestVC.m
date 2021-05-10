@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"导航栏透明测试";
+//    self.title = @"导航栏透明测试";
     
     DEF_WeakSelf;
     [self.wzz_navigationBar addItemWithText:@"测试" image:[UIImage imageNamed:@"tmpImage"] imageWidth:@(20) sort:WZZBaseNavigationBarItemSort_Image_Label place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
@@ -44,7 +44,9 @@
     [self.wzz_navigationBar createUI];
 }
 
-
+- (void)logff:(NSString *)ff {
+    NSLog(@"fffffffffff:%@", ff);
+}
 
 /*
 #pragma mark - Navigation

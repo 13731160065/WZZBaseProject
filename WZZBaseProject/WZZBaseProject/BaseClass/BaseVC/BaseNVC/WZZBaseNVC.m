@@ -30,10 +30,10 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     NSString * testStr = [WZZSingleManager shareInstance].webTestStr;
-    if ([testStr containsString:NSStringFromClass([viewController class])]) {
+    if ([testStr isEqualToString:NSStringFromClass([viewController class])]) {
         WZZWebViewController * vc = [[WZZWebViewController alloc] init];
         NSMutableDictionary * mdic = [NSMutableDictionary dictionary];
-        mdic[@"wzz_url"] = [[NSBundle mainBundle] pathForResource:@"webtest" ofType:@"html"];
+        vc.url = [[NSBundle mainBundle] pathForResource:@"webtest" ofType:@"html"];
         vc.paramDic = mdic;
         [vc paramDicFromObj:viewController];
         [super pushViewController:vc animated:YES];

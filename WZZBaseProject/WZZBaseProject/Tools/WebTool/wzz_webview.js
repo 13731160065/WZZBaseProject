@@ -64,7 +64,11 @@ function wzzvc_pushWeb(params) {
 }
 
 function wzzvc_presentWeb(params) {
-    wzz_webToNative('wzzvc_pushWeb', null, params);
+    wzz_webToNative('wzzvc_presentWeb', null, params);
+}
+
+function wzzvc_pushVC(params) {
+    wzz_webToNative('wzzvc_pushVC', null, params);
 }
 
 function wzzvc_callBack(params) {

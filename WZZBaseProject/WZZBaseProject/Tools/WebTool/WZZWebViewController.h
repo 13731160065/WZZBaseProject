@@ -10,6 +10,8 @@
 
 @interface WZZWebViewController : UIViewController
 
+@property (strong, nonatomic) NSString * url;
+@property (strong, nonatomic) NSString * html;
 @property (strong, nonatomic) NSDictionary * paramDic;
 @property (strong, nonatomic) void(^callBack)(WZZWebViewController * lastVC, NSDictionary * paramDic);
 @property (weak, nonatomic) WZZWebViewController * lastVC;

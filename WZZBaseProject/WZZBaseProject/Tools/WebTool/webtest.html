@@ -14,7 +14,19 @@
         <script src="./wzz_webview.js"></script>
         <script>
             function otherClick() {
-
+                wzzvc_pushVC({
+                    'wzz_className':'TestVC',
+                    'wzz_funcs':[
+                        {
+                            'wzz_funcName':'setTitle:',
+                            'wzz_funcParams':[
+                                {
+                                    'obj':'网页跳原生'
+                                }
+                            ]
+                        }
+                    ],
+                });
             }
 
             function wzzvc_callBackFunc(params) {
@@ -32,7 +44,7 @@
         <div id="params">
         </div>
         <div onclick="otherClick()">
-
+            跳转原生
         </div>
     </body>
     <script>

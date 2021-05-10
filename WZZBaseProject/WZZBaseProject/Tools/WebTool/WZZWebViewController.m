@@ -44,18 +44,17 @@
     [super viewDidLoad];
     self.webView = [[WZZWebView alloc] init];
     [self.view addSubview:self.webView];
-    NSString * url = self.paramDic[@"wzz_url"];
-    if (url) {
+    if (self.url) {
         NSURL * loadUrl = [NSURL URLWithString:@""];
-        if ([url hasPrefix:@"http"]) {
-            loadUrl = [NSURL URLWithString:url];
+        if ([self.url hasPrefix:@"http"]) {
+            loadUrl = [NSURL URLWithString:self.url];
         } else {
-            loadUrl = [NSURL fileURLWithPath:url];
+            loadUrl = [NSURL fileURLWithPath:self.url];
         }
         [self.webView loadWebWithUrl:loadUrl];
     }
-    if (self.paramDic[@"wzz_html"]) {
-        [self.webView loadWebWithHtml:self.paramDic[@"wzz_html"]];
+    if (self.html) {
+        [self.webView loadWebWithHtml:self.html];
     }
     
     //约束布局
@@ -69,19 +68,82 @@
     [self.webView registerJSFunc:@"wzzvc_pushWeb" response:^(NSString *funcName, NSDictionary *respDic) {
         [weakSelf.navigationController pushViewController:[weakSelf makeWebVCWithRespDic:respDic] animated:YES];
     }];
+    [self.webView registerJSFunc:@"wzzvc_presentWeb" response:^(NSString *funcName, NSDictionary *respDic) {
+        [weakSelf presentViewController:[weakSelf makeWebVCWithRespDic:respDic] animated:YES completion:nil];
+    }];
+    [self.webView registerJSFunc:@"wzzvc_pushVC" response:^(NSString *funcName, NSDictionary *respDic) {
+        NSString * className = respDic[@"wzz_className"];
+        NSArray * funcs = respDic[@"wzz_funcs"];
+        NSDictionary * params = respDic[@"wzz_params"];
+        if (className) {
+            id obj = [[NSClassFromString(className) alloc] init];
+            if ([obj isKindOfClass:[UIViewController class]]) {
+                UIViewController * vc = obj;
+                for (NSDictionary * func in funcs) {
+                    NSString * funcName = func[@"wzz_funcName"];
+                    [self callFuncWithObj:vc funcName:funcName params:func[@"wzz_funcParams"]];
+                }
+                NSArray * keys = params.allKeys;
+                for (int i = 0; i < keys.count; i++) {
+                    NSString * key = keys[i];
+                    if (key) {
+                        id value = params[key];
+                        [vc setValue:value forKeyPath:key];
+                    }
+                }
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            }
+        }
+    }];
     [self.webView registerJSFunc:@"wzzvc_getParams" response:^(NSString *funcName, NSDictionary *respDic) {
         NSMutableDictionary * mdic = [NSMutableDictionary dictionaryWithDictionary:respDic];
         [mdic addEntriesFromDictionary:self.paramDic];
         [weakSelf callWeb:mdic];
-    }];
-    [self.webView registerJSFunc:@"wzzvc_presentWeb" response:^(NSString *funcName, NSDictionary *respDic) {
-        [weakSelf presentViewController:[weakSelf makeWebVCWithRespDic:respDic] animated:YES completion:nil];
     }];
     [self.webView registerJSFunc:@"wzzvc_callBack" response:^(NSString *funcName, NSDictionary *respDic) {
         if (self.callBack) {
             self.callBack(weakSelf.lastVC, respDic);
         }
     }];
+}
+
+- (id)callFuncWithObj:(id)obj
+               funcName:(NSString *)funcName
+                 params:(NSArray <NSDictionary <NSString *, id>*>*)params {
+    //处理入参
+    if (!obj) {
+        return nil;
+    }
+    if (!funcName) {
+        return nil;
+    }
+    if (!params) {
+        params = [NSMutableArray array];
+    }
+    
+    //创建方法
+    SEL func = NSSelectorFromString(funcName);
+    NSMethodSignature * methodSign = [[obj class] instanceMethodSignatureForSelector:func];
+    NSInvocation * method = [NSInvocation invocationWithMethodSignature:methodSign];
+    method.target = obj;
+    method.selector = func;
+    
+    //参数
+    for (int i = 0; i < params.count; i++) {
+        NSDictionary * dic = params[i];
+        id aParam = dic[@"obj"];
+        [method setArgument:&aParam atIndex:i+2];
+    }
+    
+    //调用
+    [method invoke];
+    
+    //返回
+    id returnObj;
+    if (methodSign.methodReturnLength != 0) {
+        [method getReturnValue:&returnObj];
+    }
+    return returnObj;
 }
 
 - (void)callWeb:(NSDictionary *)paramDic {
@@ -92,6 +154,8 @@
     WZZWebViewController * vc = [[WZZWebViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     
+    vc.url = dic[@"wzz_url"];
+    vc.html = dic[@"wzz_html"];
     vc.paramDic = dic;
     vc.callBack = ^(WZZWebViewController * lastVC, NSDictionary *paramDic) {
         [lastVC.webView callJSFunc:@"wzzvc_callBackFunc" async:NO params:paramDic response:nil];

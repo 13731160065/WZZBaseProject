@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestVC : WZZBaseVC
 
+- (void)logff:(NSString *)ff;
+
 @end
 
 NS_ASSUME_NONNULL_END

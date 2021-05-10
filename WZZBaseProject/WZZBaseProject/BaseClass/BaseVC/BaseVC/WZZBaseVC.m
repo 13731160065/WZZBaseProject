@@ -21,6 +21,7 @@
 @implementation WZZBaseVC
 
 - (void)setTitle:(NSString *)title {
+    _title = title;
     self.titleItem.label.text = title;
 }
 
@@ -46,6 +47,22 @@
     
     //设置默认导航栏和xib拖拽导航栏
     if (_wzz_navigationBarBackView) {
+        for (NSLayoutConstraint * constraint in self.view.constraints) {
+            //遍历所有约束
+            if (constraint.firstItem == self.wzz_navigationBarBackView) {
+                //跟wzz_navigationBarBackView有关
+                if (constraint.firstAttribute == NSLayoutAttributeTop) {
+                    //是顶部约束
+                    if (![constraint.firstItem isKindOfClass:[UILayoutGuide class]] && ![constraint.secondItem isKindOfClass:[UILayoutGuide class]]) {
+                        //没有安全区
+                        if (!DEF_ISIPHONEX) {
+                            //不带刘海
+                            constraint.constant = 20;
+                        }
+                    }
+                }
+            }
+        }
         [self.wzz_navigationBarBackView addSubview:self.wzz_navigationBar];
         [self makeNavigation];
     } else {
@@ -59,6 +76,7 @@
         [NSLayoutConstraint constraintWithItem:self.noXibNavigationBackView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
         [self makeNavigation];
     }
+    
     
     [self.wzz_navigationBar addTitleConfig:^(UILabel *label, UIImageView *imageView) {
         label.font = [UIFont systemFontOfSize:18];
