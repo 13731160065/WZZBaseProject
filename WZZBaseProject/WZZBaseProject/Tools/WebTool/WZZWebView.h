@@ -24,6 +24,9 @@ typedef void(^WZZWebView_Func)(NSString * funcName, NSDictionary * respDic);
 /// 包含模式，将根据内容撑开视图，不可滑动。模式为填满视图模式
 @property (assign, nonatomic) BOOL containMode;
 
+/// 网页加载完成
+@property (strong, nonatomic) void(^loadFinish)(WZZWebView * obj);
+
 /// 加载url
 /// @param url url
 - (void)loadWebWithUrl:(NSURL *)url;

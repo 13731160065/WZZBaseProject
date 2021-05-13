@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		52070529264678FB00A3E3A8 /* WZZBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */; };
 		5207052F26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */; };
-		52F4B35526492B3100DB9E0B /* wzz_navigationBar.html in Resources */ = {isa = PBXBuildFile; fileRef = 52F4B35426492B3100DB9E0B /* wzz_navigationBar.html */; };
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
@@ -64,7 +63,6 @@
 		52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBar.m; sourceTree = "<group>"; };
 		5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBarItem.h; sourceTree = "<group>"; };
 		5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBarItem.m; sourceTree = "<group>"; };
-		52F4B35426492B3100DB9E0B /* wzz_navigationBar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wzz_navigationBar.html; sourceTree = "<group>"; };
 		71012D2A20DE12C900B4EE8C /* HttpHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHandler.h; sourceTree = "<group>"; };
 		71012D2B20DE12C900B4EE8C /* HttpHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHandler.m; sourceTree = "<group>"; };
 		71012D2D20DE12F200B4EE8C /* HttpHandler+WZZExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpHandler+WZZExt.h"; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 		712A0DBC26482500006C1801 /* WebTool */ = {
 			isa = PBXGroup;
 			children = (
-				52F4B35426492B3100DB9E0B /* wzz_navigationBar.html */,
 				712A0DC826482826006C1801 /* webtest.html */,
 				712A0DC926482826006C1801 /* wzz_webview.js */,
 				712A0DC626482826006C1801 /* WZZWebView.h */,
@@ -527,7 +524,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F4B35526492B3100DB9E0B /* wzz_navigationBar.html in Resources */,
 				71DD311D213784E500BCEB3C /* logMove@3x.png in Resources */,
 				71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */,
 				7179F8892647F091007567CF /* TestVC.xib in Resources */,

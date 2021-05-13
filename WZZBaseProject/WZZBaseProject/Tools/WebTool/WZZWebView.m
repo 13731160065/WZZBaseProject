@@ -71,12 +71,16 @@ static NSUInteger WZZWebView_AutoId = 0;
                     config:(void(^)(WKUserContentController * wkUserContentController))config {
     [self.webView removeFromSuperview];
     
+    if (!script) {
+        script = @"";
+    }
+    
     //提前注入脚本
     self.contentController = [[WKUserContentController alloc] init];
     if (config) {
         config(self.contentController);
     }
-    WKUserScript *wkUScript = [[WKUserScript alloc] initWithSource:script?script:@"" injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+    WKUserScript *wkUScript = [[WKUserScript alloc] initWithSource:script injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     [self.contentController addUserScript:wkUScript];
     
     //注册交互方法
@@ -101,7 +105,7 @@ static NSUInteger WZZWebView_AutoId = 0;
     //导航代理滚动代理
     self.webView.navigationDelegate = self;
     self.webView.scrollView.delegate = self;
-
+    
     if (self.url) {
         [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
     } else {
@@ -296,6 +300,9 @@ static NSUInteger WZZWebView_AutoId = 0;
 //    [self.webView evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout='none';" completionHandler:nil];
 //    [self.webView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none';"completionHandler:nil];
     [self callJSFunc:@"wzzvc_callBackFunc" async:NO params:@{@"wzz_funcName":@"wzz_loadFinish"} response:nil];
+    if (self.loadFinish) {
+        self.loadFinish(self);
+    }
 }
 
 - (void)webView:(WKWebView *)webView
