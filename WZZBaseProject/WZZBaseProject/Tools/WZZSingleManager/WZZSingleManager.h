@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
+#import "WZZTabbarVC.h"
 
 typedef enum : NSUInteger {
     WZZSingleManager_ChangeWindowRoot_Login,
@@ -17,6 +18,8 @@ typedef enum : NSUInteger {
 @interface WZZSingleManager : NSObject
 
 @property (nonatomic, weak) AppDelegate * appDelegate;
+
+@property (strong, nonatomic) WZZTabbarVC * tabbarVC;
 
 /// 测试web用，正式使用可删除
 @property (nonatomic, strong) NSString * webTestStr;

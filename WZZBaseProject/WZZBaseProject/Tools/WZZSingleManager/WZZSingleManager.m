@@ -40,24 +40,10 @@ static WZZSingleManager * singleManager;
 - (void)setupTabbar {
     //tabbar
     WZZTabbarVC * tabbarVC = [[WZZTabbarVC alloc] init];
+    self.tabbarVC = tabbarVC;
+    WZZBaseNVC * nvc = [[WZZBaseNVC alloc] initWithRootViewController:tabbarVC];
     
-    //添加vc
-    tmpViewController * homeVC = [[tmpViewController alloc] init];
-    [tabbarVC addVC:homeVC selectImage:[UIImage imageNamed:@"首页_hover"] normalImage:[UIImage imageNamed:@"首页_normal"]];
-    
-    //添加vc
-    tmpViewController * starLetterVC = [[tmpViewController alloc] init];
-    [tabbarVC addVC:starLetterVC selectImage:[UIImage imageNamed:@"星信_hover"] normalImage:[UIImage imageNamed:@"星信_normal"]];
-    
-    //添加vc
-    tmpViewController * ba3 = [[tmpViewController alloc] init];
-    [tabbarVC addVC:ba3 selectImage:[UIImage imageNamed:@"星语_hover"] normalImage:[UIImage imageNamed:@"星语_normal"]];
-    
-    //添加vc
-    tmpViewController * myVC = [[tmpViewController alloc] init];
-    [tabbarVC addVC:myVC selectImage:[UIImage imageNamed:@"我的_hover"] normalImage:[UIImage imageNamed:@"我的_normal"]];
-    
-    self.appDelegate.window.rootViewController = tabbarVC;
+    self.appDelegate.window.rootViewController = nvc;
 }
 
 //修改window

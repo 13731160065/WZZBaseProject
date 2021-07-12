@@ -11,4 +11,7 @@
 
 @interface WZZTabbarVC : WZZBaseTabbarVC
 
+/// 初始化tabbar
+- (void)setupTabbar;
+
 @end
