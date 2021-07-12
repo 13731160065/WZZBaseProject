@@ -27,6 +27,9 @@ typedef enum : NSUInteger {
 /// 点击事件
 @property (strong, nonatomic) void(^onClick)(WZZBaseNavigationBarItem * obj);
 
+/// 按钮边距
+@property (nonatomic, assign) UIEdgeInsets buttonEdge;
+
 /// 图片
 @property (strong, nonatomic) UIImage * image;
 

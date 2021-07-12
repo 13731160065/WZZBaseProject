@@ -39,6 +39,15 @@
     return _wzz_navigationBarBackView;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.basevc_stateBarTintColor = WZZBaseVC_StateBarTintColor_Black;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -77,7 +86,6 @@
         [self makeNavigation];
     }
     
-    
     [self.wzz_navigationBar addTitleConfig:^(UILabel *label, UIImageView *imageView) {
         label.font = [UIFont systemFontOfSize:18];
     }];
@@ -98,6 +106,7 @@
     self.backItem = [self.wzz_navigationBar addItemWithImage:[UIImage imageNamed:@"通用_返回"] imageWidth:@(10) place:WZZBaseNavigationBarPlace_Left onClick:^(WZZBaseNavigationBarItem *obj) {
         [weakSelf basevc_backClick];
     }];
+    self.backItem.buttonEdge = UIEdgeInsetsMake(0, 10, 0, 10);
     
     //设置间距
     self.wzz_navigationBar.leftSpace = @(10);
@@ -106,6 +115,8 @@
     
     //导航栏刷新UI
     [self.wzz_navigationBar createUI];
+    
+    self.basevc_stateBarTintColor = WZZBaseVC_StateBarTintColor_Black;
 }
 
 /// 创建导航栏约束

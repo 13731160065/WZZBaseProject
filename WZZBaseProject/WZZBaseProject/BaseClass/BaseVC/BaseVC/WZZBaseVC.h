@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "WZZBaseNavigationBar.h"
-#import "WZZBaseNavigationBarItem.h"
 
 typedef enum : NSUInteger {
     WZZBaseVC_StateBarTintColor_Auto = 0,//自动

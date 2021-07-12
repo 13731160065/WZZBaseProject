@@ -68,8 +68,8 @@
     [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.rightView.superview attribute:NSLayoutAttributeTop multiplier:1 constant:0].active = YES;
     [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.rightView.superview attribute:NSLayoutAttributeBottom multiplier:1 constant:0].active = YES;
     [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.rightView.superview attribute:NSLayoutAttributeRight multiplier:1 constant:-15].active = YES;
-    [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.leftView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
-    [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.leftView attribute:NSLayoutAttributeWidth multiplier:1 constant:0].active = YES;
+//    [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.leftView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+//    [NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.leftView attribute:NSLayoutAttributeWidth multiplier:1 constant:0].active = YES;
     
     [self createItemView:self.rightArr space:self.rightSpace superView:self.rightView];
 }
@@ -105,6 +105,14 @@
             [NSLayoutConstraint constraintWithItem:item attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:lastView?lastView:superView attribute:lastView?NSLayoutAttributeRight:NSLayoutAttributeLeft multiplier:1 constant:lastView?(space?space.doubleValue:5):0].active = YES;
         }
         
+        UIButton * topButton = [item valueForKey:@"topButton"];
+        //按钮
+        [self addSubview:topButton];
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeTop multiplier:1 constant:-item.buttonEdge.top].active = YES;
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeBottom multiplier:1 constant:item.buttonEdge.bottom].active = YES;
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeLeft multiplier:1 constant:-item.buttonEdge.left].active = YES;
+        [NSLayoutConstraint constraintWithItem:topButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:item attribute:NSLayoutAttributeRight multiplier:1 constant:item.buttonEdge.right].active = YES;
+        
         lastView = item;
     }
     //lastView右
@@ -112,9 +120,9 @@
         if (superView == self.titleView) {
             [NSLayoutConstraint constraintWithItem:lastView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
         } else if (superView == self.leftView) {
-//            [NSLayoutConstraint constraintWithItem:lastView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:superView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+            [NSLayoutConstraint constraintWithItem:lastView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:superView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
         } else if (superView == self.rightView) {
-//            [NSLayoutConstraint constraintWithItem:lastView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:superView attribute:NSLayoutAttributeRight multiplier:1 constant:0].active = YES;
+            [NSLayoutConstraint constraintWithItem:lastView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:superView attribute:NSLayoutAttributeLeft multiplier:1 constant:0].active = YES;
         }
     }
 }

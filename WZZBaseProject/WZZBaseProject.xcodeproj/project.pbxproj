@@ -7,8 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52070529264678FB00A3E3A8 /* WZZBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */; };
-		5207052F26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */; };
+		525DA5F7269C3DF60061B85E /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA5F6269C3DF60061B85E /* WZZTabbarVC.m */; };
+		525DA5F8269C3DF60061B85E /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA5F6269C3DF60061B85E /* WZZTabbarVC.m */; };
+		525DA613269C3E170061B85E /* WZZBaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA60F269C3E170061B85E /* WZZBaseTabbarVC.m */; };
+		525DA614269C3E170061B85E /* WZZBaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA60F269C3E170061B85E /* WZZBaseTabbarVC.m */; };
+		525DA615269C3E170061B85E /* WZZBaseTabbarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA612269C3E170061B85E /* WZZBaseTabbarVCItem.m */; };
+		525DA616269C3E170061B85E /* WZZBaseTabbarVCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA612269C3E170061B85E /* WZZBaseTabbarVCItem.m */; };
+		525DA624269C3E980061B85E /* WZZBaseNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA621269C3E980061B85E /* WZZBaseNavigationBarItem.m */; };
+		525DA625269C3E980061B85E /* WZZBaseNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA621269C3E980061B85E /* WZZBaseNavigationBarItem.m */; };
+		525DA626269C3E980061B85E /* WZZBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA623269C3E980061B85E /* WZZBaseNavigationBar.m */; };
+		525DA627269C3E980061B85E /* WZZBaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 525DA623269C3E980061B85E /* WZZBaseNavigationBar.m */; };
+		526A9D0D264E150F004084A6 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179F8862647F091007567CF /* TestVC.m */; };
+		526A9D0E264E150F004084A6 /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
+		526A9D0F264E150F004084A6 /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
+		526A9D11264E150F004084A6 /* WZZUserInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */; };
+		526A9D12264E150F004084A6 /* WZZBaseNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333720A8239100735249 /* WZZBaseNVC.m */; };
+		526A9D13264E150F004084A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192331620A81FDD00735249 /* main.m */; };
+		526A9D14264E150F004084A6 /* WZZPCHExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333A20A8251100735249 /* WZZPCHExtern.m */; };
+		526A9D15264E150F004084A6 /* WZZBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192333220A8236C00735249 /* WZZBaseVC.m */; };
+		526A9D17264E150F004084A6 /* WZZLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F65AF22136FD5B0017788A /* WZZLogTool.m */; };
+		526A9D18264E150F004084A6 /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
+		526A9D19264E150F004084A6 /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
+		526A9D1B264E150F004084A6 /* WZZLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B200213704A100D309BB /* WZZLogView.m */; };
+		526A9D1C264E150F004084A6 /* WZZSingleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807720D1311900ABA2F1 /* WZZSingleManager.m */; };
+		526A9D1D264E150F004084A6 /* WZZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0DCA26482826006C1801 /* WZZWebViewController.m */; };
+		526A9D1E264E150F004084A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7192332220A8205000735249 /* AppDelegate.m */; };
+		526A9D1F264E150F004084A6 /* NSString+WZZRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DD3121213789EE00BCEB3C /* NSString+WZZRegular.m */; };
+		526A9D20264E150F004084A6 /* WebTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0DBE264825CE006C1801 /* WebTestVC.m */; };
+		526A9D21264E150F004084A6 /* WZZWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0DC726482826006C1801 /* WZZWebView.m */; };
+		526A9D24264E150F004084A6 /* logMove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DD311B213784E400BCEB3C /* logMove@3x.png */; };
+		526A9D25264E150F004084A6 /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
+		526A9D26264E150F004084A6 /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7179F8872647F091007567CF /* TestVC.xib */; };
+		526A9D27264E150F004084A6 /* wzz_webview.js in Resources */ = {isa = PBXBuildFile; fileRef = 712A0DC926482826006C1801 /* wzz_webview.js */; };
+		526A9D28264E150F004084A6 /* logMove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DD311C213784E400BCEB3C /* logMove@2x.png */; };
+		526A9D29264E150F004084A6 /* WebTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712A0DBF264825CE006C1801 /* WebTestVC.xib */; };
+		526A9D2A264E150F004084A6 /* webtest.html in Resources */ = {isa = PBXBuildFile; fileRef = 712A0DC826482826006C1801 /* webtest.html */; };
+		526A9D2B264E150F004084A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719232EB20A81DE500735249 /* Assets.xcassets */; };
+		526A9D2C264E150F004084A6 /* WZZLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B4B202213704AA00D309BB /* WZZLogView.xib */; };
 		71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2B20DE12C900B4EE8C /* HttpHandler.m */; };
 		71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D2E20DE12F200B4EE8C /* HttpHandler+WZZExt.m */; };
 		71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71012D3220DE21A100B4EE8C /* WZZShareManager.m */; };
@@ -32,7 +67,6 @@
 		7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7198807A20D1312800ABA2F1 /* WZZUserInfoObject.m */; };
 		71B4B201213704A100D309BB /* WZZLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B200213704A100D309BB /* WZZLogView.m */; };
 		71B4B203213704AA00D309BB /* WZZLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B4B202213704AA00D309BB /* WZZLogView.xib */; };
-		71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DB203920A82FF900147BAE /* WZZTabbarVC.m */; };
 		71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DCFACF20A949E200DF0FAB /* tmpViewController.m */; };
 		71DCFAD220A949E200DF0FAB /* tmpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DCFAD020A949E200DF0FAB /* tmpViewController.xib */; };
 		71DD311D213784E500BCEB3C /* logMove@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DD311B213784E400BCEB3C /* logMove@3x.png */; };
@@ -59,10 +93,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		52070527264678FB00A3E3A8 /* WZZBaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBar.h; sourceTree = "<group>"; };
-		52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBar.m; sourceTree = "<group>"; };
-		5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBarItem.h; sourceTree = "<group>"; };
-		5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBarItem.m; sourceTree = "<group>"; };
+		525DA5F5269C3DF60061B85E /* WZZTabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZTabbarVC.h; sourceTree = "<group>"; };
+		525DA5F6269C3DF60061B85E /* WZZTabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZTabbarVC.m; sourceTree = "<group>"; };
+		525DA60F269C3E170061B85E /* WZZBaseTabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseTabbarVC.m; sourceTree = "<group>"; };
+		525DA610269C3E170061B85E /* WZZBaseTabbarVCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseTabbarVCItem.h; sourceTree = "<group>"; };
+		525DA611269C3E170061B85E /* WZZBaseTabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseTabbarVC.h; sourceTree = "<group>"; };
+		525DA612269C3E170061B85E /* WZZBaseTabbarVCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseTabbarVCItem.m; sourceTree = "<group>"; };
+		525DA620269C3E980061B85E /* WZZBaseNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBar.h; sourceTree = "<group>"; };
+		525DA621269C3E980061B85E /* WZZBaseNavigationBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBarItem.m; sourceTree = "<group>"; };
+		525DA622269C3E980061B85E /* WZZBaseNavigationBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZBaseNavigationBarItem.h; sourceTree = "<group>"; };
+		525DA623269C3E980061B85E /* WZZBaseNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZBaseNavigationBar.m; sourceTree = "<group>"; };
+		526A9D30264E150F004084A6 /* WZZBaseProjectAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZZBaseProjectAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		526A9D31264E150F004084A6 /* WZZBaseProject copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WZZBaseProject copy-Info.plist"; path = "/Users/wyq_imac/Documents/SVN/WZZBaseProject/WZZBaseProject/WZZBaseProject copy-Info.plist"; sourceTree = "<absolute>"; };
 		71012D2A20DE12C900B4EE8C /* HttpHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHandler.h; sourceTree = "<group>"; };
 		71012D2B20DE12C900B4EE8C /* HttpHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpHandler.m; sourceTree = "<group>"; };
 		71012D2D20DE12F200B4EE8C /* HttpHandler+WZZExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HttpHandler+WZZExt.h"; sourceTree = "<group>"; };
@@ -114,8 +156,6 @@
 		71DB203420A82E2E00147BAE /* HeaderReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HeaderReadme.md; sourceTree = "<group>"; };
 		71DB203620A82F1500147BAE /* AppDelegateReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppDelegateReadme.md; sourceTree = "<group>"; };
 		71DB203720A82FCD00147BAE /* BaseClassReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BaseClassReadme.md; sourceTree = "<group>"; };
-		71DB203820A82FF900147BAE /* WZZTabbarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZTabbarVC.h; sourceTree = "<group>"; };
-		71DB203920A82FF900147BAE /* WZZTabbarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZZTabbarVC.m; sourceTree = "<group>"; };
 		71DB203B20A8301000147BAE /* OtherReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = OtherReadme.md; sourceTree = "<group>"; };
 		71DB203C20A8302300147BAE /* ToolReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToolReadme.md; sourceTree = "<group>"; };
 		71DCFACC20A93E6100DF0FAB /* WZZDefineTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZZDefineTool.h; sourceTree = "<group>"; };
@@ -133,6 +173,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		526A9D22264E150F004084A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		719232DC20A81DE500735249 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +204,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		525DA5F4269C3DF60061B85E /* TabbarVC */ = {
+			isa = PBXGroup;
+			children = (
+				525DA5F5269C3DF60061B85E /* WZZTabbarVC.h */,
+				525DA5F6269C3DF60061B85E /* WZZTabbarVC.m */,
+			);
+			path = TabbarVC;
+			sourceTree = "<group>";
+		};
+		525DA60E269C3E170061B85E /* WZZBaseTabbarVC */ = {
+			isa = PBXGroup;
+			children = (
+				525DA60F269C3E170061B85E /* WZZBaseTabbarVC.m */,
+				525DA610269C3E170061B85E /* WZZBaseTabbarVCItem.h */,
+				525DA611269C3E170061B85E /* WZZBaseTabbarVC.h */,
+				525DA612269C3E170061B85E /* WZZBaseTabbarVCItem.m */,
+			);
+			path = WZZBaseTabbarVC;
+			sourceTree = "<group>";
+		};
+		525DA61F269C3E980061B85E /* WZZBaseNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				525DA620269C3E980061B85E /* WZZBaseNavigationBar.h */,
+				525DA621269C3E980061B85E /* WZZBaseNavigationBarItem.m */,
+				525DA622269C3E980061B85E /* WZZBaseNavigationBarItem.h */,
+				525DA623269C3E980061B85E /* WZZBaseNavigationBar.m */,
+			);
+			path = WZZBaseNavigationBar;
+			sourceTree = "<group>";
+		};
 		71012D2920DE12B700B4EE8C /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +275,7 @@
 				719232FA20A81DE500735249 /* WZZBaseProjectTests */,
 				7192330520A81DE500735249 /* WZZBaseProjectUITests */,
 				719232E020A81DE500735249 /* Products */,
+				526A9D31264E150F004084A6 /* WZZBaseProject copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +285,7 @@
 				719232DF20A81DE500735249 /* WZZBaseProject.app */,
 				719232F720A81DE500735249 /* WZZBaseProjectTests.xctest */,
 				7192330220A81DE500735249 /* WZZBaseProjectUITests.xctest */,
+				526A9D30264E150F004084A6 /* WZZBaseProjectAS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				71DB203C20A8302300147BAE /* ToolReadme.md */,
+				525DA5F4269C3DF60061B85E /* TabbarVC */,
 				712A0DBC26482500006C1801 /* WebTool */,
 				71DD311F2137899D00BCEB3C /* Categary */,
 				71F65AF02136FD370017788A /* LogTool */,
@@ -280,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				71DB203220A82DBD00147BAE /* LibReadme.md */,
+				525DA61F269C3E980061B85E /* WZZBaseNavigationBar */,
+				525DA60E269C3E170061B85E /* WZZBaseTabbarVC */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -331,20 +414,10 @@
 			isa = PBXGroup;
 			children = (
 				71DB203720A82FCD00147BAE /* BaseClassReadme.md */,
-				7192332920A8227C00735249 /* TabbarVC */,
 				7192332A20A8227C00735249 /* BaseVC */,
 				7192332B20A8227C00735249 /* BaseNVC */,
 			);
 			path = BaseVC;
-			sourceTree = "<group>";
-		};
-		7192332920A8227C00735249 /* TabbarVC */ = {
-			isa = PBXGroup;
-			children = (
-				71DB203820A82FF900147BAE /* WZZTabbarVC.h */,
-				71DB203920A82FF900147BAE /* WZZTabbarVC.m */,
-			);
-			path = TabbarVC;
 			sourceTree = "<group>";
 		};
 		7192332A20A8227C00735249 /* BaseVC */ = {
@@ -352,7 +425,6 @@
 			children = (
 				7192333120A8236C00735249 /* WZZBaseVC.h */,
 				7192333220A8236C00735249 /* WZZBaseVC.m */,
-				71A7E80220BD49590069920C /* View */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -384,17 +456,6 @@
 			path = WZZSingleManager;
 			sourceTree = "<group>";
 		};
-		71A7E80220BD49590069920C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				52070527264678FB00A3E3A8 /* WZZBaseNavigationBar.h */,
-				52070528264678FB00A3E3A8 /* WZZBaseNavigationBar.m */,
-				5207052D26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.h */,
-				5207052E26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		71DD311F2137899D00BCEB3C /* Categary */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +482,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		526A9D0B264E150F004084A6 /* WZZBaseProjectAS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526A9D2D264E150F004084A6 /* Build configuration list for PBXNativeTarget "WZZBaseProjectAS" */;
+			buildPhases = (
+				526A9D0C264E150F004084A6 /* Sources */,
+				526A9D22264E150F004084A6 /* Frameworks */,
+				526A9D23264E150F004084A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WZZBaseProjectAS;
+			productName = WZZBaseProject;
+			productReference = 526A9D30264E150F004084A6 /* WZZBaseProjectAS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		719232DE20A81DE500735249 /* WZZBaseProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7192330B20A81DE500735249 /* Build configuration list for PBXNativeTarget "WZZBaseProject" */;
@@ -483,6 +561,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "王泽众";
 				TargetAttributes = {
+					526A9D0B264E150F004084A6 = {
+						ProvisioningStyle = Automatic;
+					};
 					719232DE20A81DE500735249 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -513,6 +594,7 @@
 			projectRoot = "";
 			targets = (
 				719232DE20A81DE500735249 /* WZZBaseProject */,
+				526A9D0B264E150F004084A6 /* WZZBaseProjectAS */,
 				719232F620A81DE500735249 /* WZZBaseProjectTests */,
 				7192330120A81DE500735249 /* WZZBaseProjectUITests */,
 			);
@@ -520,6 +602,22 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		526A9D23264E150F004084A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526A9D24264E150F004084A6 /* logMove@3x.png in Resources */,
+				526A9D25264E150F004084A6 /* tmpViewController.xib in Resources */,
+				526A9D26264E150F004084A6 /* TestVC.xib in Resources */,
+				526A9D27264E150F004084A6 /* wzz_webview.js in Resources */,
+				526A9D28264E150F004084A6 /* logMove@2x.png in Resources */,
+				526A9D29264E150F004084A6 /* WebTestVC.xib in Resources */,
+				526A9D2A264E150F004084A6 /* webtest.html in Resources */,
+				526A9D2B264E150F004084A6 /* Assets.xcassets in Resources */,
+				526A9D2C264E150F004084A6 /* WZZLogView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		719232DD20A81DE500735249 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,6 +651,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		526A9D0C264E150F004084A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526A9D0D264E150F004084A6 /* TestVC.m in Sources */,
+				526A9D0E264E150F004084A6 /* HttpHandler+WZZExt.m in Sources */,
+				526A9D0F264E150F004084A6 /* tmpViewController.m in Sources */,
+				526A9D11264E150F004084A6 /* WZZUserInfoObject.m in Sources */,
+				526A9D12264E150F004084A6 /* WZZBaseNVC.m in Sources */,
+				526A9D13264E150F004084A6 /* main.m in Sources */,
+				526A9D14264E150F004084A6 /* WZZPCHExtern.m in Sources */,
+				526A9D15264E150F004084A6 /* WZZBaseVC.m in Sources */,
+				525DA5F8269C3DF60061B85E /* WZZTabbarVC.m in Sources */,
+				525DA625269C3E980061B85E /* WZZBaseNavigationBarItem.m in Sources */,
+				525DA616269C3E170061B85E /* WZZBaseTabbarVCItem.m in Sources */,
+				526A9D17264E150F004084A6 /* WZZLogTool.m in Sources */,
+				526A9D18264E150F004084A6 /* WZZShareManager.m in Sources */,
+				526A9D19264E150F004084A6 /* HttpHandler.m in Sources */,
+				526A9D1B264E150F004084A6 /* WZZLogView.m in Sources */,
+				525DA614269C3E170061B85E /* WZZBaseTabbarVC.m in Sources */,
+				526A9D1C264E150F004084A6 /* WZZSingleManager.m in Sources */,
+				526A9D1D264E150F004084A6 /* WZZWebViewController.m in Sources */,
+				526A9D1E264E150F004084A6 /* AppDelegate.m in Sources */,
+				525DA627269C3E980061B85E /* WZZBaseNavigationBar.m in Sources */,
+				526A9D1F264E150F004084A6 /* NSString+WZZRegular.m in Sources */,
+				526A9D20264E150F004084A6 /* WebTestVC.m in Sources */,
+				526A9D21264E150F004084A6 /* WZZWebView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		719232DB20A81DE500735249 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,21 +688,23 @@
 				7179F8882647F091007567CF /* TestVC.m in Sources */,
 				71012D2F20DE12F200B4EE8C /* HttpHandler+WZZExt.m in Sources */,
 				71DCFAD120A949E200DF0FAB /* tmpViewController.m in Sources */,
-				5207052F26467AFB00A3E3A8 /* WZZBaseNavigationBarItem.m in Sources */,
 				7198807B20D1312800ABA2F1 /* WZZUserInfoObject.m in Sources */,
 				7192333820A8239100735249 /* WZZBaseNVC.m in Sources */,
 				7192331D20A81FDE00735249 /* main.m in Sources */,
 				7192333B20A8251100735249 /* WZZPCHExtern.m in Sources */,
 				7192333420A8236C00735249 /* WZZBaseVC.m in Sources */,
-				52070529264678FB00A3E3A8 /* WZZBaseNavigationBar.m in Sources */,
+				525DA5F7269C3DF60061B85E /* WZZTabbarVC.m in Sources */,
+				525DA624269C3E980061B85E /* WZZBaseNavigationBarItem.m in Sources */,
+				525DA615269C3E170061B85E /* WZZBaseTabbarVCItem.m in Sources */,
 				71F65AF32136FD5B0017788A /* WZZLogTool.m in Sources */,
 				71012D3320DE21A100B4EE8C /* WZZShareManager.m in Sources */,
 				71012D2C20DE12C900B4EE8C /* HttpHandler.m in Sources */,
-				71DB203A20A82FF900147BAE /* WZZTabbarVC.m in Sources */,
 				71B4B201213704A100D309BB /* WZZLogView.m in Sources */,
+				525DA613269C3E170061B85E /* WZZBaseTabbarVC.m in Sources */,
 				7198807820D1311900ABA2F1 /* WZZSingleManager.m in Sources */,
 				712A0DCE26482826006C1801 /* WZZWebViewController.m in Sources */,
 				7192332320A8205000735249 /* AppDelegate.m in Sources */,
+				525DA626269C3E980061B85E /* WZZBaseNavigationBar.m in Sources */,
 				71DD3122213789EE00BCEB3C /* NSString+WZZRegular.m in Sources */,
 				712A0DC0264825CE006C1801 /* WebTestVC.m in Sources */,
 				712A0DCB26482826006C1801 /* WZZWebView.m in Sources */,
@@ -613,6 +743,51 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		526A9D2E264E150F004084A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMLKLDG682;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					"DEF_DEBUG=1",
+					"DEF_CON_DEV=1",
+				);
+				INFOPLIST_FILE = "WZZBaseProject copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff333;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		526A9D2F264E150F004084A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GMLKLDG682;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WZZBaseProject/BaseClass/Headers/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEF_CON_AS=1";
+				INFOPLIST_FILE = "WZZBaseProject copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.www.fff333;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		7192330920A81DE500735249 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -821,6 +996,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		526A9D2D264E150F004084A6 /* Build configuration list for PBXNativeTarget "WZZBaseProjectAS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526A9D2E264E150F004084A6 /* Debug */,
+				526A9D2F264E150F004084A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		719232DA20A81DE500735249 /* Build configuration list for PBXProject "WZZBaseProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
